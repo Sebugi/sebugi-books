@@ -121,7 +121,12 @@ const GEN = {
     'Gotico': { it: 'Gotico', en: 'Gothic', de: 'Schauerroman' },
     'Romanzo': { it: 'Romanzo', en: 'Novel', de: 'Roman' },
     'Poesia': { it: 'Poesia', en: 'Poetry', de: 'Dichtung' },
-    'Saggio': { it: 'Saggio', en: 'Essay', de: 'Essay' }
+    'Saggio': { it: 'Saggio', en: 'Essay', de: 'Essay' },
+    'Avventura': { it: 'Avventura', en: 'Adventure', de: 'Abenteuer' },
+    'Giallo e thriller': { it: 'Giallo e thriller', en: 'Crime & thriller', de: 'Krimi und Thriller' },
+    'Sentimentale': { it: 'Sentimentale', en: 'Romance', de: 'Liebesroman' },
+    'Per ragazzi': { it: 'Per ragazzi', en: "Children's books", de: 'Kinder- und Jugendbuch' },
+    'Fantascienza': { it: 'Fantascienza', en: 'Science fiction', de: 'Science-Fiction' }
 };
 const etichetta = (tipo, v) => tipo === 'nazione' && NAZ[v] ? NAZ[v][ui] : tipo === 'genere' && GEN[v] ? GEN[v][ui] : v;
 const conInsieme = (valore, insieme) => insieme.size === 0 || insieme.has(valore);

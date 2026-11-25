@@ -4,7 +4,7 @@ const TITOLO = document.body.dataset.titolo;
 const DATI = document.body.dataset.dati || '../data/frasi.json';
 const LANG = document.documentElement.lang === 'en' ? 'en' : 'it';
 const el = id => document.getElementById(id);
-const GEN_EN = {Gotico: 'Gothic', Romanzo: 'Novel', Poesia: 'Poetry', Saggio: 'Essay'};
+const GEN_EN = {Gotico: 'Gothic', Romanzo: 'Novel', Poesia: 'Poetry', Saggio: 'Essay', Avventura: 'Adventure', 'Giallo e thriller': 'Crime & thriller', Sentimentale: 'Romance', 'Per ragazzi': "Children's books", Fantascienza: 'Science fiction'};
 
 const TXT = {
     it: {

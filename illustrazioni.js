@@ -91,8 +91,141 @@ const ILLUSTRAZIONI = {
     <path d="M118 46L124 20L138 34L150 14L162 34L176 20L182 46Z" fill="#a67c3d" fill-opacity="0.35"/>
     <path d="M118 46H182"/>
   </g>
-</svg>`
+</svg>`,
 
+// Avventura: veliero sul mare con gabbiano e sole
+'Avventura': `<svg viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Un veliero in mare aperto">
+  <g fill="none" stroke="${INK}" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="232" cy="46" r="20" fill="#f3d58b" fill-opacity="0.75"/>
+    <path d="M222 46H242M232 36V56" stroke-width="0.6" opacity="0.5"/>
+    <!-- onde -->
+    <path d="M10 150C28 142 44 142 62 150C80 158 96 158 114 150C132 142 148 142 166 150C184 158 200 158 218 150C236 142 252 142 270 150C280 154 286 154 292 152" stroke-width="1.3"/>
+    <path d="M22 164C40 158 56 158 74 164C92 170 108 170 126 164C144 158 160 158 178 164C196 170 212 170 230 164C248 158 264 158 282 164" stroke-width="0.8" opacity="0.6"/>
+    <!-- scafo -->
+    <path d="M78 134H222C216 148 204 154 190 154H110C96 154 84 148 78 134Z" fill="#e6d3a6"/>
+    <path d="M86 142H214" stroke-width="0.7" opacity="0.6"/>
+    <!-- albero e vele -->
+    <path d="M150 134V28" stroke-width="1.6"/>
+    <path d="M150 34C176 44 196 70 200 104H150Z" fill="#fbf4e2"/>
+    <path d="M150 42C128 52 112 76 108 108H150Z" fill="#f6ecd2"/>
+    <path d="M150 110C170 114 186 122 194 132H150Z" fill="#fbf4e2" stroke-width="1"/>
+    <path d="M150 28L172 34L150 40" fill="#c9604a" fill-opacity="0.85" stroke-width="0.9"/>
+    <path d="M150 40C170 52 184 70 190 92M150 60C166 70 176 82 182 98" stroke-width="0.6" opacity="0.6"/>
+    <!-- sartie e prua -->
+    <path d="M150 28L84 134M150 28L218 134" stroke-width="0.6" opacity="0.6"/>
+    <path d="M78 134L58 126" stroke-width="1.4"/>
+    <!-- gabbiano -->
+    <path d="M40 54C46 46 54 46 60 54C66 46 74 46 80 54" stroke-width="1"/>
+    <path d="M96 30C100 26 104 26 108 30C112 26 116 26 120 30" stroke-width="0.9"/>
+  </g>
+</svg>`,
+
+// Giallo e thriller: lente d'ingrandimento sopra impronte, con lampione nella nebbia
+'Giallo e thriller': `<svg viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Una lente d'ingrandimento su alcune impronte">
+  <g fill="none" stroke="${INK}" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10 160H290" stroke-width="1.4"/>
+    <path d="M24 166H276M54 172H246" stroke-width="0.6" opacity="0.6"/>
+    <!-- nebbia -->
+    <path d="M14 40C34 34 54 34 76 40M30 52C52 46 72 46 94 52" stroke-width="0.7" opacity="0.5"/>
+    <!-- lampione -->
+    <path d="M38 160V70M30 160H46" stroke-width="1.6"/>
+    <path d="M38 70C38 56 48 50 60 50" stroke-width="1.4"/>
+    <path d="M56 50H70L68 62H58Z" fill="#f3d58b" fill-opacity="0.9"/>
+    <path d="M63 66L50 90H76Z" fill="#f3d58b" fill-opacity="0.25" stroke="none"/>
+    <!-- impronte -->
+    <g fill="#e6d8b4" stroke-width="0.9">
+      <ellipse cx="108" cy="146" rx="7" ry="11" transform="rotate(-12 108 146)"/>
+      <ellipse cx="140" cy="134" rx="7" ry="11" transform="rotate(-12 140 134)"/>
+      <ellipse cx="170" cy="150" rx="7" ry="11" transform="rotate(-12 170 150)"/>
+    </g>
+    <!-- lente -->
+    <circle cx="192" cy="84" r="46" fill="#fbf4e2" fill-opacity="0.7" stroke-width="2.4"/>
+    <circle cx="192" cy="84" r="38" stroke-width="0.8" opacity="0.6"/>
+    <path d="M168 62C176 52 188 48 200 50" stroke-width="2" opacity="0.7"/>
+    <path d="M225 118L262 156" stroke-width="7"/>
+    <path d="M225 118L262 156" stroke="#f6ecd2" stroke-width="4"/>
+    <!-- impronta digitale dentro la lente -->
+    <g stroke-width="0.9" opacity="0.8">
+      <path d="M176 100C176 86 184 76 194 76C204 76 210 84 210 94"/>
+      <path d="M182 104C182 92 188 84 195 84C202 84 204 90 204 98"/>
+      <path d="M188 106C188 98 192 92 196 92C199 92 199 96 199 101"/>
+      <path d="M170 98C170 80 180 68 194 68C208 68 218 80 217 96"/>
+    </g>
+  </g>
+</svg>`,
+
+// Sentimentale: lettera con sigillo a cuore e rosa
+'Sentimentale': `<svg viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Una lettera sigillata con un cuore e una rosa">
+  <g fill="none" stroke="${INK}" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10 160H290" stroke-width="1.4"/>
+    <path d="M24 166H276M54 172H246" stroke-width="0.6" opacity="0.6"/>
+    <!-- busta -->
+    <path d="M74 150V64H226V150Z" fill="#fbf4e2"/>
+    <path d="M74 64L150 114L226 64" fill="#f3e8cc"/>
+    <path d="M74 150L128 104M226 150L172 104" stroke-width="0.8" opacity="0.7"/>
+    <!-- sigillo -->
+    <circle cx="150" cy="114" r="15" fill="#b8503e" fill-opacity="0.9"/>
+    <path d="M150 124C140 116 138 110 142 107C146 104 150 107 150 110C150 107 154 104 158 107C162 110 160 116 150 124Z" fill="#f5eddc" stroke-width="0.8"/>
+    <!-- rosa -->
+    <path d="M238 156C240 132 246 112 258 92" stroke-width="1.4"/>
+    <path d="M241 140C250 138 256 140 260 146C252 148 246 146 241 140Z M246 124C240 120 238 114 240 108C246 112 248 118 246 124Z" fill="#cfd8b0" stroke-width="0.8"/>
+    <path d="M258 92C250 90 246 82 250 76C254 70 262 70 266 74C272 72 278 78 276 84C278 90 270 96 262 94Z" fill="#d98a7a" fill-opacity="0.9"/>
+    <path d="M254 80C258 84 264 84 268 80M258 76C262 78 266 78 270 76" stroke-width="0.8"/>
+    <!-- piuma -->
+    <path d="M40 140C54 112 76 90 104 76C100 98 82 124 54 140Z" fill="#efe3c6"/>
+    <path d="M40 140C62 112 86 90 104 76" />
+    <path d="M40 140L28 154" stroke-width="1.6"/>
+  </g>
+</svg>`,
+
+// Per ragazzi: mongolfiera con nuvole e stelle
+'Per ragazzi': `<svg viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Una mongolfiera fra le nuvole">
+  <g fill="none" stroke="${INK}" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- nuvole -->
+    <path d="M18 138C14 128 22 120 32 122C34 112 48 110 54 118C62 112 74 118 72 128C80 128 82 138 74 140H24C20 140 18 140 18 138Z" fill="#fbf4e2"/>
+    <path d="M222 62C218 52 226 44 236 46C238 36 252 34 258 42C266 36 278 42 276 52C284 52 286 62 278 64H228C224 64 222 64 222 62Z" fill="#fbf4e2"/>
+    <!-- mongolfiera -->
+    <path d="M150 12C112 12 92 44 100 80C104 98 122 112 136 118H164C178 112 196 98 200 80C208 44 188 12 150 12Z" fill="#f0dca6"/>
+    <path d="M150 12C130 24 124 60 136 118M150 12C170 24 176 60 164 118" />
+    <path d="M150 12V118" stroke-width="0.8"/>
+    <path d="M104 62C130 70 170 70 196 62" stroke="#b8503e" stroke-width="3" opacity="0.85"/>
+    <path d="M102 80C130 90 170 90 198 80" stroke="#1f4a3a" stroke-width="3" opacity="0.8"/>
+    <path d="M136 118L130 142M164 118L170 142M150 118V142" stroke-width="0.9"/>
+    <path d="M124 142H176V162H124Z" fill="#e6d3a6"/>
+    <path d="M124 150H176" stroke-width="0.7"/>
+    <!-- stelline -->
+    <path d="M70 40L73 48L81 48L75 53L77 61L70 56L63 61L65 53L59 48L67 48Z" fill="#f3d58b" stroke-width="0.8"/>
+    <path d="M238 112L240 117L246 117L241 121L243 127L238 123L233 127L235 121L230 117L236 117Z" fill="#f3d58b" stroke-width="0.8"/>
+    <path d="M40 80L42 84L46 84L43 87L44 91L40 88L36 91L37 87L34 84L38 84Z" fill="#f3d58b" stroke-width="0.7"/>
+  </g>
+</svg>`,
+
+// Fantascienza: pianeta con anello, razzo e stelle
+'Fantascienza': `<svg viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Un pianeta con un anello e un razzo">
+  <g fill="none" stroke="${INK}" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- pianeta -->
+    <circle cx="112" cy="94" r="46" fill="#ecdcb0"/>
+    <path d="M78 70C98 80 126 82 150 76M68 94C92 104 128 106 156 98M74 116C96 124 122 124 140 118" stroke-width="0.7" opacity="0.6"/>
+    <!-- anello -->
+    <path d="M30 108C20 96 52 76 98 66C150 56 198 62 204 78C210 94 172 114 124 124C84 132 40 124 30 108Z" stroke-width="1.6"/>
+    <path d="M42 108C36 98 62 82 100 74C146 66 188 70 192 80C196 92 164 108 122 116C86 122 48 118 42 108Z" stroke-width="0.7" opacity="0.6"/>
+    <path d="M70 128C84 130 100 130 116 126" stroke="#f3d58b" stroke-width="0" />
+    <!-- razzo -->
+    <g transform="translate(228 70) rotate(35)">
+      <path d="M0 -34C12 -22 14 -2 12 18H-12C-14 -2 -12 -22 0 -34Z" fill="#fbf4e2"/>
+      <circle cx="0" cy="-8" r="6" fill="#f3d58b"/>
+      <path d="M-12 18L-22 32L-12 28M12 18L22 32L12 28" fill="#c9604a" fill-opacity="0.85" stroke-width="1"/>
+      <path d="M-6 18L0 38L6 18" fill="#f3d58b" fill-opacity="0.9" stroke-width="1"/>
+    </g>
+    <!-- scia -->
+    <path d="M214 98C204 114 196 126 188 138" stroke-width="0.7" opacity="0.5" stroke-dasharray="3 4"/>
+    <!-- stelle -->
+    <path d="M40 40L42 46L48 46L43 50L45 56L40 52L35 56L37 50L32 46L38 46Z" fill="#f3d58b" stroke-width="0.8"/>
+    <path d="M250 28L252 33L257 33L253 36L254 41L250 38L246 41L247 36L243 33L248 33Z" fill="#f3d58b" stroke-width="0.8"/>
+    <path d="M268 140L270 144L274 144L271 147L272 151L268 148L264 151L265 147L262 144L266 144Z" fill="#f3d58b" stroke-width="0.7"/>
+    <circle cx="180" cy="26" r="1.4" fill="${INK}"/><circle cx="64" cy="150" r="1.4" fill="${INK}"/><circle cx="270" cy="90" r="1.2" fill="${INK}"/><circle cx="20" cy="70" r="1.2" fill="${INK}"/>
+  </g>
+</svg>`,
 };
 
 function disegnaIllustrazione(genere) {
