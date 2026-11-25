@@ -114,6 +114,7 @@ const NAZ = {
     'Svizzera': { it: 'Svizzera', en: 'Switzerland', de: 'Schweiz' },
     'Norvegia': { it: 'Norvegia', en: 'Norway', de: 'Norwegen' },
     'Grecia': { it: 'Grecia', en: 'Greece', de: 'Griechenland' },
+    'Belgio': { it: 'Belgio', en: 'Belgium', de: 'Belgien' },
     'Cina': { it: 'Cina', en: 'China', de: 'China' },
     'Polonia': { it: 'Polonia', en: 'Poland', de: 'Polen' },
     'Austria-Ungheria': { it: 'Austria-Ungheria', en: 'Austria-Hungary', de: 'Österreich-Ungarn' }
