@@ -117,7 +117,13 @@ const NAZ = {
     'Polonia': { it: 'Polonia', en: 'Poland', de: 'Polen' },
     'Austria-Ungheria': { it: 'Austria-Ungheria', en: 'Austria-Hungary', de: 'Österreich-Ungarn' }
 };
-const etichetta = (tipo, v) => tipo === 'nazione' && NAZ[v] ? NAZ[v][ui] : v;
+const GEN = {
+    'Gotico': { it: 'Gotico', en: 'Gothic', de: 'Schauerroman' },
+    'Romanzo': { it: 'Romanzo', en: 'Novel', de: 'Roman' },
+    'Poesia': { it: 'Poesia', en: 'Poetry', de: 'Dichtung' },
+    'Saggio': { it: 'Saggio', en: 'Essay', de: 'Essay' }
+};
+const etichetta = (tipo, v) => tipo === 'nazione' && NAZ[v] ? NAZ[v][ui] : tipo === 'genere' && GEN[v] ? GEN[v][ui] : v;
 const conInsieme = (valore, insieme) => insieme.size === 0 || insieme.has(valore);
 
 function disegnaChips(id, tipo, valori) {
@@ -200,7 +206,7 @@ function mostraRisposta() {
     const t = el('titolo-risposta'), a = el('autore-risposta'), g = el('genere-risposta');
     t.textContent = corrente.libro;  t.style.display = ctx.libri > 1 ? '' : 'none';
     a.textContent = corrente.autore; a.style.display = ctx.autori > 1 ? '' : 'none';
-    g.textContent = corrente.genere; g.style.display = ctx.generi > 1 ? '' : 'none';
+    g.textContent = etichetta('genere', corrente.genere); g.style.display = ctx.generi > 1 ? '' : 'none';
     disegnaIllustrazione(corrente.genere);
     el('traduzione-risposta').textContent = originaleDi(corrente);
     el('risposta').style.display = 'block';
@@ -275,6 +281,7 @@ function applicaLingua() {
     if (tutte.length) aggiornaScelte();
     if (corrente) {
         el('info-frase').textContent = testoDomanda();
+        el('genere-risposta').textContent = etichetta('genere', corrente.genere);
         el('testo-frase').textContent = testoFrase(corrente);
         el('traduzione-risposta').textContent =
             (el('risposta').style.display === 'block') ? originaleDi(corrente) : '';

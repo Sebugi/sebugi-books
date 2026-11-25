@@ -4,6 +4,7 @@ const TITOLO = document.body.dataset.titolo;
 const DATI = document.body.dataset.dati || '../data/frasi.json';
 const LANG = document.documentElement.lang === 'en' ? 'en' : 'it';
 const el = id => document.getElementById(id);
+const GEN_EN = {Gotico: 'Gothic', Romanzo: 'Novel', Poesia: 'Poetry', Saggio: 'Essay'};
 
 const TXT = {
     it: {
@@ -73,7 +74,7 @@ function mostraRisposta() {
     const q = domande[indice];
     el('titolo-risposta').textContent = q.libro;
     el('autore-risposta').textContent = q.autore;
-    el('genere-risposta').textContent = q.genere;
+    el('genere-risposta').textContent = LANG === 'en' ? (GEN_EN[q.genere] || q.genere) : q.genere;
     // Nella pagina italiana la domanda è tradotta: sotto la risposta si vede l'originale inglese
     el('traduzione-risposta').textContent = originaleDi(q);
     el('nota-libro').textContent = q.libro === LIBRO ? TXT.questo : '';
