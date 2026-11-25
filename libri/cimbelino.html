@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#f5eddc">
+    <title>Cimbelino: frasi celebri e quiz | Sebugi Books</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+    <link rel="apple-touch-icon" href="../favicon-192.png">
+    <meta name="description" content="Le frasi più celebri di Cimbelino di William Shakespeare, in inglese con traduzione italiana. Metti alla prova quanto conosci l'opera con un quiz di 10 frasi.">
+    <link rel="canonical" href="https://books.sebugi.com/libri/cimbelino.html">
+    <link rel="alternate" hreflang="it" href="https://books.sebugi.com/libri/cimbelino.html">
+    <link rel="alternate" hreflang="en" href="https://books.sebugi.com/libri/en/cymbeline.html">
+    <meta property="og:title" content="Cimbelino: frasi celebri e quiz">
+    <meta property="og:description" content="Quanto conosci Cimbelino? Riconosci le sue frasi tra quelle di altri grandi libri.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://books.sebugi.com/libri/cimbelino.html">
+    <link rel="stylesheet" href="/fonts/fonts.css">
+    <link rel="stylesheet" href="../style.css?v=8">
+</head>
+<body data-libro="Cymbeline" data-titolo="Cimbelino" data-dati="../data/frasi.json">
+
+    <div id="schermata-gioco">
+        <header>
+            <a id="link-home" href="index.html">&larr; Libri</a>
+            <h1>Sebugi Books</h1>
+        </header>
+
+        <main>
+            <p class="lang-riga"><a class="lang-link" href="en/cymbeline.html" hreflang="en">English</a></p>
+            <section class="presentazione">
+                <h2>Cimbelino</h2>
+                <p class="sotto">William Shakespeare, 1623 · Teatro</p>
+                <p>Imogene, figlia del re di Britannia, viene calunniata dal marito per colpa di un seduttore e fugge travestita fra intrighi, veleni e riconoscimenti. Quante riconosci? Dieci frasi: alcune sono di quest'opera, altre di altri grandi libri. Per ognuna prova a indovinare il libro, poi gira la carta e dì onestamente come è andata.</p>
+            </section>
+
+            <div id="quiz">
+                <div id="card-frase">
+                    <p id="info-frase">Frase <span id="numero">1</span> di <span id="totale">10</span></p>
+                    <p id="testo-frase"></p>
+                </div>
+
+                <button id="btn-mostra-risposta" style="display:none;">Mostra risposta</button>
+
+                <div id="risposta" style="display:none;">
+                    <div id="illustrazione"></div>
+                    <h2 id="titolo-risposta"></h2>
+                    <p id="autore-risposta"></p>
+                    <span id="genere-risposta"></span>
+                    <p id="nota-libro" class="nota-libro"></p>
+                    <p id="traduzione-risposta"></p>
+
+                    <div id="bottoni-anki">
+                        <button class="anki-btn" id="btn-corretto">Corretto</button>
+                        <button class="anki-btn" id="btn-insicuro">Insicuro</button>
+                        <button class="anki-btn" id="btn-sbagliato">Sbagliato</button>
+                        <button class="anki-btn" id="btn-nonricordo">Non ricordavo</button>
+                        <button class="anki-btn" id="btn-nonsapevo">Non lo sapevo</button>
+                    </div>
+                </div>
+
+                <div id="fine" style="display:none;">
+                    <h2 id="punteggio"></h2>
+                    <p id="commento-fine"></p>
+                    <a class="bottone-principale" href="../index.html">Gioca con tutti i 192 libri</a>
+                    <button id="btn-ricomincia">Rifai il quiz</button>
+                </div>
+
+                <aside id="statistiche" style="display:none;" aria-live="polite">
+                    <h3 id="stat-titolo"></h3>
+                    <div id="stat-grafico"></div>
+                </aside>
+            </div>
+
+            <section class="citazioni">
+                <h2>Le frasi celebri di Cimbelino</h2>
+                <p class="sotto">In inglese, con traduzione italiana.</p>
+                <blockquote>
+                    <p class="en">Fear no more the heat o’ th’ sun, Nor the furious winter’s rages; Thou thy worldly task hast done, Home art gone, and ta’en thy wages.</p>
+                    <p class="it">Non temere più il calore del sole, né le furie dell'inverno; il tuo compito terreno è finito, sei tornato a casa e hai ritirato il tuo salario.</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">Golden lads and girls all must, As chimney-sweepers, come to dust.</p>
+                    <p class="it">Ragazzi e ragazze d'oro devono, come spazzacamini, tornare in polvere.</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">Hark, hark! the lark at heaven’s gate sings, And Phœbus ’gins arise, His steeds to water at those springs On chalic’d flow’rs that lies; And winking Mary-buds begin To ope their golden eyes.</p>
+                    <p class="it">Ascolta, ascolta! L'allodola canta alla porta del cielo, e Febo comincia a sorgere e abbevera i suoi cavalli a quelle sorgenti.</p>
+                </blockquote>
+            </section>
+
+            <section class="invito">
+                <p>Il quiz completo ha 192 classici: romanzi, teatro, avventura, gialli, libri gotici, poesie e saggi in lingua originale, con le frasi celebri e tante altre prese da tutto il testo.</p>
+                <a class="bottone-principale" href="../index.html">Prova il quiz completo</a>
+            </section>
+        </main>
+    </div>
+
+    <script src="../illustrazioni.js?v=10"></script>
+    <script src="../libro.js?v=11"></script>
+</body>
+</html>
