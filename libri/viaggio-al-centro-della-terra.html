@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#f5eddc">
+    <title>Viaggio al centro della Terra: frasi celebri e quiz | Sebugi Books</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+    <link rel="apple-touch-icon" href="../favicon-192.png">
+    <meta name="description" content="Le frasi più celebri di Viaggio al centro della Terra di Jules Verne, in inglese con traduzione italiana. Metti alla prova quanto conosci il libro con un quiz di 10 frasi.">
+    <link rel="canonical" href="https://books.sebugi.com/libri/viaggio-al-centro-della-terra.html">
+    <link rel="alternate" hreflang="it" href="https://books.sebugi.com/libri/viaggio-al-centro-della-terra.html">
+    <link rel="alternate" hreflang="en" href="https://books.sebugi.com/libri/en/journey-to-the-center-of-the-earth.html">
+    <meta property="og:title" content="Viaggio al centro della Terra: frasi celebri e quiz">
+    <meta property="og:description" content="Quanto conosci Viaggio al centro della Terra? Riconosci le sue frasi tra quelle di altri grandi libri.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://books.sebugi.com/libri/viaggio-al-centro-della-terra.html">
+    <link rel="stylesheet" href="/fonts/fonts.css">
+    <link rel="stylesheet" href="../style.css?v=8">
+</head>
+<body data-libro="Journey to the Center of the Earth" data-titolo="Viaggio al centro della Terra" data-dati="../data/frasi.json">
+
+    <div id="schermata-gioco">
+        <header>
+            <a id="link-home" href="index.html">&larr; Libri</a>
+            <h1>Sebugi Books</h1>
+        </header>
+
+        <main>
+            <p class="lang-riga"><a class="lang-link" href="en/journey-to-the-center-of-the-earth.html" hreflang="en">English</a></p>
+            <section class="presentazione">
+                <h2>Viaggio al centro della Terra</h2>
+                <p class="sotto">Jules Verne, 1864 · Avventura</p>
+                <p>Il professor Lidenbrock, suo nipote e una guida islandese scendono in un vulcano seguendo le tracce di un alchimista, fino a un mondo nascosto sotto la crosta terrestre. Quante riconosci? Dieci frasi: alcune sono di questo libro, altre di altri grandi libri. Per ognuna prova a indovinare il libro, poi gira la carta e dì onestamente come è andata.</p>
+            </section>
+
+            <div id="quiz">
+                <div id="card-frase">
+                    <p id="info-frase">Frase <span id="numero">1</span> di <span id="totale">10</span></p>
+                    <p id="testo-frase"></p>
+                </div>
+
+                <button id="btn-mostra-risposta" style="display:none;">Mostra risposta</button>
+
+                <div id="risposta" style="display:none;">
+                    <div id="illustrazione"></div>
+                    <h2 id="titolo-risposta"></h2>
+                    <p id="autore-risposta"></p>
+                    <span id="genere-risposta"></span>
+                    <p id="nota-libro" class="nota-libro"></p>
+                    <p id="traduzione-risposta"></p>
+
+                    <div id="bottoni-anki">
+                        <button class="anki-btn" id="btn-corretto">Corretto</button>
+                        <button class="anki-btn" id="btn-insicuro">Insicuro</button>
+                        <button class="anki-btn" id="btn-sbagliato">Sbagliato</button>
+                        <button class="anki-btn" id="btn-nonricordo">Non ricordavo</button>
+                        <button class="anki-btn" id="btn-nonsapevo">Non lo sapevo</button>
+                    </div>
+                </div>
+
+                <div id="fine" style="display:none;">
+                    <h2 id="punteggio"></h2>
+                    <p id="commento-fine"></p>
+                    <a class="bottone-principale" href="../index.html">Gioca con tutti i 166 libri</a>
+                    <button id="btn-ricomincia">Rifai il quiz</button>
+                </div>
+
+                <aside id="statistiche" style="display:none;" aria-live="polite">
+                    <h3 id="stat-titolo"></h3>
+                    <div id="stat-grafico"></div>
+                </aside>
+            </div>
+
+            <section class="citazioni">
+                <h2>Le frasi celebri di Viaggio al centro della Terra</h2>
+                <p class="sotto">In inglese, con traduzione italiana.</p>
+                <blockquote>
+                    <p class="en">Descend, bold traveller, into the crater of the jokul of Sneffels, which the shadow of Scartaris touches before the kalends of July, and you will attain the centre of the earth; which I have done, Arne Saknussemm.</p>
+                    <p class="it">«Scendi, audace viaggiatore, nel cratere dello Sneffels, che l'ombra dello Scartaris sfiora prima delle calende di luglio, e raggiungerai il centro della terra; cosa che ho fatto io, Arne Saknussemm.»</p>
+                </blockquote>
+            </section>
+
+            <section class="invito">
+                <p>Il quiz completo ha 166 classici: romanzi, teatro, avventura, gialli, libri gotici, poesie e saggi in lingua originale, con le frasi celebri e tante altre prese da tutto il testo.</p>
+                <a class="bottone-principale" href="../index.html">Prova il quiz completo</a>
+            </section>
+        </main>
+    </div>
+
+    <script src="../illustrazioni.js?v=10"></script>
+    <script src="../libro.js?v=11"></script>
+</body>
+</html>
