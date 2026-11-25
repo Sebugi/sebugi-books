@@ -126,7 +126,8 @@ const GEN = {
     'Giallo e thriller': { it: 'Giallo e thriller', en: 'Crime & thriller', de: 'Krimi und Thriller' },
     'Sentimentale': { it: 'Sentimentale', en: 'Romance', de: 'Liebesroman' },
     'Per ragazzi': { it: 'Per ragazzi', en: "Children's books", de: 'Kinder- und Jugendbuch' },
-    'Fantascienza': { it: 'Fantascienza', en: 'Science fiction', de: 'Science-Fiction' }
+    'Fantascienza': { it: 'Fantascienza', en: 'Science fiction', de: 'Science-Fiction' },
+    'Teatro': { it: 'Teatro', en: 'Theatre', de: 'Theater' }
 };
 const etichetta = (tipo, v) => tipo === 'nazione' && NAZ[v] ? NAZ[v][ui] : tipo === 'genere' && GEN[v] ? GEN[v][ui] : v;
 const conInsieme = (valore, insieme) => insieme.size === 0 || insieme.has(valore);

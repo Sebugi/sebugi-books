@@ -226,6 +226,42 @@ const ILLUSTRAZIONI = {
     <circle cx="180" cy="26" r="1.4" fill="${INK}"/><circle cx="64" cy="150" r="1.4" fill="${INK}"/><circle cx="270" cy="90" r="1.2" fill="${INK}"/><circle cx="20" cy="70" r="1.2" fill="${INK}"/>
   </g>
 </svg>`,
+
+// Teatro: sipario aperto con le due maschere
+'Teatro': `<svg viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Un sipario aperto con le maschere del teatro">
+  <g fill="none" stroke="${INK}" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- cornice e mantovana -->
+    <path d="M20 22H280V34C250 44 220 30 190 38C170 44 130 44 110 38C80 30 50 44 20 34Z" fill="#c9604a" fill-opacity="0.55"/>
+    <path d="M30 36V40M60 38V44M90 36V42M210 36V42M240 38V44M270 36V40" stroke-width="0.7" opacity="0.6"/>
+    <!-- sipario sinistro -->
+    <path d="M26 34C46 70 40 120 22 158H78C70 120 76 74 96 40Z" fill="#c9604a" fill-opacity="0.45"/>
+    <path d="M42 44C54 80 50 120 40 156M60 42C68 80 66 120 58 156" stroke-width="0.7" opacity="0.6"/>
+    <!-- sipario destro -->
+    <path d="M274 34C254 70 260 120 278 158H222C230 120 224 74 204 40Z" fill="#c9604a" fill-opacity="0.45"/>
+    <path d="M258 44C246 80 250 120 260 156M240 42C232 80 234 120 242 156" stroke-width="0.7" opacity="0.6"/>
+    <!-- palco -->
+    <path d="M18 158H282V166H18Z" fill="#e6d8b4"/>
+    <path d="M30 166V172M270 166V172" stroke-width="0.8"/>
+    <!-- maschera della commedia -->
+    <g transform="translate(124 96) rotate(-10)">
+      <path d="M-22 -26C-22 -34 22 -34 22 -26C24 -4 14 22 0 24C-14 22 -24 -4 -22 -26Z" fill="#fbf4e2"/>
+      <path d="M-14 -10C-10 -14 -6 -14 -4 -10M4 -10C6 -14 10 -14 14 -10" stroke-width="1.1"/>
+      <path d="M-12 4C-6 16 6 16 12 4" stroke-width="1.3"/>
+      <circle cx="-14" cy="2" r="1" fill="${INK}"/><circle cx="14" cy="2" r="1" fill="${INK}"/>
+    </g>
+    <!-- maschera della tragedia -->
+    <g transform="translate(176 106) rotate(10)">
+      <path d="M-22 -26C-22 -34 22 -34 22 -26C24 -4 14 22 0 24C-14 22 -24 -4 -22 -26Z" fill="#ecdcb0"/>
+      <path d="M-15 -12C-11 -8 -7 -8 -4 -11M4 -11C7 -8 11 -8 15 -12" stroke-width="1.1"/>
+      <path d="M-11 14C-6 4 6 4 11 14" stroke-width="1.3"/>
+      <path d="M-10 -4C-10 0 -10 2 -9 4" stroke-width="0.8" opacity="0.7"/>
+    </g>
+    <!-- nastri -->
+    <path d="M122 70C112 58 110 52 118 48M178 80C188 68 192 62 186 56" stroke-width="0.9"/>
+    <!-- lampada -->
+    <path d="M150 38V50" stroke-width="0.9"/><circle cx="150" cy="54" r="3.2" fill="#f3d58b" stroke-width="0.9"/>
+  </g>
+</svg>`,
 };
 
 function disegnaIllustrazione(genere) {

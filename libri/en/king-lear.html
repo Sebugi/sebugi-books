@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#f5eddc">
+    <title>King Lear: famous quotes and quiz | Sebugi Books</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32.png">
+    <link rel="apple-touch-icon" href="../../favicon-192.png">
+    <meta name="description" content="The most famous lines of King Lear by William Shakespeare. Test how well you know the play with a 10-phrase quiz.">
+    <link rel="canonical" href="https://books.sebugi.com/libri/en/king-lear.html">
+    <link rel="alternate" hreflang="it" href="https://books.sebugi.com/libri/re-lear.html">
+    <link rel="alternate" hreflang="en" href="https://books.sebugi.com/libri/en/king-lear.html">
+    <meta property="og:title" content="King Lear: famous quotes and quiz">
+    <meta property="og:description" content="How well do you know King Lear? Recognise its lines among those of other great books.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://books.sebugi.com/libri/en/king-lear.html">
+    <link rel="stylesheet" href="/fonts/fonts.css">
+    <link rel="stylesheet" href="../../style.css?v=8">
+</head>
+<body data-libro="King Lear" data-titolo="King Lear" data-dati="../../data/frasi.json">
+
+    <div id="schermata-gioco">
+        <header>
+            <a id="link-home" href="index.html">&larr; Books</a>
+            <h1>Sebugi Books</h1>
+        </header>
+
+        <main>
+            <p class="lang-riga"><a class="lang-link" href="../re-lear.html" hreflang="it">Italiano</a></p>
+            <section class="presentazione">
+                <h2>King Lear</h2>
+                <p class="sotto">William Shakespeare, 1608 · Theatre</p>
+                <p>Old King Lear divides his kingdom among his daughters according to who declares the most love, and loses everything: power, reason, family. How many do you recognise? Ten phrases: some are from this play, others from other great books. Try to guess the book for each one, then reveal the answer and rate yourself honestly.</p>
+            </section>
+
+            <div id="quiz">
+                <div id="card-frase">
+                    <p id="info-frase">Phrase <span id="numero">1</span> of <span id="totale">10</span></p>
+                    <p id="testo-frase"></p>
+                </div>
+
+                <button id="btn-mostra-risposta" style="display:none;">Show answer</button>
+
+                <div id="risposta" style="display:none;">
+                    <div id="illustrazione"></div>
+                    <h2 id="titolo-risposta"></h2>
+                    <p id="autore-risposta"></p>
+                    <span id="genere-risposta"></span>
+                    <p id="nota-libro" class="nota-libro"></p>
+                    <p id="traduzione-risposta"></p>
+
+                    <div id="bottoni-anki">
+                        <button class="anki-btn" id="btn-corretto">Correct</button>
+                        <button class="anki-btn" id="btn-insicuro">Unsure</button>
+                        <button class="anki-btn" id="btn-sbagliato">Wrong</button>
+                        <button class="anki-btn" id="btn-nonricordo">I forgot it</button>
+                        <button class="anki-btn" id="btn-nonsapevo">I didn't know</button>
+                    </div>
+                </div>
+
+                <div id="fine" style="display:none;">
+                    <h2 id="punteggio"></h2>
+                    <p id="commento-fine"></p>
+                    <a class="bottone-principale" href="../../index.html?lang=en">Play with all 150 books</a>
+                    <button id="btn-ricomincia">Try again</button>
+                </div>
+
+                <aside id="statistiche" style="display:none;" aria-live="polite">
+                    <h3 id="stat-titolo"></h3>
+                    <div id="stat-grafico"></div>
+                </aside>
+            </div>
+
+            <section class="citazioni">
+                <h2>Famous quotes from King Lear</h2>
+                <p class="sotto">Original English text.</p>
+                <blockquote>
+                    <p class="en">How sharper than a serpent’s tooth it is To have a thankless child!</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">I am a man More sinn’d against than sinning.</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">Nothing will come of nothing: speak again.</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">Thou’lt come no more, Never, never, never, never, never!</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">Blow, winds, and crack your cheeks!</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">Poor naked wretches, wheresoe’er you are, That bide the pelting of this pitiless storm, How shall your houseless heads and unfed sides, Your loop’d and window’d raggedness, defend you From seasons such as these?</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">This is the excellent foppery of the world, that, when we are sick in fortune, often the surfeits of our own behaviour, we make guilty of our disasters the sun, the moon, and the stars.</p>
+                </blockquote>
+            </section>
+
+            <section class="invito">
+                <p>The full quiz has 150 classics: novels, theatre, adventure, crime, Gothic books, poems and essays in the original language, with famous quotes and many more phrases taken from the whole text.</p>
+                <a class="bottone-principale" href="../../index.html?lang=en">Try the full quiz</a>
+            </section>
+        </main>
+    </div>
+
+    <script src="../../illustrazioni.js?v=10"></script>
+    <script src="../../libro.js?v=11"></script>
+</body>
+</html>
