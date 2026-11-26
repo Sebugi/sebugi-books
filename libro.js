@@ -125,6 +125,7 @@ function mostraDomanda() {
     el('numero').textContent = indice + 1;
     el('totale').textContent = domande.length;
     el('testo-frase').textContent = testoDi(q);
+    el('testo-frase').classList.toggle('ha-virgolette', /["“”«»„]/.test(el('testo-frase').textContent));
     el('card-frase').style.display = 'block';
     el('btn-mostra-risposta').style.display = 'block';
     el('risposta').style.display = 'none';

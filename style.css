@@ -419,6 +419,8 @@ h2 {
 
 #testo-frase::before { content: "\201C"; color: var(--gold); }
 #testo-frase::after  { content: "\201D"; color: var(--gold); }
+/* frasi che hanno già le loro virgolette (dialoghi): niente virgolette in più */
+#testo-frase.ha-virgolette::before, #testo-frase.ha-virgolette::after { content: none; }
 
 #genere-risposta {
     display: inline-block;

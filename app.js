@@ -247,6 +247,7 @@ function prossima() {
     corrente = disponibili.pop();
     el('info-frase').textContent = testoDomanda();
     el('testo-frase').textContent = testoFrase(corrente);
+    segnaVirgolette(el('testo-frase'));
     el('illustrazione').innerHTML = '';
     el('risposta').style.display = 'none';
     el('btn-mostra-risposta').style.display = 'block';
@@ -335,6 +336,7 @@ function applicaLingua() {
         el('info-frase').textContent = testoDomanda();
         el('genere-risposta').textContent = etichetta('genere', corrente.genere);
         el('testo-frase').textContent = testoFrase(corrente);
+    segnaVirgolette(el('testo-frase'));
         el('traduzione-risposta').textContent =
             (el('risposta').style.display === 'block') ? originaleDi(corrente) : '';
     }
@@ -376,6 +378,9 @@ el('btn-cancella-voti').addEventListener('click', () => {
 });
 el('btn-mostra-risposta').addEventListener('click', mostraRisposta);
 CATEGORIE.forEach(([k, id]) => el(id).addEventListener('click', () => registra(k)));
+
+// Se la frase ha già le sue virgolette (un dialogo), la pagina non ne aggiunge altre intorno
+function segnaVirgolette(nodo) { nodo.classList.toggle('ha-virgolette', /["“”«»„]/.test(nodo.textContent)); }
 
 // Apertura diretta su un libro: books.sebugi.com/?libro=la-divina-commedia (anche &canto=inferno-5 per Dante)
 function apriDaIndirizzo() {
