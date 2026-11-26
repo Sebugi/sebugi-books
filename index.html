@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
     <link rel="apple-touch-icon" href="favicon-192.png">
     <link rel="stylesheet" href="/fonts/fonts.css">
-    <link rel="stylesheet" href="style.css?v=13">
+    <link rel="stylesheet" href="style.css?v=14">
 <script defer src="https://cloud.umami.is/script.js" data-website-id="86c03d25-c58e-427d-a332-2fb69da70300"></script>
 </head>
 <body>
@@ -40,6 +40,11 @@
                 </div>
 
                 <button type="button" id="btn-gioca-subito" data-i18n="giocaSubito">Inizia a giocare se non vuoi scegliere niente</button>
+
+                <button type="button" id="btn-dante-home" class="btn-dante-home">
+                    <strong data-i18n="danteHomeTitolo">Ripassa la Divina Commedia</strong>
+                    <span data-i18n="danteHomeSotto">Canto per canto: riconosci il canto e chi parla</span>
+                </button>
 
                 <p class="suggerimento" data-i18n="suggerimento">Tocca per scegliere nazione, autore o libro, anche più di uno. Se non scegli niente, ricevi domande a caso da tutti i libri.</p>
 
@@ -129,7 +134,63 @@
         </aside>
     </div>
 
+    <!-- RIPASSO DELLA DIVINA COMMEDIA: scelta dei canti -->
+    <div id="schermata-dante" class="schermata-dc" style="display:none;">
+        <header class="dc-header">
+            <button type="button" class="btn-indietro" id="btn-dante-home2" data-i18n="home">&larr; Home</button>
+            <h1>Sebugi Books</h1>
+        </header>
+        <main>
+            <h2 class="dc-titolo">La Divina Commedia</h2>
+            <p class="suggerimento" data-i18n="danteIntro">Scegli la cantica e il canto che devi ripassare. Se non scegli niente, ripassi tutti i versi.</p>
+            <div class="filtro-gruppo">
+                <label data-i18n="danteCantica">Cantica</label>
+                <div class="chips" id="dc-cantiche"></div>
+            </div>
+            <div class="filtro-gruppo">
+                <label data-i18n="danteCanto">Canto</label>
+                <div class="chips" id="dc-canti"></div>
+            </div>
+            <div class="filtro-gruppo">
+                <label data-i18n="danteDomanda">Domanda</label>
+                <div class="chips" id="dc-domande"></div>
+            </div>
+            <button type="button" class="dc-primario" id="btn-dante-inizia"></button>
+        </main>
+    </div>
+
+    <!-- RIPASSO DELLA DIVINA COMMEDIA: domande -->
+    <div id="schermata-dante-gioco" class="schermata-dc" style="display:none;">
+        <header class="dc-header">
+            <button type="button" class="btn-indietro" id="btn-dante-scelte" data-i18n="danteCanti">&larr; Canti</button>
+            <h1>Sebugi Books</h1>
+        </header>
+        <main>
+            <div id="dc-quiz">
+                <div class="dc-card">
+                    <p class="dc-num" id="dc-num"></p>
+                    <p class="dc-domanda" id="dc-domanda"></p>
+                    <p class="dc-verso" id="dc-verso"></p>
+                </div>
+                <div id="dc-opzioni"></div>
+                <button type="button" class="dc-nonso" id="dc-nonso" data-i18n="danteNonSo">Non lo so</button>
+                <div id="dc-dopo" style="display:none;">
+                    <p class="dc-esito" id="dc-esito"></p>
+                    <p class="dc-info" id="dc-info"></p>
+                    <button type="button" class="dc-primario" id="dc-avanti"></button>
+                </div>
+            </div>
+            <div id="dc-fine" style="display:none;">
+                <h2 id="dc-punti"></h2>
+                <p class="suggerimento" id="dc-commento"></p>
+                <button type="button" class="dc-primario" id="dc-rifai"></button>
+                <button type="button" class="dc-secondario" id="dc-altri-canti" data-i18n="danteAltri">Scegli altri canti</button>
+            </div>
+        </main>
+    </div>
+
     <script src="illustrazioni.js?v=10"></script>
-    <script src="app.js?v=17"></script>
+    <script src="app.js?v=18"></script>
+    <script src="dante.js?v=1"></script>
 </body>
 </html>

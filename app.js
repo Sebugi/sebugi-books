@@ -23,7 +23,20 @@ const TESTI = {
         finite:'Hai visto tutte le frasi! Ricomincia.', nessuna:'Nessuna frase trovata con queste scelte! Prova a togliere qualche filtro.',
         statTitolo:'Le tue risposte', statN:'{n} su {t}',
         ripassa:'Ripassa le tue risposte', ripassaNota:'Scegli quali frasi rivedere.', cancellaVoti:'Cancella le mie risposte',
-        confermaCancella:'Vuoi cancellare tutte le tue risposte salvate? Non si può annullare.', nessunaCat:'Non ci sono frasi in questa categoria.'},
+        confermaCancella:'Vuoi cancellare tutte le tue risposte salvate? Non si può annullare.', nessunaCat:'Non ci sono frasi in questa categoria.',
+        danteHomeTitolo:'Ripassa la Divina Commedia', danteHomeSotto:'Canto per canto: riconosci il canto e chi parla',
+        danteIntro:'Scegli la cantica e il canto che devi ripassare. Se non scegli niente, ripassi tutti i versi.',
+        danteCantica:'Cantica', danteCanto:'Canto', danteDomanda:'Domanda', danteCanti:'← Canti',
+        danteInizia:'Inizia il ripasso · {n} versi', danteNessuno:'Nessun verso con queste scelte.',
+        dqCanto:'Da quale canto?', dqCantoDi:'Da quale canto {cantica}?', dqChi:'Chi parla?', dqCantica:'Da quale cantica?',
+        dqCantoBreve:'Quale canto?', dqChiBreve:'Chi parla?', dqCanticaBreve:'Quale cantica?',
+        danteNum:'Verso {i} di {n}', danteNonSo:'Non lo so', danteEsatto:'Esatto!', danteEra:'Era: {r}',
+        danteInfo:'{cantica}, canto {canto}, {versi} · Chi parla: {chi}', danteV:'v. {v}', danteVV:'vv. {v}',
+        danteCantoN:'Canto {n}', avantiD:'Avanti', risultatoD:'Vedi il risultato',
+        dantePunti:'Ne hai riconosciuti {g} su {n}',
+        danteAlto:'Ottimo ripasso: questi canti li conosci bene.', danteMedio:'Buon ripasso. Rifai gli sbagliati per fissarli.',
+        danteBasso:'Si impara ripassando: rifai i versi sbagliati e vedrai la differenza.',
+        danteRifaiSbagliati:'Ripassa i {n} sbagliati', danteRifai:'Ripassa di nuovo', danteAltri:'Scegli altri canti'},
     en: {sottotitolo:'Recognise the book from its words', scegli:'Choose how to play', livello:'Level',
         suggerimento:"Tap to pick a country, an author or a book, as many as you like. If you pick nothing, you get random questions from all the books.",
         tutteFrasi:'All phrases', celebri:'Famous quotes', resto:'Rest of the book', genere:'Genre', nazione:'Country', autore:'Author',
@@ -37,7 +50,20 @@ const TESTI = {
         finite:"You've seen all the phrases! Start again.", nessuna:'No phrases found with these choices!',
         statTitolo:'Your answers', statN:'{n} of {t}',
         ripassa:'Review your answers', ripassaNota:'Choose which phrases to see again.', cancellaVoti:'Delete my answers',
-        confermaCancella:'Delete all your saved answers? This cannot be undone.', nessunaCat:'There are no phrases in this category.'},
+        confermaCancella:'Delete all your saved answers? This cannot be undone.', nessunaCat:'There are no phrases in this category.',
+        danteHomeTitolo:'Study the Divine Comedy', danteHomeSotto:'Canto by canto, in the original Italian: name the canto and the speaker',
+        danteIntro:'Choose the part and the canto you need to study. If you choose nothing, you study all the verses.',
+        danteCantica:'Part', danteCanto:'Canto', danteDomanda:'Question', danteCanti:'← Cantos',
+        danteInizia:'Start · {n} verses', danteNessuno:'No verses with these choices.',
+        dqCanto:'Which canto?', dqCantoDi:'Which canto {cantica}?', dqChi:'Who is speaking?', dqCantica:'Which part?',
+        dqCantoBreve:'Which canto?', dqChiBreve:'Who speaks?', dqCanticaBreve:'Which part?',
+        danteNum:'Verse {i} of {n}', danteNonSo:"I don't know", danteEsatto:'Correct!', danteEra:'It was: {r}',
+        danteInfo:'{cantica}, canto {canto}, {versi} · Speaker: {chi}', danteV:'line {v}', danteVV:'lines {v}',
+        danteCantoN:'Canto {n}', avantiD:'Next', risultatoD:'See your score',
+        dantePunti:'You got {g} out of {n}',
+        danteAlto:'Great work: you know these cantos well.', danteMedio:'Good work. Redo the wrong ones to fix them in your mind.',
+        danteBasso:'You learn by reviewing: redo the wrong verses and you will see the difference.',
+        danteRifaiSbagliati:'Review the {n} wrong ones', danteRifai:'Review again', danteAltri:'Choose other cantos'},
     de: {sottotitolo:'Erkenne das Buch an seinen Worten', scegli:'Wähle, wie du spielen möchtest', livello:'Stufe',
         suggerimento:'Tippe, um Land, Autor oder Buch zu wählen, auch mehrere. Wenn du nichts wählst, bekommst du zufällige Fragen aus allen Büchern.',
         tutteFrasi:'Alle Sätze', celebri:'Berühmte Zitate', resto:'Rest des Buches', genere:'Genre', nazione:'Land', autore:'Autor',
@@ -51,7 +77,20 @@ const TESTI = {
         finite:'Du hast alle Sätze gesehen! Fang neu an.', nessuna:'Keine Sätze für diese Auswahl gefunden!',
         statTitolo:'Deine Antworten', statN:'{n} von {t}',
         ripassa:'Deine Antworten wiederholen', ripassaNota:'Wähle, welche Sätze du noch einmal sehen willst.', cancellaVoti:'Meine Antworten löschen',
-        confermaCancella:'Alle gespeicherten Antworten löschen? Das kann nicht rückgängig gemacht werden.', nessunaCat:'In dieser Kategorie gibt es keine Sätze.'}
+        confermaCancella:'Alle gespeicherten Antworten löschen? Das kann nicht rückgängig gemacht werden.', nessunaCat:'In dieser Kategorie gibt es keine Sätze.',
+        danteHomeTitolo:'Die Göttliche Komödie wiederholen', danteHomeSotto:'Gesang für Gesang, im italienischen Original: Gesang und Sprecher erkennen',
+        danteIntro:'Wähle den Teil und den Gesang, den du wiederholen willst. Wenn du nichts wählst, wiederholst du alle Verse.',
+        danteCantica:'Teil', danteCanto:'Gesang', danteDomanda:'Frage', danteCanti:'← Gesänge',
+        danteInizia:'Start · {n} Verse', danteNessuno:'Keine Verse für diese Auswahl.',
+        dqCanto:'Aus welchem Gesang?', dqCantoDi:'Aus welchem Gesang {cantica}?', dqChi:'Wer spricht?', dqCantica:'Aus welchem Teil?',
+        dqCantoBreve:'Welcher Gesang?', dqChiBreve:'Wer spricht?', dqCanticaBreve:'Welcher Teil?',
+        danteNum:'Vers {i} von {n}', danteNonSo:'Weiß ich nicht', danteEsatto:'Richtig!', danteEra:'Richtig war: {r}',
+        danteInfo:'{cantica}, Gesang {canto}, {versi} · Sprecher: {chi}', danteV:'V. {v}', danteVV:'V. {v}',
+        danteCantoN:'Gesang {n}', avantiD:'Weiter', risultatoD:'Ergebnis ansehen',
+        dantePunti:'{g} von {n} richtig',
+        danteAlto:'Sehr gut: diese Gesänge kennst du.', danteMedio:'Gut. Wiederhole die falschen, um sie zu festigen.',
+        danteBasso:'Man lernt durch Wiederholen: mach die falschen Verse noch einmal.',
+        danteRifaiSbagliati:'Die {n} falschen wiederholen', danteRifai:'Noch einmal', danteAltri:'Andere Gesänge wählen'}
 };
 let ui = 'it';
 try { ui = localStorage.getItem('cgb-ui') || 'it'; } catch (e) {}
@@ -85,14 +124,17 @@ const CATEGORIE = [
     ['nonricordavo', 'btn-nonricordo'], ['nonsapevo', 'btn-nonsapevo']
 ];
 
-function mostraHome() {
-    el('schermata-home').style.display = 'block';
-    el('schermata-gioco').style.display = 'none';
+const SCHERMATE = ['schermata-home', 'schermata-gioco', 'schermata-dante', 'schermata-dante-gioco'];
+function mostraSchermata(id) {
+    SCHERMATE.forEach(s => { const n = el(s); if (n) n.style.display = s === id ? 'block' : 'none'; });
+    window.scrollTo(0, 0);
 }
-function mostraGioco() {
-    el('schermata-home').style.display = 'none';
-    el('schermata-gioco').style.display = 'block';
-}
+function mostraHome() { mostraSchermata('schermata-home'); }
+function mostraGioco() { mostraSchermata('schermata-gioco'); }
+
+// Nome del libro nell'indirizzo: lo stesso usato per le pagine dei libri (libri/<nome>.html)
+const slug = t => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
+    .replace(/[’']/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
 
 // ---------- Scelte a bottoni (genere, autore, libro) ----------
 const basePerLivello = () => {
@@ -335,10 +377,29 @@ el('btn-cancella-voti').addEventListener('click', () => {
 el('btn-mostra-risposta').addEventListener('click', mostraRisposta);
 CATEGORIE.forEach(([k, id]) => el(id).addEventListener('click', () => registra(k)));
 
+// Apertura diretta su un libro: books.sebugi.com/?libro=la-divina-commedia (anche &canto=inferno-5 per Dante)
+function apriDaIndirizzo() {
+    let p;
+    try { p = new URLSearchParams(location.search); } catch (e) { return; }
+    const voluto = (p.get('libro') || '').toLowerCase();
+    if (!voluto) return;
+    const voce = tutte.find(x => slug(x.libro) === voluto);
+    if (!voce) return;
+    if (tutte.some(x => x.libro === voce.libro && x.cantica) && typeof apriDante === 'function') {
+        apriDante(p.get('canto') || '');
+        return;
+    }
+    sel.autore.add(voce.autore);
+    sel.libro.add(voce.libro);
+    aggiornaScelte();
+    avviaGioco();
+}
+
 async function avvio() {
     const r = await fetch('data/frasi.json');
     tutte = await r.json();
     applicaLingua();
+    apriDaIndirizzo();
 }
 applicaLingua();
 avvio();
