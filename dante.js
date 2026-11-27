@@ -270,11 +270,13 @@ function aiutoDante() {
             if (i !== giusto) [...box.children].forEach(x => { if (x.textContent === c.momenti[giusto].t) x.classList.add('ok'); });
             el('dc-aiuto-esito').textContent = T(i === giusto ? 'pdGiusto' : 'pdNo');
             el('dc-aiuto-esito').style.display = 'block';
+            el('dc-aiuto-indietro').style.display = 'none';
             schedaDante();
         });
         box.appendChild(btn);
     });
     el('dc-aiuto-esito').style.display = 'none';
+    el('dc-aiuto-indietro').style.display = 'block';
     el('dc-aiuto').style.display = 'block';
 }
 
@@ -321,6 +323,11 @@ el('dc-avanti').addEventListener('click', () => {
 el('dc-nonso').addEventListener('click', () => rispondiDante(null, null));
 el('dc-mostra').addEventListener('click', () => { schedaDante(); el('dc-scheda').scrollIntoView({ behavior: 'smooth', block: 'start' }); });
 el('dc-aiuto-btn').addEventListener('click', aiutoDante);
+el('dc-aiuto-indietro').addEventListener('click', () => {
+    el('dc-aiuto').style.display = 'none';
+    el('dc-pd').style.display = 'block';
+    window.scrollTo(0, 0);
+});
 el('dc-sapevo').addEventListener('click', () => valutaDante('corretto'));
 el('dc-piumeno').addEventListener('click', () => valutaDante('insicuro'));
 el('dc-nonsapevo').addEventListener('click', () => valutaDante('nonsapevo'));

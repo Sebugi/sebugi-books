@@ -82,6 +82,7 @@ h1{font-size:1.7rem;line-height:1.2;margin:.2em 0 .3em;text-align:center}
 <p class="aiuto-dom" id="aiutodom"></p>
 <div id="opzioni"></div>
 <p class="esito" id="esito"></p>
+<button class="sec" id="indietro" type="button">← Torna alla domanda</button>
 </div>
 <div class="scheda" id="scheda" hidden>
 <p class="etich">La situazione</p>
@@ -154,12 +155,12 @@ function aiuto(){
       if(fatto)return;fatto=true;
       [].forEach.call(box.children,function(z){z.disabled=true;if(+z.getAttribute("data-k")===giusto)z.className="opz ok"});
       if(k!==giusto)b.className="opz no";
-      el("esito").textContent=k===giusto?"Esatto!":"Non era questo: guarda la risposta.";
+      el("indietro").hidden=true;el("esito").textContent=k===giusto?"Esatto!":"Non era questo: guarda la risposta.";
       scheda();
     };
     box.appendChild(b);
   });
-  el("bottoni").hidden=true;el("boxaiuto").hidden=false;
+  el("bottoni").hidden=true;el("indietro").hidden=false;el("boxaiuto").hidden=false;
 }
 function valuta(n){
   voti[n]++;i++;
@@ -173,6 +174,7 @@ function valuta(n){
 }
 el("mostra").onclick=scheda;
 el("aiuto").onclick=aiuto;
+el("indietro").onclick=function(){el("boxaiuto").hidden=true;el("bottoni").hidden=false;window.scrollTo(0,0)};
 [].forEach.call(document.querySelectorAll(".voto"),function(b){b.onclick=function(){valuta(+b.getAttribute("data-v"))}});
 el("ripeti").onclick=function(){el("fine").hidden=true;el("quiz").hidden=false;prepara();mostra()};
 el("start").onclick=function(){el("intro").hidden=true;el("quiz").hidden=false;window.scrollTo(0,0)};
