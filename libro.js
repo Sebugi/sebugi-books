@@ -24,7 +24,7 @@ const TXT = {
         dMedio: 'Buon risultato. Nell\'app ripassi canto per canto e rifai i versi sbagliati.',
         dBasso: 'Si impara ripassando: nell\'app scegli il canto che devi portare e ripassi i suoi versi.',
         dPausaTitolo: 'Quattro versi fatti!',
-        dPausa: 'Puoi continuare con gli altri 6 versi del test, oppure passare all\'app: lì ripassi la Divina Commedia canto per canto, con 141 versi da riconoscere, le domande su canto, cantica e chi parla, e il ripasso dei versi sbagliati.',
+        dPausa: 'Puoi continuare con gli altri 6 versi del test, oppure passare all\'app: lì ripassi la Divina Commedia canto per canto, con il testo completo di 18 canti, le domande su cosa viene prima e cosa viene dopo e su chi parla, e il ripasso dei versi da rivedere.',
         dContinua: 'Continua con gli altri 6 versi', dApp: 'Vai all\'app della Divina Commedia', dAppFine: 'Ripassa la Divina Commedia nell\'app'
     },
     en: {
@@ -44,7 +44,7 @@ const TXT = {
         dMedio: 'Good score. In the app you can study canto by canto and redo the verses you missed.',
         dBasso: 'You learn by reviewing: in the app you choose the canto you need and study its verses.',
         dPausaTitolo: 'Four verses done!',
-        dPausa: 'You can carry on with the other 6 verses of the test, or move to the app: there you study the Divine Comedy canto by canto, with 141 verses to recognise in the original Italian and questions on canto, part and speaker.',
+        dPausa: 'You can carry on with the other 6 verses of the test, or move to the app: there you study the Divine Comedy canto by canto, with the full text of 18 cantos in the original Italian and questions on what comes before and after and on who speaks.',
         dContinua: 'Continue with the other 6 verses', dApp: 'Open the Divine Comedy in the app', dAppFine: 'Study the Divine Comedy in the app'
     }
 }[LANG];
