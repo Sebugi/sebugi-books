@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#f5eddc">
-<title>Ripassa il quinto canto dell'Inferno: riconosci i versi | Sebugi Books</title>
+<title>Ripassa il quinto canto dell'Inferno: cosa viene prima e cosa viene dopo | Sebugi Books</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
     <link rel="apple-touch-icon" href="../favicon-192.png">
-<meta name="description" content="Cinque versi del quinto canto dell'Inferno: riconosci a che punto del canto si trovano e chi parla. Ripasso gratuito, senza registrazione.">
+<meta name="description" content="Cinque versi del quinto canto dell'Inferno: sai dire cosa viene prima e cosa viene dopo? Ripasso gratuito, senza registrazione.">
 <link rel="canonical" href="https://books.sebugi.com/landing/inferno-5.html">
 <meta name="robots" content="noindex">
 <style>
@@ -41,6 +41,18 @@ h1{font-size:1.7rem;line-height:1.2;margin:.2em 0 .3em;text-align:center}
 .intro ul{list-style:none;padding:0;margin:0 0 14px;color:#6b5b47;font-size:.95rem}
 .start{display:block;width:100%;padding:20px 14px;margin-top:6px;font:inherit;font-weight:bold;font-size:1.5rem;color:#fff;background:linear-gradient(#5d8a4a,#46703a);border:0;border-radius:12px;cursor:pointer;box-shadow:0 3px 0 #2f5226}
 .start:active{transform:translateY(2px);box-shadow:0 1px 0 #2f5226}
+.sotto2{font-size:.92rem;color:#6b5b47;margin:0 0 14px}
+.sec{display:block;width:100%;padding:13px;margin-top:10px;font:inherit;font-size:1rem;text-align:center;color:#3b2f22;background:#fff;border:1px solid #cdb98f;border-radius:8px;cursor:pointer}
+.aiuto-dom{font-style:italic;color:#6b5b47;margin:16px 0 4px}
+.scheda{margin-top:16px;border-top:1px solid #d9c9a8;padding-top:12px}
+.etich{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:#8a6a35;font-weight:bold;margin:12px 0 2px}
+.etich span{font-weight:normal;letter-spacing:0;text-transform:none;color:#7a6a55}
+.sit{margin:0 0 4px}
+.ctx{font-style:italic;white-space:pre-line;margin:0 0 4px;color:#4b3d2c}
+.voti{display:flex;gap:8px;margin-top:6px}
+.voto{flex:1;padding:12px 4px;font:inherit;font-size:.95rem;font-weight:bold;border-radius:8px;cursor:pointer;color:#3b2f22;border:1px solid}
+.v1{background:#dcebd2;border-color:#6a9a52}.v2{background:#f3e6c8;border-color:#b8913f}.v3{background:#f4d9d3;border-color:#b9604f}
+.dettaglio{text-align:center;color:#6b5b47;font-size:.92rem;margin:0 0 8px}
 </style>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="86c03d25-c58e-427d-a332-2fb69da70300"></script>
 </head>
@@ -48,32 +60,47 @@ h1{font-size:1.7rem;line-height:1.2;margin:.2em 0 .3em;text-align:center}
 <div class="wrap">
 <img src="../logo.png" alt="Sebugi" width="150" style="display:block;margin:0 auto 6px;max-width:50%;height:auto">
 <h1>Devi ripassare il quinto canto dell'Inferno?</h1>
-<p class="sotto">Cinque versi del canto: riconosci a che punto si trovano.</p>
+<p class="sotto">Cinque versi del canto: sai dire cosa viene prima e cosa viene dopo?</p>
 
 <div class="card intro" id="intro">
 <h2>Come funziona</h2>
-<p>Leggi cinque versi del quinto canto dell'Inferno e indovina se vengono dall'inizio, dalla metà o dalla fine del canto. Ogni tanto la domanda è su chi parla.</p>
-<ul><li>Gratis e senza registrazione</li><li>Due minuti, anche dal telefono</li><li>Dopo ogni risposta vedi i numeri dei versi e chi parla</li></ul>
+<p>Leggi cinque versi del quinto canto dell'Inferno e prova a dire cosa viene prima e cosa viene dopo, a parole tue o con i versi. Se non ti viene in mente, chiedi un aiuto.</p>
+<ul><li>Gratis e senza registrazione</li><li>Due minuti, anche dal telefono</li><li>Dopo ogni verso vedi la situazione, i versi prima e dopo e chi parla</li></ul>
 <button class="start" id="start" type="button" data-umami-event="canto-inizio-test" data-umami-event-canto="inferno-5">Inizia il ripasso</button>
 </div>
 
 <div class="card" id="quiz" hidden>
 <p class="num">Inferno, canto V · verso <span id="n">1</span> di 5</p>
-<p class="domanda" id="domanda"></p>
+<p class="domanda">Cosa viene prima e cosa viene dopo?</p>
 <p class="frase" id="frase"></p>
+<p class="sotto2">Rispondi a parole tue o, se te li ricordi, con i versi</p>
+<div id="bottoni">
+<button class="avanti" id="mostra" type="button">Mostra la risposta</button>
+<button class="sec" id="aiuto" type="button">Voglio un aiuto</button>
+</div>
+<div id="boxaiuto" hidden>
+<p class="aiuto-dom" id="aiutodom"></p>
 <div id="opzioni"></div>
-<button class="nonso" id="nonso" type="button">Non lo so</button>
-<div id="dopo" hidden>
 <p class="esito" id="esito"></p>
-<p class="info" id="info"></p>
-<button class="avanti" id="avanti" type="button">Avanti</button>
+</div>
+<div class="scheda" id="scheda" hidden>
+<p class="etich">La situazione</p>
+<p class="sit" id="sit"></p>
+<p class="etich">Prima <span id="npri"></span></p>
+<p class="ctx" id="pri"></p>
+<p class="etich">Dopo <span id="ndop"></span></p>
+<p class="ctx" id="dop"></p>
+<p class="info" id="info" style="margin-top:12px"></p>
+<p class="etich" style="text-align:center;margin-top:16px">Come è andata?</p>
+<div class="voti"><button class="voto v1" type="button" data-v="2">Lo sapevo</button><button class="voto v2" type="button" data-v="1">Più o meno</button><button class="voto v3" type="button" data-v="0">Non lo sapevo</button></div>
 </div>
 </div>
 
 <div class="card" id="fine" hidden>
 <p class="punti" id="punti"></p>
+<p class="dettaglio" id="dettaglio"></p>
 <p id="commento" style="text-align:center"></p>
-<p style="text-align:center">Nell'app ripassi i versi più importanti del quinto canto dell'Inferno e gli altri canti della Divina Commedia. Gratis e senza registrazione.</p>
+<p style="text-align:center">Nell'app ripassi tutto il quinto canto dell'Inferno e gli altri canti della Divina Commedia. Gratis e senza registrazione.</p>
 <a class="cta" href="https://books.sebugi.com/?libro=la-divina-commedia&amp;canto=inferno-5&amp;lang=it" id="cta" data-umami-event="canto-entra-app" data-umami-event-canto="inferno-5">Ripassa il quinto canto dell'Inferno</a>
 <button class="avanti" id="ripeti" type="button" style="background:#fff;color:#3b2f22;border:1px solid #cdb98f">Rifai il quiz</button>
 </div>
@@ -82,60 +109,71 @@ h1{font-size:1.7rem;line-height:1.2;margin:.2em 0 .3em;text-align:center}
 </div>
 <script>
 var CANTO="inferno-5";
-var D={"V":[{"t":"Stavvi Minòs orribilmente, e ringhia: / essamina le colpe ne l'intrata; / giudica e manda secondo ch'avvinghia.","v":"4-6","p":"Dante","z":0,"a":0},{"t":"La bufera infernal, che mai non resta, / mena li spirti con la sua rapina; / voltando e percotendo li molesta.","v":"31-33","p":"Dante","z":0,"a":0},{"t":"Siede la terra dove nata fui / su la marina dove 'l Po discende / per aver pace co' seguaci sui.","v":"97-99","p":"Francesca","z":2,"a":1},{"t":"Amor, ch'al cor gentil ratto s'apprende, / prese costui de la bella persona / che mi fu tolta; e 'l modo ancor m'offende.","v":"100-102","p":"Francesca","z":2,"a":0},{"t":"Amor, ch'a nullo amato amar perdona, / mi prese del costui piacer sì forte, / che, come vedi, ancor non m'abbandona.","v":"103-105","p":"Francesca","z":2,"a":0},{"t":"Amor condusse noi ad una morte. / Caina attende chi a vita ci spense.","v":"106-107","p":"Francesca","z":2,"a":0},{"t":"Nessun maggior dolore / che ricordarsi del tempo felice / ne la miseria; e ciò sa 'l tuo dottore.","v":"121-123","p":"Francesca","z":2,"a":0},{"t":"Noi leggiavamo un giorno per diletto / di Lancialotto come amor lo strinse; / soli eravamo e sanza alcun sospetto.","v":"127-129","p":"Francesca","z":2,"a":0},{"t":"Galeotto fu 'l libro e chi lo scrisse: / quel giorno più non vi leggemmo avante.","v":"137-138","p":"Francesca","z":2,"a":0},{"t":"Io venni men così com'io morisse. / E caddi come corpo morto cade.","v":"141-142","p":"Dante","z":2,"a":0},{"t":"La prima di color di cui novelle / tu vuo' saper, mi disse quelli allotta, / fu imperadrice di molte favelle.","v":"52-54","p":"Virgilio","z":1,"a":0},{"t":"Parlerei a quei due che 'nsieme vanno, / e paion sì al vento esser leggeri.","v":"74-75","p":"Dante","z":1,"a":0},{"t":"O animal grazïoso e benigno / che visitando vai per l'aere perso / noi che tignemmo il mondo di sanguigno…","v":"88-90","p":"Francesca","z":1,"a":0}],"L":142,"altri":["Caronte","Cavalcante","Farinata","Frate Alberigo","La scritta sulla porta dell'Inferno","Pier della Vigna","Ugolino","Ulisse","Un suicida fiorentino"]};
-var PUNTI=["All'inizio","A metà","Alla fine"];
+var D={"V":[{"t":"Stavvi Minòs orribilmente, e ringhia: / essamina le colpe ne l'intrata; / giudica e manda secondo ch'avvinghia.","v":"4-6","p":"Dante"},{"t":"La bufera infernal, che mai non resta, / mena li spirti con la sua rapina; / voltando e percotendo li molesta.","v":"31-33","p":"Dante"},{"t":"Siede la terra dove nata fui / su la marina dove 'l Po discende / per aver pace co' seguaci sui.","v":"97-99","p":"Francesca"},{"t":"Amor, ch'al cor gentil ratto s'apprende, / prese costui de la bella persona / che mi fu tolta; e 'l modo ancor m'offende.","v":"100-102","p":"Francesca"},{"t":"Amor, ch'a nullo amato amar perdona, / mi prese del costui piacer sì forte, / che, come vedi, ancor non m'abbandona.","v":"103-105","p":"Francesca"},{"t":"Amor condusse noi ad una morte. / Caina attende chi a vita ci spense.","v":"106-107","p":"Francesca"},{"t":"Nessun maggior dolore / che ricordarsi del tempo felice / ne la miseria; e ciò sa 'l tuo dottore.","v":"121-123","p":"Francesca"},{"t":"Noi leggiavamo un giorno per diletto / di Lancialotto come amor lo strinse; / soli eravamo e sanza alcun sospetto.","v":"127-129","p":"Francesca"},{"t":"Galeotto fu 'l libro e chi lo scrisse: / quel giorno più non vi leggemmo avante.","v":"137-138","p":"Francesca"},{"t":"Io venni men così com'io morisse. / E caddi come corpo morto cade.","v":"141-142","p":"Dante"},{"t":"La prima di color di cui novelle / tu vuo' saper, mi disse quelli allotta, / fu imperadrice di molte favelle.","v":"52-54","p":"Virgilio"},{"t":"Parlerei a quei due che 'nsieme vanno, / e paion sì al vento esser leggeri.","v":"74-75","p":"Dante"},{"t":"O animal grazïoso e benigno / che visitando vai per l'aere perso / noi che tignemmo il mondo di sanguigno…","v":"88-90","p":"Francesca"}],"versi":["Così discesi del cerchio primaio","giù nel secondo, che men loco cinghia","e tanto più dolor, che punge a guaio.","Stavvi Minòs orribilmente, e ringhia:","essamina le colpe ne l'intrata;","giudica e manda secondo ch'avvinghia.","Dico che quando l'anima mal nata","li vien dinanzi, tutta si confessa;","e quel conoscitor de le peccata","vede qual loco d'inferno è da essa;","cignesi con la coda tante volte","quantunque gradi vuol che giù sia messa.","Sempre dinanzi a lui ne stanno molte:","vanno a vicenda ciascuna al giudizio,","dicono e odono e poi son giù volte.","\"O tu che vieni al doloroso ospizio\",","disse Minòs a me quando mi vide,","lasciando l'atto di cotanto offizio,","\"guarda com'entri e di cui tu ti fide;","non t'inganni l'ampiezza de l'intrare!\".","E 'l duca mio a lui: \"Perché pur gride?","Non impedir lo suo fatale andare:","vuolsi così colà dove si puote","ciò che si vuole, e più non dimandare\".","Or incomincian le dolenti note","a farmisi sentire; or son venuto","là dove molto pianto mi percuote.","Io venni in loco d'ogne luce muto,","che mugghia come fa mar per tempesta,","se da contrari venti è combattuto.","La bufera infernal, che mai non resta,","mena li spirti con la sua rapina;","voltando e percotendo li molesta.","Quando giungon davanti a la ruina,","quivi le strida, il compianto, il lamento;","bestemmian quivi la virtù divina.","Intesi ch'a così fatto tormento","enno dannati i peccator carnali,","che la ragion sommettono al talento.","E come li stornei ne portan l'ali","nel freddo tempo, a schiera larga e piena,","così quel fiato li spiriti mali","di qua, di là, di giù, di sù li mena;","nulla speranza li conforta mai,","non che di posa, ma di minor pena.","E come i gru van cantando lor lai,","faccendo in aere di sé lunga riga,","così vid'io venir, traendo guai,","ombre portate da la detta briga;","per ch'i' dissi: \"Maestro, chi son quelle","genti che l'aura nera sì gastiga?\".","\"La prima di color di cui novelle","tu vuo' saper\", mi disse quelli allotta,","\"fu imperadrice di molte favelle.","A vizio di lussuria fu sì rotta,","che libito fé licito in sua legge,","per tòrre il biasmo in che era condotta.","Ell'è Semiramìs, di cui si legge","che succedette a Nino e fu sua sposa:","tenne la terra che 'l Soldan corregge.","L'altra è colei che s'ancise amorosa,","e ruppe fede al cener di Sicheo;","poi è Cleopatràs lussurïosa.","Elena vedi, per cui tanto reo","tempo si volse, e vedi 'l grande Achille,","che con amore al fine combatteo.","Vedi Parìs, Tristano\"; e più di mille","ombre mostrommi e nominommi a dito,","ch'amor di nostra vita dipartille.","Poscia ch'io ebbi 'l mio dottore udito","nomar le donne antiche e ' cavalieri,","pietà mi giunse, e fui quasi smarrito.","I' cominciai: \"Poeta, volontieri","parlerei a quei due che 'nsieme vanno,","e paion sì al vento esser leggeri\".","Ed elli a me: \"Vedrai quando saranno","più presso a noi; e tu allor li priega","per quello amor che i mena, ed ei verranno\".","Sì tosto come il vento a noi li piega,","mossi la voce: \"O anime affannate,","venite a noi parlar, s'altri nol niega!\".","Quali colombe dal disio chiamate","con l'ali alzate e ferme al dolce nido","vegnon per l'aere, dal voler portate;","cotali uscir de la schiera ov'è Dido,","a noi venendo per l'aere maligno,","sì forte fu l'affettüoso grido.","\"O animal grazïoso e benigno","che visitando vai per l'aere perso","noi che tignemmo il mondo di sanguigno,","se fosse amico il re de l'universo,","noi pregheremmo lui de la tua pace,","poi c' hai pietà del nostro mal perverso.","Di quel che udire e che parlar vi piace,","noi udiremo e parleremo a voi,","mentre che 'l vento, come fa, ci tace.","Siede la terra dove nata fui","su la marina dove 'l Po discende","per aver pace co' seguaci sui.","Amor, ch'al cor gentil ratto s'apprende,","prese costui de la bella persona","che mi fu tolta; e 'l modo ancor m'offende.","Amor, ch'a nullo amato amar perdona,","mi prese del costui piacer sì forte,","che, come vedi, ancor non m'abbandona.","Amor condusse noi ad una morte.","Caina attende chi a vita ci spense\".","Queste parole da lor ci fuor porte.","Quand'io intesi quell'anime offense,","china' il viso, e tanto il tenni basso,","fin che 'l poeta mi disse: \"Che pense?\".","Quando rispuosi, cominciai: \"Oh lasso,","quanti dolci pensier, quanto disio","menò costoro al doloroso passo!\".","Poi mi rivolsi a loro e parla' io,","e cominciai: \"Francesca, i tuoi martìri","a lagrimar mi fanno tristo e pio.","Ma dimmi: al tempo d'i dolci sospiri,","a che e come concedette amore","che conosceste i dubbiosi disiri?\".","E quella a me: \"Nessun maggior dolore","che ricordarsi del tempo felice","ne la miseria; e ciò sa 'l tuo dottore.","Ma s'a conoscer la prima radice","del nostro amor tu hai cotanto affetto,","dirò come colui che piange e dice.","Noi leggiavamo un giorno per diletto","di Lancialotto come amor lo strinse;","soli eravamo e sanza alcun sospetto.","Per più fïate li occhi ci sospinse","quella lettura, e scolorocci il viso;","ma solo un punto fu quel che ci vinse.","Quando leggemmo il disïato riso","esser basciato da cotanto amante,","questi, che mai da me non fia diviso,","la bocca mi basciò tutto tremante.","Galeotto fu 'l libro e chi lo scrisse:","quel giorno più non vi leggemmo avante\".","Mentre che l'uno spirto questo disse,","l'altro piangëa; sì che di pietade","io venni men così com'io morisse.","E caddi come corpo morto cade."],"M":[[1,15,"Dante scende nel secondo cerchio, dove Minosse giudica le anime attorcigliando la coda."],[16,24,"Minosse avverte Dante; Virgilio lo zittisce come aveva fatto con Caronte."],[25,51,"La bufera infernale trascina i lussuriosi, che passano come stormi di storni e di gru."],[52,72,"Virgilio nomina le anime famose: Semiramide, Didone, Cleopatra, Elena, Achille, Paride, Tristano."],[73,87,"Dante chiama due anime che vanno insieme e loro arrivano come colombe al nido."],[88,108,"Francesca si presenta e racconta come l'amore ha legato lei e Paolo fino alla morte."],[109,120,"Dante, commosso, chiede a Francesca come è nato il loro amore."],[121,142,"Francesca racconta la lettura di Lancillotto e il bacio; Paolo piange e Dante sviene."]]};
+var L=D.versi.length;
 function mescola(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
 function el(x){return document.getElementById(x)}
-var dom=[],i=0,punti=0,chiuso=false;
-function parlanti(){var o={};D.V.forEach(function(v){o[v.p]=1});return Object.keys(o)}
+function da(v){return parseInt(v.split("-")[0],10)}
+function a(v){var p=v.split("-");return parseInt(p[p.length-1],10)}
+function mom(n){for(var k=0;k<D.M.length;k++)if(D.M[k][0]<=n&&n<=D.M[k][1])return k;return 0}
+function nv(x,y){return x===y?"(v. "+x+")":"(vv. "+x+"-"+y+")"}
+var dom=[],i=0,voti=[0,0,0],fatto=false;
 function prepara(){
-  var chi=parlanti(),nChi=chi.length>=3?2:chi.length===2?1:0;
-  // cinque versi: uno per ogni parte del canto, poi a caso
-  var scelti=[];
-  [0,1,2].forEach(function(z){var c=mescola(D.V.filter(function(v){return v.z===z&&!v.a}))[0];if(c)scelti.push(c)});
+  // cinque versi da momenti diversi del canto, quando si può
+  var scelti=[],usati={};
+  mescola(D.V).forEach(function(v){var m=mom(da(v.v));if(scelti.length<5&&!usati[m]){usati[m]=1;scelti.push(v)}});
   mescola(D.V).forEach(function(v){if(scelti.length<5&&scelti.indexOf(v)<0)scelti.push(v)});
-  scelti=mescola(scelti);
-  // le domande su chi parla vanno ai versi vicini al confine fra due parti, poi a caso
-  var ordine=scelti.map(function(v,k){return k}).sort(function(a,b){return scelti[b].a-scelti[a].a});
-  var tipoChi={};for(var k=0;k<5&&nChi>0;k++){if(scelti[ordine[k]].a||nChi>0){tipoChi[ordine[k]]=1;nChi--}}
-  scelti.forEach(function(v,k){if(v.a)tipoChi[k]=1});
-  dom=scelti.map(function(v,k){
-    if(tipoChi[k]){
-      var altri=mescola(chi.filter(function(p){return p!==v.p})).concat(mescola(D.altri)).filter(function(p,x,a){return a.indexOf(p)===x&&p!==v.p}).slice(0,2);
-      return {v:v,domanda:"Chi parla?",opz:mescola([v.p].concat(altri)),giusta:v.p};
-    }
-    return {v:v,domanda:"A che punto del canto si trova questo verso?",opz:PUNTI.slice(),giusta:PUNTI[v.z]};
-  });
-  i=0;punti=0;
+  dom=mescola(scelti);i=0;voti=[0,0,0];
 }
 function mostra(){
-  var q=dom[i];chiuso=false;
-  el("n").textContent=i+1;el("domanda").textContent=q.domanda;el("frase").textContent=q.v.t.replace(/ \/ /g,"\n");
-  el("dopo").hidden=true;el("nonso").hidden=false;
+  var v=dom[i];fatto=false;
+  el("n").textContent=i+1;el("frase").textContent=v.t.replace(/ \/ /g,"\n");
+  el("bottoni").hidden=false;el("boxaiuto").hidden=true;el("scheda").hidden=true;el("esito").textContent="";
+}
+function scheda(){
+  var v=dom[i],x=da(v.v),y=a(v.v);
+  el("bottoni").hidden=true;
+  el("sit").textContent=D.M[mom(x)][2];
+  if(x>1){var p=Math.max(1,x-3);el("npri").textContent=nv(p,x-1);el("pri").textContent=D.versi.slice(p-1,x-1).join("\n")}
+  else{el("npri").textContent="";el("pri").textContent="È l'inizio del canto."}
+  if(y<L){var q=Math.min(L,y+3);el("ndop").textContent=nv(y+1,q);el("dop").textContent=D.versi.slice(y,q).join("\n")}
+  else{el("ndop").textContent="";el("dop").textContent="È la fine del canto."}
+  el("info").textContent=(x===y?"Verso "+x:"Versi "+x+"-"+y)+" su "+L+" · Chi parla: "+v.p;
+  el("scheda").hidden=false;
+}
+function aiuto(){
+  if(window.umami)umami.track("canto-aiuto",{canto:CANTO});
+  var v=dom[i],x=da(v.v),y=a(v.v);
+  var dopo=mom(y)<D.M.length-1,mio=dopo?mom(y):mom(x),giusto=dopo?mio+1:mio-1;
+  el("aiutodom").textContent=dopo?"Quale di questi momenti viene subito dopo?":"Siamo nell'ultima parte del canto. Quale di questi momenti viene subito prima?";
+  var altri=mescola(D.M.map(function(m,k){return k}).filter(function(k){return k!==mio&&k!==giusto})).slice(0,2);
   var box=el("opzioni");box.innerHTML="";
-  q.opz.forEach(function(t){
-    var b=document.createElement("button");b.type="button";b.className="opz";b.textContent=t;
-    b.onclick=function(){scegli(b,t)};box.appendChild(b)
-  })
+  mescola([giusto].concat(altri)).forEach(function(k){
+    var b=document.createElement("button");b.type="button";b.className="opz";b.textContent=D.M[k][2];b.setAttribute("data-k",k);
+    b.onclick=function(){
+      if(fatto)return;fatto=true;
+      [].forEach.call(box.children,function(z){z.disabled=true;if(+z.getAttribute("data-k")===giusto)z.className="opz ok"});
+      if(k!==giusto)b.className="opz no";
+      el("esito").textContent=k===giusto?"Esatto!":"Non era questo: guarda la risposta.";
+      scheda();
+    };
+    box.appendChild(b);
+  });
+  el("bottoni").hidden=true;el("boxaiuto").hidden=false;
 }
-function scegli(b,t){
-  if(chiuso)return;chiuso=true;
-  var q=dom[i],v=q.v;
-  [].forEach.call(el("opzioni").children,function(y){y.disabled=true;if(y.textContent===q.giusta)y.className="opz ok"});
-  if(t===q.giusta){punti++;el("esito").textContent="Esatto!"}
-  else{if(b)b.className="opz no";el("esito").textContent="Era: "+(q.giusta.charAt(0).toLowerCase()===q.giusta.charAt(0)||q.domanda!=="Chi parla?"?q.giusta.charAt(0).toLowerCase()+q.giusta.slice(1):q.giusta)+"."}
-  el("info").textContent=(v.v.indexOf("-")>0?"Versi ":"Verso ")+v.v+" su "+D.L+" · Chi parla: "+v.p;
-  el("avanti").textContent=i<4?"Avanti":"Vedi il risultato";
-  el("nonso").hidden=true;el("dopo").hidden=false
+function valuta(n){
+  voti[n]++;i++;
+  if(i<5){mostra();window.scrollTo(0,0);return}
+  el("quiz").hidden=true;el("fine").hidden=false;window.scrollTo(0,0);
+  if(window.umami)umami.track("canto-fine-test",{canto:CANTO,punti:voti[2]});
+  el("punti").textContent="Lo sapevi in "+voti[2]+" su 5";
+  el("dettaglio").textContent="Più o meno: "+voti[1]+" · Non lo sapevi: "+voti[0];
+  var s=voti[2]+voti[1]/2;
+  el("commento").textContent=s>=4?"Ottimo: questo canto lo conosci bene.":s>=2?"Buon ripasso. Con il canto intero davanti lo fissi tutto.":"Si impara ripassando: ogni verso che rivedi è uno in più che ricorderai."
 }
-el("nonso").onclick=function(){scegli(null,null)};
-el("avanti").onclick=function(){
-  i++;
-  if(i<5){mostra();return}
-  el("quiz").hidden=true;el("fine").hidden=false;if(window.umami)umami.track("canto-fine-test",{canto:CANTO,punti:punti});
-  el("punti").textContent="Ne hai riconosciuti "+punti+" su 5";
-  el("commento").textContent=punti>=4?"Ottimo: questo canto lo conosci bene.":punti>=2?"Buon ripasso. Con qualche verso in più lo fissi tutto.":"Si impara ripassando: ogni verso che rivedi è uno in più che riconoscerai."
-};
+el("mostra").onclick=scheda;
+el("aiuto").onclick=aiuto;
+[].forEach.call(document.querySelectorAll(".voto"),function(b){b.onclick=function(){valuta(+b.getAttribute("data-v"))}});
 el("ripeti").onclick=function(){el("fine").hidden=true;el("quiz").hidden=false;prepara();mostra()};
 el("start").onclick=function(){el("intro").hidden=true;el("quiz").hidden=false;window.scrollTo(0,0)};
 prepara();mostra();

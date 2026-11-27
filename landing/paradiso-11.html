@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#f5eddc">
-<title>Ripassa l'undicesimo canto del Paradiso: riconosci i versi | Sebugi Books</title>
+<title>Ripassa l'undicesimo canto del Paradiso: cosa viene prima e cosa viene dopo | Sebugi Books</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
     <link rel="apple-touch-icon" href="../favicon-192.png">
-<meta name="description" content="Cinque versi dell'undicesimo canto del Paradiso: riconosci a che punto del canto si trovano e chi parla. Ripasso gratuito, senza registrazione.">
+<meta name="description" content="Cinque versi dell'undicesimo canto del Paradiso: sai dire cosa viene prima e cosa viene dopo? Ripasso gratuito, senza registrazione.">
 <link rel="canonical" href="https://books.sebugi.com/landing/paradiso-11.html">
 <meta name="robots" content="noindex">
 <style>
@@ -41,6 +41,18 @@ h1{font-size:1.7rem;line-height:1.2;margin:.2em 0 .3em;text-align:center}
 .intro ul{list-style:none;padding:0;margin:0 0 14px;color:#6b5b47;font-size:.95rem}
 .start{display:block;width:100%;padding:20px 14px;margin-top:6px;font:inherit;font-weight:bold;font-size:1.5rem;color:#fff;background:linear-gradient(#5d8a4a,#46703a);border:0;border-radius:12px;cursor:pointer;box-shadow:0 3px 0 #2f5226}
 .start:active{transform:translateY(2px);box-shadow:0 1px 0 #2f5226}
+.sotto2{font-size:.92rem;color:#6b5b47;margin:0 0 14px}
+.sec{display:block;width:100%;padding:13px;margin-top:10px;font:inherit;font-size:1rem;text-align:center;color:#3b2f22;background:#fff;border:1px solid #cdb98f;border-radius:8px;cursor:pointer}
+.aiuto-dom{font-style:italic;color:#6b5b47;margin:16px 0 4px}
+.scheda{margin-top:16px;border-top:1px solid #d9c9a8;padding-top:12px}
+.etich{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:#8a6a35;font-weight:bold;margin:12px 0 2px}
+.etich span{font-weight:normal;letter-spacing:0;text-transform:none;color:#7a6a55}
+.sit{margin:0 0 4px}
+.ctx{font-style:italic;white-space:pre-line;margin:0 0 4px;color:#4b3d2c}
+.voti{display:flex;gap:8px;margin-top:6px}
+.voto{flex:1;padding:12px 4px;font:inherit;font-size:.95rem;font-weight:bold;border-radius:8px;cursor:pointer;color:#3b2f22;border:1px solid}
+.v1{background:#dcebd2;border-color:#6a9a52}.v2{background:#f3e6c8;border-color:#b8913f}.v3{background:#f4d9d3;border-color:#b9604f}
+.dettaglio{text-align:center;color:#6b5b47;font-size:.92rem;margin:0 0 8px}
 </style>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="86c03d25-c58e-427d-a332-2fb69da70300"></script>
 </head>
@@ -48,32 +60,47 @@ h1{font-size:1.7rem;line-height:1.2;margin:.2em 0 .3em;text-align:center}
 <div class="wrap">
 <img src="../logo.png" alt="Sebugi" width="150" style="display:block;margin:0 auto 6px;max-width:50%;height:auto">
 <h1>Devi ripassare l'undicesimo canto del Paradiso?</h1>
-<p class="sotto">Cinque versi del canto: riconosci a che punto si trovano.</p>
+<p class="sotto">Cinque versi del canto: sai dire cosa viene prima e cosa viene dopo?</p>
 
 <div class="card intro" id="intro">
 <h2>Come funziona</h2>
-<p>Leggi cinque versi dell'undicesimo canto del Paradiso e indovina se vengono dall'inizio, dalla metà o dalla fine del canto. Ogni tanto la domanda è su chi parla.</p>
-<ul><li>Gratis e senza registrazione</li><li>Due minuti, anche dal telefono</li><li>Dopo ogni risposta vedi i numeri dei versi e chi parla</li></ul>
+<p>Leggi cinque versi dell'undicesimo canto del Paradiso e prova a dire cosa viene prima e cosa viene dopo, a parole tue o con i versi. Se non ti viene in mente, chiedi un aiuto.</p>
+<ul><li>Gratis e senza registrazione</li><li>Due minuti, anche dal telefono</li><li>Dopo ogni verso vedi la situazione, i versi prima e dopo e chi parla</li></ul>
 <button class="start" id="start" type="button" data-umami-event="canto-inizio-test" data-umami-event-canto="paradiso-11">Inizia il ripasso</button>
 </div>
 
 <div class="card" id="quiz" hidden>
 <p class="num">Paradiso, canto XI · verso <span id="n">1</span> di 5</p>
-<p class="domanda" id="domanda"></p>
+<p class="domanda">Cosa viene prima e cosa viene dopo?</p>
 <p class="frase" id="frase"></p>
+<p class="sotto2">Rispondi a parole tue o, se te li ricordi, con i versi</p>
+<div id="bottoni">
+<button class="avanti" id="mostra" type="button">Mostra la risposta</button>
+<button class="sec" id="aiuto" type="button">Voglio un aiuto</button>
+</div>
+<div id="boxaiuto" hidden>
+<p class="aiuto-dom" id="aiutodom"></p>
 <div id="opzioni"></div>
-<button class="nonso" id="nonso" type="button">Non lo so</button>
-<div id="dopo" hidden>
 <p class="esito" id="esito"></p>
-<p class="info" id="info"></p>
-<button class="avanti" id="avanti" type="button">Avanti</button>
+</div>
+<div class="scheda" id="scheda" hidden>
+<p class="etich">La situazione</p>
+<p class="sit" id="sit"></p>
+<p class="etich">Prima <span id="npri"></span></p>
+<p class="ctx" id="pri"></p>
+<p class="etich">Dopo <span id="ndop"></span></p>
+<p class="ctx" id="dop"></p>
+<p class="info" id="info" style="margin-top:12px"></p>
+<p class="etich" style="text-align:center;margin-top:16px">Come è andata?</p>
+<div class="voti"><button class="voto v1" type="button" data-v="2">Lo sapevo</button><button class="voto v2" type="button" data-v="1">Più o meno</button><button class="voto v3" type="button" data-v="0">Non lo sapevo</button></div>
 </div>
 </div>
 
 <div class="card" id="fine" hidden>
 <p class="punti" id="punti"></p>
+<p class="dettaglio" id="dettaglio"></p>
 <p id="commento" style="text-align:center"></p>
-<p style="text-align:center">Nell'app ripassi i versi più importanti dell'undicesimo canto del Paradiso e gli altri canti della Divina Commedia. Gratis e senza registrazione.</p>
+<p style="text-align:center">Nell'app ripassi tutto l'undicesimo canto del Paradiso e gli altri canti della Divina Commedia. Gratis e senza registrazione.</p>
 <a class="cta" href="https://books.sebugi.com/?libro=la-divina-commedia&amp;canto=paradiso-11&amp;lang=it" id="cta" data-umami-event="canto-entra-app" data-umami-event-canto="paradiso-11">Ripassa l'undicesimo canto del Paradiso</a>
 <button class="avanti" id="ripeti" type="button" style="background:#fff;color:#3b2f22;border:1px solid #cdb98f">Rifai il quiz</button>
 </div>
@@ -82,60 +109,71 @@ h1{font-size:1.7rem;line-height:1.2;margin:.2em 0 .3em;text-align:center}
 </div>
 <script>
 var CANTO="paradiso-11";
-var D={"V":[{"t":"O insensata cura de' mortali, / quanto son difettivi silogismi / quei che ti fanno in basso batter l'ali!","v":"1-3","p":"Dante","z":0,"a":0},{"t":"Intra Tupino e l'acqua che discende / del colle eletto dal beato Ubaldo, / fertile costa d'alto monte pende…","v":"43-45","p":"San Tommaso d'Aquino","z":0,"a":1},{"t":"Di questa costa, là dov'ella frange / più sua rattezza, nacque al mondo un sole, / come fa questo talvolta di Gange.","v":"49-51","p":"San Tommaso d'Aquino","z":1,"a":1},{"t":"Però chi d'esso loco fa parole, / non dica Ascesi, ché direbbe corto, / ma Orïente, se proprio dir vuole.","v":"52-54","p":"San Tommaso d'Aquino","z":1,"a":0},{"t":"L'un fu tutto serafico in ardore; / l'altro per sapïenza in terra fue / di cherubica luce uno splendore.","v":"37-39","p":"San Tommaso d'Aquino","z":0,"a":0},{"t":"Francesco e Povertà per questi amanti…","v":"74","p":"San Tommaso d'Aquino","z":1,"a":0},{"t":"Nel crudo sasso intra Tevero e Arno / da Cristo prese l'ultimo sigillo, / che le sue membra due anni portarno.","v":"106-108","p":"San Tommaso d'Aquino","z":2,"a":0},{"t":"Ché per tal donna, giovinetto, in guerra / del padre corse, a cui, come a la morte…","v":"58-59","p":"San Tommaso d'Aquino","z":1,"a":0},{"t":"Pensa oramai qual fu colui che degno / collega fu a mantener la barca / di Pietro in alto mar per dritto segno;","v":"118-120","p":"San Tommaso d'Aquino","z":2,"a":0},{"t":"E vedra' il corrègger che argomenta / U' ben s'impingua, se non si vaneggia.","v":"138-139","p":"San Tommaso d'Aquino","z":2,"a":0}],"L":139,"altri":["Beatrice","Cacciaguida","Giustiniano","Piccarda Donati","San Bernardo"]};
-var PUNTI=["All'inizio","A metà","Alla fine"];
+var D={"V":[{"t":"O insensata cura de' mortali, / quanto son difettivi silogismi / quei che ti fanno in basso batter l'ali!","v":"1-3","p":"Dante"},{"t":"Intra Tupino e l'acqua che discende / del colle eletto dal beato Ubaldo, / fertile costa d'alto monte pende…","v":"43-45","p":"San Tommaso d'Aquino"},{"t":"Di questa costa, là dov'ella frange / più sua rattezza, nacque al mondo un sole, / come fa questo talvolta di Gange.","v":"49-51","p":"San Tommaso d'Aquino"},{"t":"Però chi d'esso loco fa parole, / non dica Ascesi, ché direbbe corto, / ma Orïente, se proprio dir vuole.","v":"52-54","p":"San Tommaso d'Aquino"},{"t":"L'un fu tutto serafico in ardore; / l'altro per sapïenza in terra fue / di cherubica luce uno splendore.","v":"37-39","p":"San Tommaso d'Aquino"},{"t":"Francesco e Povertà per questi amanti…","v":"74","p":"San Tommaso d'Aquino"},{"t":"Nel crudo sasso intra Tevero e Arno / da Cristo prese l'ultimo sigillo, / che le sue membra due anni portarno.","v":"106-108","p":"San Tommaso d'Aquino"},{"t":"Ché per tal donna, giovinetto, in guerra / del padre corse, a cui, come a la morte…","v":"58-59","p":"San Tommaso d'Aquino"},{"t":"Pensa oramai qual fu colui che degno / collega fu a mantener la barca / di Pietro in alto mar per dritto segno;","v":"118-120","p":"San Tommaso d'Aquino"},{"t":"E vedra' il corrègger che argomenta / U' ben s'impingua, se non si vaneggia.","v":"138-139","p":"San Tommaso d'Aquino"}],"versi":["O insensata cura de' mortali,","quanto son difettivi silogismi","quei che ti fanno in basso batter l'ali!","Chi dietro a iura e chi ad amforismi","sen giva, e chi seguendo sacerdozio,","e chi regnar per forza o per sofismi,","e chi rubare e chi civil negozio,","chi nel diletto de la carne involto","s'affaticava e chi si dava a l'ozio,","quando, da tutte queste cose sciolto,","con Bëatrice m'era suso in cielo","cotanto glorïosamente accolto.","Poi che ciascuno fu tornato ne lo","punto del cerchio in che avanti s'era,","fermossi, come a candellier candelo.","E io senti' dentro a quella lumera","che pria m'avea parlato, sorridendo","incominciar, faccendosi più mera:","«Così com' io del suo raggio resplendo,","sì, riguardando ne la luce etterna,","li tuoi pensieri onde cagioni apprendo.","Tu dubbi, e hai voler che si ricerna","in sì aperta e 'n sì distesa lingua","lo dicer mio, ch'al tuo sentir si sterna,","ove dinanzi dissi: \"U' ben s'impingua\",","e là u' dissi: \"Non nacque il secondo\";","e qui è uopo che ben si distingua.","La provedenza, che governa il mondo","con quel consiglio nel quale ogne aspetto","creato è vinto pria che vada al fondo,","però che andasse ver' lo suo diletto","la sposa di colui ch'ad alte grida","disposò lei col sangue benedetto,","in sé sicura e anche a lui più fida,","due principi ordinò in suo favore,","che quinci e quindi le fosser per guida.","L'un fu tutto serafico in ardore;","l'altro per sapïenza in terra fue","di cherubica luce uno splendore.","De l'un dirò, però che d'amendue","si dice l'un pregiando, qual ch'om prende,","perch' ad un fine fur l'opere sue.","Intra Tupino e l'acqua che discende","del colle eletto dal beato Ubaldo,","fertile costa d'alto monte pende,","onde Perugia sente freddo e caldo","da Porta Sole; e di rietro le piange","per grave giogo Nocera con Gualdo.","Di questa costa, là dov' ella frange","più sua rattezza, nacque al mondo un sole,","come fa questo talvolta di Gange.","Però chi d'esso loco fa parole,","non dica Ascesi, ché direbbe corto,","ma Orïente, se proprio dir vuole.","Non era ancor molto lontan da l'orto,","ch'el cominciò a far sentir la terra","de la sua gran virtute alcun conforto;","ché per tal donna, giovinetto, in guerra","del padre corse, a cui, come a la morte,","la porta del piacer nessun diserra;","e dinanzi a la sua spirital corte","et coram patre le si fece unito;","poscia di dì in dì l'amò più forte.","Questa, privata del primo marito,","millecent' anni e più dispetta e scura","fino a costui si stette sanza invito;","né valse udir che la trovò sicura","con Amiclate, al suon de la sua voce,","colui ch'a tutto 'l mondo fé paura;","né valse esser costante né feroce,","sì che, dove Maria rimase giuso,","ella con Cristo pianse in su la croce.","Ma perch' io non proceda troppo chiuso,","Francesco e Povertà per questi amanti","prendi oramai nel mio parlar diffuso.","La lor concordia e i lor lieti sembianti,","amore e maraviglia e dolce sguardo","facieno esser cagion di pensier santi;","tanto che 'l venerabile Bernardo","si scalzò prima, e dietro a tanta pace","corse e, correndo, li parve esser tardo.","Oh ignota ricchezza! oh ben ferace!","Scalzasi Egidio, scalzasi Silvestro","dietro a lo sposo, sì la sposa piace.","Indi sen va quel padre e quel maestro","con la sua donna e con quella famiglia","che già legava l'umile capestro.","Né li gravò viltà di cuor le ciglia","per esser fi' di Pietro Bernardone,","né per parer dispetto a maraviglia;","ma regalmente sua dura intenzione","ad Innocenzio aperse, e da lui ebbe","primo sigillo a sua religïone.","Poi che la gente poverella crebbe","dietro a costui, la cui mirabil vita","meglio in gloria del ciel si canterebbe,","di seconda corona redimita","fu per Onorio da l'Etterno Spiro","la santa voglia d'esto archimandrita.","E poi che, per la sete del martiro,","ne la presenza del Soldan superba","predicò Cristo e li altri che 'l seguiro,","e per trovare a conversione acerba","troppo la gente e per non stare indarno,","redissi al frutto de l'italica erba,","nel crudo sasso intra Tevero e Arno","da Cristo prese l'ultimo sigillo,","che le sue membra due anni portarno.","Quando a colui ch'a tanto ben sortillo","piacque di trarlo suso a la mercede","ch'el meritò nel suo farsi pusillo,","a' frati suoi, sì com' a giuste rede,","raccomandò la donna sua più cara,","e comandò che l'amassero a fede;","e del suo grembo l'anima preclara","mover si volle, tornando al suo regno,","e al suo corpo non volle altra bara.","Pensa oramai qual fu colui che degno","collega fu a mantener la barca","di Pietro in alto mar per dritto segno;","e questo fu il nostro patrïarca;","per che qual segue lui, com' el comanda,","discerner puoi che buone merce carca.","Ma 'l suo pecuglio di nova vivanda","è fatto ghiotto, sì ch'esser non puote","che per diversi salti non si spanda;","e quanto le sue pecore remote","e vagabunde più da esso vanno,","più tornano a l'ovil di latte vòte.","Ben son di quelle che temono 'l danno","e stringonsi al pastor; ma son sì poche,","che le cappe fornisce poco panno.","Or, se le mie parole non son fioche,","se la tua audïenza è stata attenta,","se ciò ch'è detto a la mente revoche,","in parte fia la tua voglia contenta,","perché vedrai la pianta onde si scheggia,","e vedra' il corrègger che argomenta","\"U' ben s'impingua, se non si vaneggia\"»."],"M":[[1,12,"Dante riflette sulle vane occupazioni degli uomini, mentre lui è in cielo con Beatrice."],[13,27,"San Tommaso d'Aquino legge nei pensieri di Dante e promette di chiarire due sue frasi."],[28,42,"La Provvidenza ha dato alla Chiesa due guide: san Francesco e san Domenico."],[43,63,"San Tommaso racconta la nascita di Francesco ad Assisi e le sue nozze con la Povertà, davanti al padre."],[64,87,"La Povertà, sola dopo Cristo, trova in Francesco il suo sposo; i primi seguaci si scalzano per seguirlo."],[88,117,"L'approvazione della regola, la predicazione davanti al Sultano, le stimmate e la morte di Francesco."],[118,139,"San Tommaso rimprovera i domenicani, che si sono allontanati dalla via di san Domenico."]]};
+var L=D.versi.length;
 function mescola(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
 function el(x){return document.getElementById(x)}
-var dom=[],i=0,punti=0,chiuso=false;
-function parlanti(){var o={};D.V.forEach(function(v){o[v.p]=1});return Object.keys(o)}
+function da(v){return parseInt(v.split("-")[0],10)}
+function a(v){var p=v.split("-");return parseInt(p[p.length-1],10)}
+function mom(n){for(var k=0;k<D.M.length;k++)if(D.M[k][0]<=n&&n<=D.M[k][1])return k;return 0}
+function nv(x,y){return x===y?"(v. "+x+")":"(vv. "+x+"-"+y+")"}
+var dom=[],i=0,voti=[0,0,0],fatto=false;
 function prepara(){
-  var chi=parlanti(),nChi=chi.length>=3?2:chi.length===2?1:0;
-  // cinque versi: uno per ogni parte del canto, poi a caso
-  var scelti=[];
-  [0,1,2].forEach(function(z){var c=mescola(D.V.filter(function(v){return v.z===z&&!v.a}))[0];if(c)scelti.push(c)});
+  // cinque versi da momenti diversi del canto, quando si può
+  var scelti=[],usati={};
+  mescola(D.V).forEach(function(v){var m=mom(da(v.v));if(scelti.length<5&&!usati[m]){usati[m]=1;scelti.push(v)}});
   mescola(D.V).forEach(function(v){if(scelti.length<5&&scelti.indexOf(v)<0)scelti.push(v)});
-  scelti=mescola(scelti);
-  // le domande su chi parla vanno ai versi vicini al confine fra due parti, poi a caso
-  var ordine=scelti.map(function(v,k){return k}).sort(function(a,b){return scelti[b].a-scelti[a].a});
-  var tipoChi={};for(var k=0;k<5&&nChi>0;k++){if(scelti[ordine[k]].a||nChi>0){tipoChi[ordine[k]]=1;nChi--}}
-  scelti.forEach(function(v,k){if(v.a)tipoChi[k]=1});
-  dom=scelti.map(function(v,k){
-    if(tipoChi[k]){
-      var altri=mescola(chi.filter(function(p){return p!==v.p})).concat(mescola(D.altri)).filter(function(p,x,a){return a.indexOf(p)===x&&p!==v.p}).slice(0,2);
-      return {v:v,domanda:"Chi parla?",opz:mescola([v.p].concat(altri)),giusta:v.p};
-    }
-    return {v:v,domanda:"A che punto del canto si trova questo verso?",opz:PUNTI.slice(),giusta:PUNTI[v.z]};
-  });
-  i=0;punti=0;
+  dom=mescola(scelti);i=0;voti=[0,0,0];
 }
 function mostra(){
-  var q=dom[i];chiuso=false;
-  el("n").textContent=i+1;el("domanda").textContent=q.domanda;el("frase").textContent=q.v.t.replace(/ \/ /g,"\n");
-  el("dopo").hidden=true;el("nonso").hidden=false;
+  var v=dom[i];fatto=false;
+  el("n").textContent=i+1;el("frase").textContent=v.t.replace(/ \/ /g,"\n");
+  el("bottoni").hidden=false;el("boxaiuto").hidden=true;el("scheda").hidden=true;el("esito").textContent="";
+}
+function scheda(){
+  var v=dom[i],x=da(v.v),y=a(v.v);
+  el("bottoni").hidden=true;
+  el("sit").textContent=D.M[mom(x)][2];
+  if(x>1){var p=Math.max(1,x-3);el("npri").textContent=nv(p,x-1);el("pri").textContent=D.versi.slice(p-1,x-1).join("\n")}
+  else{el("npri").textContent="";el("pri").textContent="È l'inizio del canto."}
+  if(y<L){var q=Math.min(L,y+3);el("ndop").textContent=nv(y+1,q);el("dop").textContent=D.versi.slice(y,q).join("\n")}
+  else{el("ndop").textContent="";el("dop").textContent="È la fine del canto."}
+  el("info").textContent=(x===y?"Verso "+x:"Versi "+x+"-"+y)+" su "+L+" · Chi parla: "+v.p;
+  el("scheda").hidden=false;
+}
+function aiuto(){
+  if(window.umami)umami.track("canto-aiuto",{canto:CANTO});
+  var v=dom[i],x=da(v.v),y=a(v.v);
+  var dopo=mom(y)<D.M.length-1,mio=dopo?mom(y):mom(x),giusto=dopo?mio+1:mio-1;
+  el("aiutodom").textContent=dopo?"Quale di questi momenti viene subito dopo?":"Siamo nell'ultima parte del canto. Quale di questi momenti viene subito prima?";
+  var altri=mescola(D.M.map(function(m,k){return k}).filter(function(k){return k!==mio&&k!==giusto})).slice(0,2);
   var box=el("opzioni");box.innerHTML="";
-  q.opz.forEach(function(t){
-    var b=document.createElement("button");b.type="button";b.className="opz";b.textContent=t;
-    b.onclick=function(){scegli(b,t)};box.appendChild(b)
-  })
+  mescola([giusto].concat(altri)).forEach(function(k){
+    var b=document.createElement("button");b.type="button";b.className="opz";b.textContent=D.M[k][2];b.setAttribute("data-k",k);
+    b.onclick=function(){
+      if(fatto)return;fatto=true;
+      [].forEach.call(box.children,function(z){z.disabled=true;if(+z.getAttribute("data-k")===giusto)z.className="opz ok"});
+      if(k!==giusto)b.className="opz no";
+      el("esito").textContent=k===giusto?"Esatto!":"Non era questo: guarda la risposta.";
+      scheda();
+    };
+    box.appendChild(b);
+  });
+  el("bottoni").hidden=true;el("boxaiuto").hidden=false;
 }
-function scegli(b,t){
-  if(chiuso)return;chiuso=true;
-  var q=dom[i],v=q.v;
-  [].forEach.call(el("opzioni").children,function(y){y.disabled=true;if(y.textContent===q.giusta)y.className="opz ok"});
-  if(t===q.giusta){punti++;el("esito").textContent="Esatto!"}
-  else{if(b)b.className="opz no";el("esito").textContent="Era: "+(q.giusta.charAt(0).toLowerCase()===q.giusta.charAt(0)||q.domanda!=="Chi parla?"?q.giusta.charAt(0).toLowerCase()+q.giusta.slice(1):q.giusta)+"."}
-  el("info").textContent=(v.v.indexOf("-")>0?"Versi ":"Verso ")+v.v+" su "+D.L+" · Chi parla: "+v.p;
-  el("avanti").textContent=i<4?"Avanti":"Vedi il risultato";
-  el("nonso").hidden=true;el("dopo").hidden=false
+function valuta(n){
+  voti[n]++;i++;
+  if(i<5){mostra();window.scrollTo(0,0);return}
+  el("quiz").hidden=true;el("fine").hidden=false;window.scrollTo(0,0);
+  if(window.umami)umami.track("canto-fine-test",{canto:CANTO,punti:voti[2]});
+  el("punti").textContent="Lo sapevi in "+voti[2]+" su 5";
+  el("dettaglio").textContent="Più o meno: "+voti[1]+" · Non lo sapevi: "+voti[0];
+  var s=voti[2]+voti[1]/2;
+  el("commento").textContent=s>=4?"Ottimo: questo canto lo conosci bene.":s>=2?"Buon ripasso. Con il canto intero davanti lo fissi tutto.":"Si impara ripassando: ogni verso che rivedi è uno in più che ricorderai."
 }
-el("nonso").onclick=function(){scegli(null,null)};
-el("avanti").onclick=function(){
-  i++;
-  if(i<5){mostra();return}
-  el("quiz").hidden=true;el("fine").hidden=false;if(window.umami)umami.track("canto-fine-test",{canto:CANTO,punti:punti});
-  el("punti").textContent="Ne hai riconosciuti "+punti+" su 5";
-  el("commento").textContent=punti>=4?"Ottimo: questo canto lo conosci bene.":punti>=2?"Buon ripasso. Con qualche verso in più lo fissi tutto.":"Si impara ripassando: ogni verso che rivedi è uno in più che riconoscerai."
-};
+el("mostra").onclick=scheda;
+el("aiuto").onclick=aiuto;
+[].forEach.call(document.querySelectorAll(".voto"),function(b){b.onclick=function(){valuta(+b.getAttribute("data-v"))}});
 el("ripeti").onclick=function(){el("fine").hidden=true;el("quiz").hidden=false;prepara();mostra()};
 el("start").onclick=function(){el("intro").hidden=true;el("quiz").hidden=false;window.scrollTo(0,0)};
 prepara();mostra();

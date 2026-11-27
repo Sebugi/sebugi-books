@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#f5eddc">
-<title>Ripassa il primo canto dell'Inferno: riconosci i versi | Sebugi Books</title>
+<title>Ripassa il primo canto dell'Inferno: cosa viene prima e cosa viene dopo | Sebugi Books</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
     <link rel="apple-touch-icon" href="../favicon-192.png">
-<meta name="description" content="Cinque versi del primo canto dell'Inferno: riconosci a che punto del canto si trovano e chi parla. Ripasso gratuito, senza registrazione.">
+<meta name="description" content="Cinque versi del primo canto dell'Inferno: sai dire cosa viene prima e cosa viene dopo? Ripasso gratuito, senza registrazione.">
 <link rel="canonical" href="https://books.sebugi.com/landing/inferno-1.html">
 <meta name="robots" content="noindex">
 <style>
@@ -41,6 +41,18 @@ h1{font-size:1.7rem;line-height:1.2;margin:.2em 0 .3em;text-align:center}
 .intro ul{list-style:none;padding:0;margin:0 0 14px;color:#6b5b47;font-size:.95rem}
 .start{display:block;width:100%;padding:20px 14px;margin-top:6px;font:inherit;font-weight:bold;font-size:1.5rem;color:#fff;background:linear-gradient(#5d8a4a,#46703a);border:0;border-radius:12px;cursor:pointer;box-shadow:0 3px 0 #2f5226}
 .start:active{transform:translateY(2px);box-shadow:0 1px 0 #2f5226}
+.sotto2{font-size:.92rem;color:#6b5b47;margin:0 0 14px}
+.sec{display:block;width:100%;padding:13px;margin-top:10px;font:inherit;font-size:1rem;text-align:center;color:#3b2f22;background:#fff;border:1px solid #cdb98f;border-radius:8px;cursor:pointer}
+.aiuto-dom{font-style:italic;color:#6b5b47;margin:16px 0 4px}
+.scheda{margin-top:16px;border-top:1px solid #d9c9a8;padding-top:12px}
+.etich{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:#8a6a35;font-weight:bold;margin:12px 0 2px}
+.etich span{font-weight:normal;letter-spacing:0;text-transform:none;color:#7a6a55}
+.sit{margin:0 0 4px}
+.ctx{font-style:italic;white-space:pre-line;margin:0 0 4px;color:#4b3d2c}
+.voti{display:flex;gap:8px;margin-top:6px}
+.voto{flex:1;padding:12px 4px;font:inherit;font-size:.95rem;font-weight:bold;border-radius:8px;cursor:pointer;color:#3b2f22;border:1px solid}
+.v1{background:#dcebd2;border-color:#6a9a52}.v2{background:#f3e6c8;border-color:#b8913f}.v3{background:#f4d9d3;border-color:#b9604f}
+.dettaglio{text-align:center;color:#6b5b47;font-size:.92rem;margin:0 0 8px}
 </style>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="86c03d25-c58e-427d-a332-2fb69da70300"></script>
 </head>
@@ -48,32 +60,47 @@ h1{font-size:1.7rem;line-height:1.2;margin:.2em 0 .3em;text-align:center}
 <div class="wrap">
 <img src="../logo.png" alt="Sebugi" width="150" style="display:block;margin:0 auto 6px;max-width:50%;height:auto">
 <h1>Devi ripassare il primo canto dell'Inferno?</h1>
-<p class="sotto">Cinque versi del canto: riconosci a che punto si trovano.</p>
+<p class="sotto">Cinque versi del canto: sai dire cosa viene prima e cosa viene dopo?</p>
 
 <div class="card intro" id="intro">
 <h2>Come funziona</h2>
-<p>Leggi cinque versi del primo canto dell'Inferno e indovina se vengono dall'inizio, dalla metà o dalla fine del canto. Ogni tanto la domanda è su chi parla.</p>
-<ul><li>Gratis e senza registrazione</li><li>Due minuti, anche dal telefono</li><li>Dopo ogni risposta vedi i numeri dei versi e chi parla</li></ul>
+<p>Leggi cinque versi del primo canto dell'Inferno e prova a dire cosa viene prima e cosa viene dopo, a parole tue o con i versi. Se non ti viene in mente, chiedi un aiuto.</p>
+<ul><li>Gratis e senza registrazione</li><li>Due minuti, anche dal telefono</li><li>Dopo ogni verso vedi la situazione, i versi prima e dopo e chi parla</li></ul>
 <button class="start" id="start" type="button" data-umami-event="canto-inizio-test" data-umami-event-canto="inferno-1">Inizia il ripasso</button>
 </div>
 
 <div class="card" id="quiz" hidden>
 <p class="num">Inferno, canto I · verso <span id="n">1</span> di 5</p>
-<p class="domanda" id="domanda"></p>
+<p class="domanda">Cosa viene prima e cosa viene dopo?</p>
 <p class="frase" id="frase"></p>
+<p class="sotto2">Rispondi a parole tue o, se te li ricordi, con i versi</p>
+<div id="bottoni">
+<button class="avanti" id="mostra" type="button">Mostra la risposta</button>
+<button class="sec" id="aiuto" type="button">Voglio un aiuto</button>
+</div>
+<div id="boxaiuto" hidden>
+<p class="aiuto-dom" id="aiutodom"></p>
 <div id="opzioni"></div>
-<button class="nonso" id="nonso" type="button">Non lo so</button>
-<div id="dopo" hidden>
 <p class="esito" id="esito"></p>
-<p class="info" id="info"></p>
-<button class="avanti" id="avanti" type="button">Avanti</button>
+</div>
+<div class="scheda" id="scheda" hidden>
+<p class="etich">La situazione</p>
+<p class="sit" id="sit"></p>
+<p class="etich">Prima <span id="npri"></span></p>
+<p class="ctx" id="pri"></p>
+<p class="etich">Dopo <span id="ndop"></span></p>
+<p class="ctx" id="dop"></p>
+<p class="info" id="info" style="margin-top:12px"></p>
+<p class="etich" style="text-align:center;margin-top:16px">Come è andata?</p>
+<div class="voti"><button class="voto v1" type="button" data-v="2">Lo sapevo</button><button class="voto v2" type="button" data-v="1">Più o meno</button><button class="voto v3" type="button" data-v="0">Non lo sapevo</button></div>
 </div>
 </div>
 
 <div class="card" id="fine" hidden>
 <p class="punti" id="punti"></p>
+<p class="dettaglio" id="dettaglio"></p>
 <p id="commento" style="text-align:center"></p>
-<p style="text-align:center">Nell'app ripassi i versi più importanti del primo canto dell'Inferno e gli altri canti della Divina Commedia. Gratis e senza registrazione.</p>
+<p style="text-align:center">Nell'app ripassi tutto il primo canto dell'Inferno e gli altri canti della Divina Commedia. Gratis e senza registrazione.</p>
 <a class="cta" href="https://books.sebugi.com/?libro=la-divina-commedia&amp;canto=inferno-1&amp;lang=it" id="cta" data-umami-event="canto-entra-app" data-umami-event-canto="inferno-1">Ripassa il primo canto dell'Inferno</a>
 <button class="avanti" id="ripeti" type="button" style="background:#fff;color:#3b2f22;border:1px solid #cdb98f">Rifai il quiz</button>
 </div>
@@ -82,60 +109,71 @@ h1{font-size:1.7rem;line-height:1.2;margin:.2em 0 .3em;text-align:center}
 </div>
 <script>
 var CANTO="inferno-1";
-var D={"V":[{"t":"Nel mezzo del cammin di nostra vita / mi ritrovai per una selva oscura, / ché la diritta via era smarrita.","v":"1-3","p":"Dante","z":0,"a":0},{"t":"Ahi quanto a dir qual era è cosa dura / esta selva selvaggia e aspra e forte / che nel pensier rinova la paura!","v":"4-6","p":"Dante","z":0,"a":0},{"t":"Tant'è amara che poco è più morte; / ma per trattar del ben ch'i' vi trovai, / dirò de l'altre cose ch'i' v'ho scorte.","v":"7-9","p":"Dante","z":0,"a":0},{"t":"Io non so ben ridir com'i' v'intrai, / tant'era pien di sonno a quel punto / che la verace via abbandonai.","v":"10-12","p":"Dante","z":0,"a":0},{"t":"Ed ecco, quasi al cominciar de l'erta, / una lonza leggera e presta molto, / che di pel macolato era coverta;","v":"31-33","p":"Dante","z":0,"a":0},{"t":"Non omo, omo già fui, / e li parenti miei furon lombardi, / mantoani per patrïa ambedui.","v":"67-69","p":"Virgilio","z":1,"a":0},{"t":"Or se' tu quel Virgilio e quella fonte / che spandi di parlar sì largo fiume? / rispuos'io lui con vergognosa fronte.","v":"79-81","p":"Dante","z":1,"a":0},{"t":"Tu se' lo mio maestro e 'l mio autore, / tu se' solo colui da cu' io tolsi / lo bello stilo che m'ha fatto onore.","v":"85-87","p":"Dante","z":1,"a":0},{"t":"Ond'io per lo tuo me' penso e discerno / che tu mi segui, e io sarò tua guida, / e trarrotti di qui per loco etterno;","v":"112-114","p":"Virgilio","z":2,"a":0},{"t":"Miserere di me, gridai a lui, / qual che tu sii, od ombra od omo certo!","v":"65-66","p":"Dante","z":1,"a":0},{"t":"E io a lui: Poeta, io ti richeggio / per quello Dio che tu non conoscesti, / acciò ch'io fugga questo male e peggio…","v":"130-132","p":"Dante","z":2,"a":0},{"t":"Allor si mosse, e io li tenni dietro.","v":"136","p":"Dante","z":2,"a":0}],"L":136,"altri":["Caronte","Cavalcante","Farinata","Francesca","Frate Alberigo","La scritta sulla porta dell'Inferno","Pier della Vigna","Ugolino","Ulisse","Un suicida fiorentino"]};
-var PUNTI=["All'inizio","A metà","Alla fine"];
+var D={"V":[{"t":"Nel mezzo del cammin di nostra vita / mi ritrovai per una selva oscura, / ché la diritta via era smarrita.","v":"1-3","p":"Dante"},{"t":"Ahi quanto a dir qual era è cosa dura / esta selva selvaggia e aspra e forte / che nel pensier rinova la paura!","v":"4-6","p":"Dante"},{"t":"Tant'è amara che poco è più morte; / ma per trattar del ben ch'i' vi trovai, / dirò de l'altre cose ch'i' v'ho scorte.","v":"7-9","p":"Dante"},{"t":"Io non so ben ridir com'i' v'intrai, / tant'era pien di sonno a quel punto / che la verace via abbandonai.","v":"10-12","p":"Dante"},{"t":"Ed ecco, quasi al cominciar de l'erta, / una lonza leggera e presta molto, / che di pel macolato era coverta;","v":"31-33","p":"Dante"},{"t":"Non omo, omo già fui, / e li parenti miei furon lombardi, / mantoani per patrïa ambedui.","v":"67-69","p":"Virgilio"},{"t":"Or se' tu quel Virgilio e quella fonte / che spandi di parlar sì largo fiume? / rispuos'io lui con vergognosa fronte.","v":"79-81","p":"Dante"},{"t":"Tu se' lo mio maestro e 'l mio autore, / tu se' solo colui da cu' io tolsi / lo bello stilo che m'ha fatto onore.","v":"85-87","p":"Dante"},{"t":"Ond'io per lo tuo me' penso e discerno / che tu mi segui, e io sarò tua guida, / e trarrotti di qui per loco etterno;","v":"112-114","p":"Virgilio"},{"t":"Miserere di me, gridai a lui, / qual che tu sii, od ombra od omo certo!","v":"65-66","p":"Dante"},{"t":"E io a lui: Poeta, io ti richeggio / per quello Dio che tu non conoscesti, / acciò ch'io fugga questo male e peggio…","v":"130-132","p":"Dante"},{"t":"Allor si mosse, e io li tenni dietro.","v":"136","p":"Dante"}],"versi":["Nel mezzo del cammin di nostra vita","mi ritrovai per una selva oscura,","ché la diritta via era smarrita.","Ahi quanto a dir qual era è cosa dura","esta selva selvaggia e aspra e forte","che nel pensier rinova la paura!","Tant'è amara che poco è più morte;","ma per trattar del ben ch'i' vi trovai,","dirò de l'altre cose ch'i' v' ho scorte.","Io non so ben ridir com'i' v'intrai,","tant'era pien di sonno a quel punto","che la verace via abbandonai.","Ma poi ch'i' fui al piè d'un colle giunto,","là dove terminava quella valle","che m'avea di paura il cor compunto,","guardai in alto e vidi le sue spalle","vestite già de' raggi del pianeta","che mena dritto altrui per ogne calle.","Allor fu la paura un poco queta,","che nel lago del cor m'era durata","la notte ch'i' passai con tanta pieta.","E come quei che con lena affannata,","uscito fuor del pelago a la riva,","si volge a l'acqua perigliosa e guata,","così l'animo mio, ch'ancor fuggiva,","si volse a retro a rimirar lo passo","che non lasciò già mai persona viva.","Poi ch'èi posato un poco il corpo lasso,","ripresi via per la piaggia diserta,","sì che 'l piè fermo sempre era 'l più basso.","Ed ecco, quasi al cominciar de l'erta,","una lonza leggera e presta molto,","che di pel macolato era coverta;","e non mi si partia dinanzi al volto,","anzi 'mpediva tanto il mio cammino,","ch'i' fui per ritornar più volte vòlto.","Temp'era dal principio del mattino,","e 'l sol montava 'n sù con quelle stelle","ch'eran con lui quando l'amor divino","mosse di prima quelle cose belle;","sì ch'a bene sperar m'era cagione","di quella fiera a la gaetta pelle","l'ora del tempo e la dolce stagione;","ma non sì che paura non mi desse","la vista che m'apparve d'un leone.","Questi parea che contra me venisse","con la test'alta e con rabbiosa fame,","sì che parea che l'aere ne tremesse.","Ed una lupa, che di tutte brame","sembiava carca ne la sua magrezza,","e molte genti fé già viver grame,","questa mi porse tanto di gravezza","con la paura ch'uscia di sua vista,","ch'io perdei la speranza de l'altezza.","E qual è quei che volontieri acquista,","e giugne 'l tempo che perder lo face,","che 'n tutti suoi pensier piange e s'attrista;","tal mi fece la bestia sanza pace,","che, venendomi 'ncontro, a poco a poco","mi ripigneva là dove 'l sol tace.","Mentre ch'i' rovinava in basso loco,","dinanzi a li occhi mi si fu offerto","chi per lungo silenzio parea fioco.","Quando vidi costui nel gran diserto,","\"Miserere di me\", gridai a lui,","\"qual che tu sii, od ombra od omo certo!\".","Rispuosemi: \"Non omo, omo già fui,","e li parenti miei furon lombardi,","mantoani per patrïa ambedui.","Nacqui sub Iulio, ancor che fosse tardi,","e vissi a Roma sotto 'l buono Augusto","nel tempo de li dèi falsi e bugiardi.","Poeta fui, e cantai di quel giusto","figliuol d'Anchise che venne di Troia,","poi che 'l superbo Ilïón fu combusto.","Ma tu perché ritorni a tanta noia?","perché non sali il dilettoso monte","ch'è principio e cagion di tutta gioia?\".","\"Or se' tu quel Virgilio e quella fonte","che spandi di parlar sì largo fiume?\",","rispuos'io lui con vergognosa fronte.","\"O de li altri poeti onore e lume,","vagliami 'l lungo studio e 'l grande amore","che m' ha fatto cercar lo tuo volume.","Tu se' lo mio maestro e 'l mio autore,","tu se' solo colui da cu' io tolsi","lo bello stilo che m' ha fatto onore.","Vedi la bestia per cu' io mi volsi;","aiutami da lei, famoso saggio,","ch'ella mi fa tremar le vene e i polsi\".","\"A te convien tenere altro vïaggio\",","rispuose, poi che lagrimar mi vide,","\"se vuo' campar d'esto loco selvaggio;","ché questa bestia, per la qual tu gride,","non lascia altrui passar per la sua via,","ma tanto lo 'mpedisce che l'uccide;","e ha natura sì malvagia e ria,","che mai non empie la bramosa voglia,","e dopo 'l pasto ha più fame che pria.","Molti son li animali a cui s'ammoglia,","e più saranno ancora, infin che 'l veltro","verrà, che la farà morir con doglia.","Questi non ciberà terra né peltro,","ma sapïenza, amore e virtute,","e sua nazion sarà tra feltro e feltro.","Di quella umile Italia fia salute","per cui morì la vergine Cammilla,","Eurialo e Turno e Niso di ferute.","Questi la caccerà per ogne villa,","fin che l'avrà rimessa ne lo 'nferno,","là onde 'nvidia prima dipartilla.","Ond'io per lo tuo me' penso e discerno","che tu mi segui, e io sarò tua guida,","e trarrotti di qui per loco etterno;","ove udirai le disperate strida,","vedrai li antichi spiriti dolenti,","ch'a la seconda morte ciascun grida;","e vederai color che son contenti","nel foco, perché speran di venire","quando che sia a le beate genti.","A le quai poi se tu vorrai salire,","anima fia a ciò più di me degna:","con lei ti lascerò nel mio partire;","ché quello imperador che là sù regna,","perch'i' fu' ribellante a la sua legge,","non vuol che 'n sua città per me si vegna.","In tutte parti impera e quivi regge;","quivi è la sua città e l'alto seggio:","oh felice colui cu' ivi elegge!\".","E io a lui: \"Poeta, io ti richeggio","per quello Dio che tu non conoscesti,","acciò ch'io fugga questo male e peggio,","che tu mi meni là dov'or dicesti,","sì ch'io veggia la porta di san Pietro","e color cui tu fai cotanto mesti\".","Allor si mosse, e io li tenni dietro."],"M":[[1,12,"Dante si perde nella selva oscura e non sa dire come ci è entrato."],[13,30,"Ai piedi di un colle illuminato dal sole, Dante si riprende dalla paura e comincia a salire."],[31,60,"Tre fiere gli sbarrano la strada: la lonza, il leone e la lupa, che lo respinge verso la selva."],[61,78,"Appare un'ombra: è Virgilio, che si presenta e gli chiede perché non sale il monte."],[79,90,"Dante riconosce Virgilio, lo chiama suo maestro e gli chiede aiuto contro la lupa."],[91,111,"Virgilio spiega che la lupa non lascia passare nessuno e annuncia il Veltro che la caccerà."],[112,129,"Virgilio propone un altro viaggio: l'Inferno e il Purgatorio con lui, poi il Paradiso con un'anima più degna."],[130,136,"Dante accetta e si mette in cammino dietro a Virgilio."]]};
+var L=D.versi.length;
 function mescola(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
 function el(x){return document.getElementById(x)}
-var dom=[],i=0,punti=0,chiuso=false;
-function parlanti(){var o={};D.V.forEach(function(v){o[v.p]=1});return Object.keys(o)}
+function da(v){return parseInt(v.split("-")[0],10)}
+function a(v){var p=v.split("-");return parseInt(p[p.length-1],10)}
+function mom(n){for(var k=0;k<D.M.length;k++)if(D.M[k][0]<=n&&n<=D.M[k][1])return k;return 0}
+function nv(x,y){return x===y?"(v. "+x+")":"(vv. "+x+"-"+y+")"}
+var dom=[],i=0,voti=[0,0,0],fatto=false;
 function prepara(){
-  var chi=parlanti(),nChi=chi.length>=3?2:chi.length===2?1:0;
-  // cinque versi: uno per ogni parte del canto, poi a caso
-  var scelti=[];
-  [0,1,2].forEach(function(z){var c=mescola(D.V.filter(function(v){return v.z===z&&!v.a}))[0];if(c)scelti.push(c)});
+  // cinque versi da momenti diversi del canto, quando si può
+  var scelti=[],usati={};
+  mescola(D.V).forEach(function(v){var m=mom(da(v.v));if(scelti.length<5&&!usati[m]){usati[m]=1;scelti.push(v)}});
   mescola(D.V).forEach(function(v){if(scelti.length<5&&scelti.indexOf(v)<0)scelti.push(v)});
-  scelti=mescola(scelti);
-  // le domande su chi parla vanno ai versi vicini al confine fra due parti, poi a caso
-  var ordine=scelti.map(function(v,k){return k}).sort(function(a,b){return scelti[b].a-scelti[a].a});
-  var tipoChi={};for(var k=0;k<5&&nChi>0;k++){if(scelti[ordine[k]].a||nChi>0){tipoChi[ordine[k]]=1;nChi--}}
-  scelti.forEach(function(v,k){if(v.a)tipoChi[k]=1});
-  dom=scelti.map(function(v,k){
-    if(tipoChi[k]){
-      var altri=mescola(chi.filter(function(p){return p!==v.p})).concat(mescola(D.altri)).filter(function(p,x,a){return a.indexOf(p)===x&&p!==v.p}).slice(0,2);
-      return {v:v,domanda:"Chi parla?",opz:mescola([v.p].concat(altri)),giusta:v.p};
-    }
-    return {v:v,domanda:"A che punto del canto si trova questo verso?",opz:PUNTI.slice(),giusta:PUNTI[v.z]};
-  });
-  i=0;punti=0;
+  dom=mescola(scelti);i=0;voti=[0,0,0];
 }
 function mostra(){
-  var q=dom[i];chiuso=false;
-  el("n").textContent=i+1;el("domanda").textContent=q.domanda;el("frase").textContent=q.v.t.replace(/ \/ /g,"\n");
-  el("dopo").hidden=true;el("nonso").hidden=false;
+  var v=dom[i];fatto=false;
+  el("n").textContent=i+1;el("frase").textContent=v.t.replace(/ \/ /g,"\n");
+  el("bottoni").hidden=false;el("boxaiuto").hidden=true;el("scheda").hidden=true;el("esito").textContent="";
+}
+function scheda(){
+  var v=dom[i],x=da(v.v),y=a(v.v);
+  el("bottoni").hidden=true;
+  el("sit").textContent=D.M[mom(x)][2];
+  if(x>1){var p=Math.max(1,x-3);el("npri").textContent=nv(p,x-1);el("pri").textContent=D.versi.slice(p-1,x-1).join("\n")}
+  else{el("npri").textContent="";el("pri").textContent="È l'inizio del canto."}
+  if(y<L){var q=Math.min(L,y+3);el("ndop").textContent=nv(y+1,q);el("dop").textContent=D.versi.slice(y,q).join("\n")}
+  else{el("ndop").textContent="";el("dop").textContent="È la fine del canto."}
+  el("info").textContent=(x===y?"Verso "+x:"Versi "+x+"-"+y)+" su "+L+" · Chi parla: "+v.p;
+  el("scheda").hidden=false;
+}
+function aiuto(){
+  if(window.umami)umami.track("canto-aiuto",{canto:CANTO});
+  var v=dom[i],x=da(v.v),y=a(v.v);
+  var dopo=mom(y)<D.M.length-1,mio=dopo?mom(y):mom(x),giusto=dopo?mio+1:mio-1;
+  el("aiutodom").textContent=dopo?"Quale di questi momenti viene subito dopo?":"Siamo nell'ultima parte del canto. Quale di questi momenti viene subito prima?";
+  var altri=mescola(D.M.map(function(m,k){return k}).filter(function(k){return k!==mio&&k!==giusto})).slice(0,2);
   var box=el("opzioni");box.innerHTML="";
-  q.opz.forEach(function(t){
-    var b=document.createElement("button");b.type="button";b.className="opz";b.textContent=t;
-    b.onclick=function(){scegli(b,t)};box.appendChild(b)
-  })
+  mescola([giusto].concat(altri)).forEach(function(k){
+    var b=document.createElement("button");b.type="button";b.className="opz";b.textContent=D.M[k][2];b.setAttribute("data-k",k);
+    b.onclick=function(){
+      if(fatto)return;fatto=true;
+      [].forEach.call(box.children,function(z){z.disabled=true;if(+z.getAttribute("data-k")===giusto)z.className="opz ok"});
+      if(k!==giusto)b.className="opz no";
+      el("esito").textContent=k===giusto?"Esatto!":"Non era questo: guarda la risposta.";
+      scheda();
+    };
+    box.appendChild(b);
+  });
+  el("bottoni").hidden=true;el("boxaiuto").hidden=false;
 }
-function scegli(b,t){
-  if(chiuso)return;chiuso=true;
-  var q=dom[i],v=q.v;
-  [].forEach.call(el("opzioni").children,function(y){y.disabled=true;if(y.textContent===q.giusta)y.className="opz ok"});
-  if(t===q.giusta){punti++;el("esito").textContent="Esatto!"}
-  else{if(b)b.className="opz no";el("esito").textContent="Era: "+(q.giusta.charAt(0).toLowerCase()===q.giusta.charAt(0)||q.domanda!=="Chi parla?"?q.giusta.charAt(0).toLowerCase()+q.giusta.slice(1):q.giusta)+"."}
-  el("info").textContent=(v.v.indexOf("-")>0?"Versi ":"Verso ")+v.v+" su "+D.L+" · Chi parla: "+v.p;
-  el("avanti").textContent=i<4?"Avanti":"Vedi il risultato";
-  el("nonso").hidden=true;el("dopo").hidden=false
+function valuta(n){
+  voti[n]++;i++;
+  if(i<5){mostra();window.scrollTo(0,0);return}
+  el("quiz").hidden=true;el("fine").hidden=false;window.scrollTo(0,0);
+  if(window.umami)umami.track("canto-fine-test",{canto:CANTO,punti:voti[2]});
+  el("punti").textContent="Lo sapevi in "+voti[2]+" su 5";
+  el("dettaglio").textContent="Più o meno: "+voti[1]+" · Non lo sapevi: "+voti[0];
+  var s=voti[2]+voti[1]/2;
+  el("commento").textContent=s>=4?"Ottimo: questo canto lo conosci bene.":s>=2?"Buon ripasso. Con il canto intero davanti lo fissi tutto.":"Si impara ripassando: ogni verso che rivedi è uno in più che ricorderai."
 }
-el("nonso").onclick=function(){scegli(null,null)};
-el("avanti").onclick=function(){
-  i++;
-  if(i<5){mostra();return}
-  el("quiz").hidden=true;el("fine").hidden=false;if(window.umami)umami.track("canto-fine-test",{canto:CANTO,punti:punti});
-  el("punti").textContent="Ne hai riconosciuti "+punti+" su 5";
-  el("commento").textContent=punti>=4?"Ottimo: questo canto lo conosci bene.":punti>=2?"Buon ripasso. Con qualche verso in più lo fissi tutto.":"Si impara ripassando: ogni verso che rivedi è uno in più che riconoscerai."
-};
+el("mostra").onclick=scheda;
+el("aiuto").onclick=aiuto;
+[].forEach.call(document.querySelectorAll(".voto"),function(b){b.onclick=function(){valuta(+b.getAttribute("data-v"))}});
 el("ripeti").onclick=function(){el("fine").hidden=true;el("quiz").hidden=false;prepara();mostra()};
 el("start").onclick=function(){el("intro").hidden=true;el("quiz").hidden=false;window.scrollTo(0,0)};
 prepara();mostra();

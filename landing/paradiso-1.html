@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#f5eddc">
-<title>Ripassa il primo canto del Paradiso: riconosci i versi | Sebugi Books</title>
+<title>Ripassa il primo canto del Paradiso: cosa viene prima e cosa viene dopo | Sebugi Books</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
     <link rel="apple-touch-icon" href="../favicon-192.png">
-<meta name="description" content="Cinque versi del primo canto del Paradiso: riconosci a che punto del canto si trovano e chi parla. Ripasso gratuito, senza registrazione.">
+<meta name="description" content="Cinque versi del primo canto del Paradiso: sai dire cosa viene prima e cosa viene dopo? Ripasso gratuito, senza registrazione.">
 <link rel="canonical" href="https://books.sebugi.com/landing/paradiso-1.html">
 <meta name="robots" content="noindex">
 <style>
@@ -41,6 +41,18 @@ h1{font-size:1.7rem;line-height:1.2;margin:.2em 0 .3em;text-align:center}
 .intro ul{list-style:none;padding:0;margin:0 0 14px;color:#6b5b47;font-size:.95rem}
 .start{display:block;width:100%;padding:20px 14px;margin-top:6px;font:inherit;font-weight:bold;font-size:1.5rem;color:#fff;background:linear-gradient(#5d8a4a,#46703a);border:0;border-radius:12px;cursor:pointer;box-shadow:0 3px 0 #2f5226}
 .start:active{transform:translateY(2px);box-shadow:0 1px 0 #2f5226}
+.sotto2{font-size:.92rem;color:#6b5b47;margin:0 0 14px}
+.sec{display:block;width:100%;padding:13px;margin-top:10px;font:inherit;font-size:1rem;text-align:center;color:#3b2f22;background:#fff;border:1px solid #cdb98f;border-radius:8px;cursor:pointer}
+.aiuto-dom{font-style:italic;color:#6b5b47;margin:16px 0 4px}
+.scheda{margin-top:16px;border-top:1px solid #d9c9a8;padding-top:12px}
+.etich{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:#8a6a35;font-weight:bold;margin:12px 0 2px}
+.etich span{font-weight:normal;letter-spacing:0;text-transform:none;color:#7a6a55}
+.sit{margin:0 0 4px}
+.ctx{font-style:italic;white-space:pre-line;margin:0 0 4px;color:#4b3d2c}
+.voti{display:flex;gap:8px;margin-top:6px}
+.voto{flex:1;padding:12px 4px;font:inherit;font-size:.95rem;font-weight:bold;border-radius:8px;cursor:pointer;color:#3b2f22;border:1px solid}
+.v1{background:#dcebd2;border-color:#6a9a52}.v2{background:#f3e6c8;border-color:#b8913f}.v3{background:#f4d9d3;border-color:#b9604f}
+.dettaglio{text-align:center;color:#6b5b47;font-size:.92rem;margin:0 0 8px}
 </style>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="86c03d25-c58e-427d-a332-2fb69da70300"></script>
 </head>
@@ -48,32 +60,47 @@ h1{font-size:1.7rem;line-height:1.2;margin:.2em 0 .3em;text-align:center}
 <div class="wrap">
 <img src="../logo.png" alt="Sebugi" width="150" style="display:block;margin:0 auto 6px;max-width:50%;height:auto">
 <h1>Devi ripassare il primo canto del Paradiso?</h1>
-<p class="sotto">Cinque versi del canto: riconosci a che punto si trovano.</p>
+<p class="sotto">Cinque versi del canto: sai dire cosa viene prima e cosa viene dopo?</p>
 
 <div class="card intro" id="intro">
 <h2>Come funziona</h2>
-<p>Leggi cinque versi del primo canto del Paradiso e indovina se vengono dall'inizio, dalla metà o dalla fine del canto. Ogni tanto la domanda è su chi parla.</p>
-<ul><li>Gratis e senza registrazione</li><li>Due minuti, anche dal telefono</li><li>Dopo ogni risposta vedi i numeri dei versi e chi parla</li></ul>
+<p>Leggi cinque versi del primo canto del Paradiso e prova a dire cosa viene prima e cosa viene dopo, a parole tue o con i versi. Se non ti viene in mente, chiedi un aiuto.</p>
+<ul><li>Gratis e senza registrazione</li><li>Due minuti, anche dal telefono</li><li>Dopo ogni verso vedi la situazione, i versi prima e dopo e chi parla</li></ul>
 <button class="start" id="start" type="button" data-umami-event="canto-inizio-test" data-umami-event-canto="paradiso-1">Inizia il ripasso</button>
 </div>
 
 <div class="card" id="quiz" hidden>
 <p class="num">Paradiso, canto I · verso <span id="n">1</span> di 5</p>
-<p class="domanda" id="domanda"></p>
+<p class="domanda">Cosa viene prima e cosa viene dopo?</p>
 <p class="frase" id="frase"></p>
+<p class="sotto2">Rispondi a parole tue o, se te li ricordi, con i versi</p>
+<div id="bottoni">
+<button class="avanti" id="mostra" type="button">Mostra la risposta</button>
+<button class="sec" id="aiuto" type="button">Voglio un aiuto</button>
+</div>
+<div id="boxaiuto" hidden>
+<p class="aiuto-dom" id="aiutodom"></p>
 <div id="opzioni"></div>
-<button class="nonso" id="nonso" type="button">Non lo so</button>
-<div id="dopo" hidden>
 <p class="esito" id="esito"></p>
-<p class="info" id="info"></p>
-<button class="avanti" id="avanti" type="button">Avanti</button>
+</div>
+<div class="scheda" id="scheda" hidden>
+<p class="etich">La situazione</p>
+<p class="sit" id="sit"></p>
+<p class="etich">Prima <span id="npri"></span></p>
+<p class="ctx" id="pri"></p>
+<p class="etich">Dopo <span id="ndop"></span></p>
+<p class="ctx" id="dop"></p>
+<p class="info" id="info" style="margin-top:12px"></p>
+<p class="etich" style="text-align:center;margin-top:16px">Come è andata?</p>
+<div class="voti"><button class="voto v1" type="button" data-v="2">Lo sapevo</button><button class="voto v2" type="button" data-v="1">Più o meno</button><button class="voto v3" type="button" data-v="0">Non lo sapevo</button></div>
 </div>
 </div>
 
 <div class="card" id="fine" hidden>
 <p class="punti" id="punti"></p>
+<p class="dettaglio" id="dettaglio"></p>
 <p id="commento" style="text-align:center"></p>
-<p style="text-align:center">Nell'app ripassi i versi più importanti del primo canto del Paradiso e gli altri canti della Divina Commedia. Gratis e senza registrazione.</p>
+<p style="text-align:center">Nell'app ripassi tutto il primo canto del Paradiso e gli altri canti della Divina Commedia. Gratis e senza registrazione.</p>
 <a class="cta" href="https://books.sebugi.com/?libro=la-divina-commedia&amp;canto=paradiso-1&amp;lang=it" id="cta" data-umami-event="canto-entra-app" data-umami-event-canto="paradiso-1">Ripassa il primo canto del Paradiso</a>
 <button class="avanti" id="ripeti" type="button" style="background:#fff;color:#3b2f22;border:1px solid #cdb98f">Rifai il quiz</button>
 </div>
@@ -82,60 +109,71 @@ h1{font-size:1.7rem;line-height:1.2;margin:.2em 0 .3em;text-align:center}
 </div>
 <script>
 var CANTO="paradiso-1";
-var D={"V":[{"t":"La gloria di colui che tutto move / per l'universo penetra, e risplende / in una parte più e meno altrove.","v":"1-3","p":"Dante","z":0,"a":0},{"t":"Nel ciel che più de la sua luce prende / fu' io, e vidi cose che ridire / né sa né può chi di là sù discende;","v":"4-6","p":"Dante","z":0,"a":0},{"t":"O buono Appollo, a l'ultimo lavoro / fammi del tuo valor sì fatto vaso, / come dimandi a dar l'amato alloro.","v":"13-15","p":"Dante","z":0,"a":0},{"t":"Poca favilla gran fiamma seconda…","v":"34","p":"Dante","z":0,"a":0},{"t":"Beatrice tutta ne l'etterne rote / fissa con li occhi stava; e io in lei / le luci fissi, di là sù rimote.","v":"64-66","p":"Dante","z":1,"a":0},{"t":"Trasumanar significar per verba / non si poria; però l'essemplo basti…","v":"70-71","p":"Dante","z":1,"a":0},{"t":"Le cose tutte quante / hanno ordine tra loro, e questo è forma / che l'universo a Dio fa simigliante.","v":"103-105","p":"Beatrice","z":2,"a":0},{"t":"Tu non se' in terra, sì come tu credi; / ma folgore, fuggendo il proprio sito, / non corse come tu ch'ad esso riedi.","v":"91-93","p":"Beatrice","z":1,"a":1},{"t":"Vero è che, come forma non s'accorda / molte fïate a l'intenzion de l'arte, / perch'a risponder la materia è sorda…","v":"127-129","p":"Beatrice","z":2,"a":0},{"t":"Non dei più ammirar, se bene stimo, / lo tuo salir, se non come d'un rivo…","v":"136-137","p":"Beatrice","z":2,"a":0}],"L":142,"altri":["Cacciaguida","Giustiniano","Piccarda Donati","San Bernardo","San Tommaso d'Aquino"]};
-var PUNTI=["All'inizio","A metà","Alla fine"];
+var D={"V":[{"t":"La gloria di colui che tutto move / per l'universo penetra, e risplende / in una parte più e meno altrove.","v":"1-3","p":"Dante"},{"t":"Nel ciel che più de la sua luce prende / fu' io, e vidi cose che ridire / né sa né può chi di là sù discende;","v":"4-6","p":"Dante"},{"t":"O buono Appollo, a l'ultimo lavoro / fammi del tuo valor sì fatto vaso, / come dimandi a dar l'amato alloro.","v":"13-15","p":"Dante"},{"t":"Poca favilla gran fiamma seconda…","v":"34","p":"Dante"},{"t":"Beatrice tutta ne l'etterne rote / fissa con li occhi stava; e io in lei / le luci fissi, di là sù rimote.","v":"64-66","p":"Dante"},{"t":"Trasumanar significar per verba / non si poria; però l'essemplo basti…","v":"70-71","p":"Dante"},{"t":"Le cose tutte quante / hanno ordine tra loro, e questo è forma / che l'universo a Dio fa simigliante.","v":"103-105","p":"Beatrice"},{"t":"Tu non se' in terra, sì come tu credi; / ma folgore, fuggendo il proprio sito, / non corse come tu ch'ad esso riedi.","v":"91-93","p":"Beatrice"},{"t":"Vero è che, come forma non s'accorda / molte fïate a l'intenzion de l'arte, / perch'a risponder la materia è sorda…","v":"127-129","p":"Beatrice"},{"t":"Non dei più ammirar, se bene stimo, / lo tuo salir, se non come d'un rivo…","v":"136-137","p":"Beatrice"}],"versi":["La gloria di colui che tutto move","per l'universo penetra, e risplende","in una parte più e meno altrove.","Nel ciel che più de la sua luce prende","fu' io, e vidi cose che ridire","né sa né può chi di là sù discende;","perché appressando sé al suo disire,","nostro intelletto si profonda tanto,","che dietro la memoria non può ire.","Veramente quant'io del regno santo","ne la mia mente potei far tesoro,","sarà ora materia del mio canto.","O buono Appollo, a l'ultimo lavoro","fammi del tuo valor sì fatto vaso,","come dimandi a dar l'amato alloro.","Infino a qui l'un giogo di Parnaso","assai mi fu; ma or con amendue","m'è uopo intrar ne l'aringo rimaso.","Entra nel petto mio, e spira tue","sì come quando Marsïa traesti","de la vagina de le membra sue.","O divina virtù, se mi ti presti","tanto che l'ombra del beato regno","segnata nel mio capo io manifesti,","vedra' mi al piè del tuo diletto legno","venire, e coronarmi de le foglie","che la materia e tu mi farai degno.","Sì rade volte, padre, se ne coglie","per trïunfare o cesare o poeta,","colpa e vergogna de l'umane voglie,","che parturir letizia in su la lieta","delfica deïtà dovria la fronda","peneia, quando alcun di sé asseta.","Poca favilla gran fiamma seconda:","forse di retro a me con miglior voci","si pregherà perché Cirra risponda.","Surge ai mortali per diverse foci","la lucerna del mondo; ma da quella","che quattro cerchi giugne con tre croci,","con miglior corso e con migliore stella","esce congiunta, e la mondana cera","più a suo modo tempera e suggella.","Fatto avea di là mane e di qua sera","tal foce, e quasi tutto era là bianco","quello emisperio, e l'altra parte nera,","quando Beatrice in sul sinistro fianco","vidi rivolta e riguardar nel sole:","aguglia sì non li s'affisse unquanco.","E sì come secondo raggio suole","uscir del primo e risalire in suso,","pur come pelegrin che tornar vuole,","così de l'atto suo, per li occhi infuso","ne l'imagine mia, il mio si fece,","e fissi li occhi al sole oltre nostr'uso.","Molto è licito là, che qui non lece","a le nostre virtù, mercé del loco","fatto per proprio de l'umana spece.","Io nol soffersi molto, né sì poco,","ch'io nol vedessi sfavillar dintorno,","com' ferro che bogliente esce del foco;","e di sùbito parve giorno a giorno","essere aggiunto, come quei che puote","avesse il ciel d'un altro sole addorno.","Beatrice tutta ne l'etterne rote","fissa con li occhi stava; e io in lei","le luci fissi, di là sù rimote.","Nel suo aspetto tal dentro mi fei,","qual si fé Glauco nel gustar de l'erba","che 'l fé consorto in mar de li altri dèi.","Trasumanar significar per verba","non si poria; però l'essemplo basti","a cui esperïenza grazia serba.","S'i' era sol di me quel che creasti","novellamente, amor che 'l ciel governi,","tu 'l sai, che col tuo lume mi levasti.","Quando la rota che tu sempiterni","desiderato, a sé mi fece atteso","con l'armonia che temperi e discerni,","parvemi tanto allor del cielo acceso","de la fiamma del sol, che pioggia o fiume","lago non fece alcun tanto disteso.","La novità del suono e 'l grande lume","di lor cagion m'accesero un disio","mai non sentito di cotanto acume.","Ond'ella, che vedea me sì com'io,","a quïetarmi l'animo commosso,","pria ch'io a dimandar, la bocca aprio","e cominciò: \"Tu stesso ti fai grosso","col falso imaginar, sì che non vedi","ciò che vedresti se l'avessi scosso.","Tu non se' in terra, sì come tu credi;","ma folgore, fuggendo il proprio sito,","non corse come tu ch'ad esso riedi\".","S'io fui del primo dubbio disvestito","per le sorrise parolette brevi,","dentro ad un nuovo più fu' inretito","e dissi: \"Già contento requïevi","di grande ammirazion; ma ora ammiro","com'io trascenda questi corpi levi\".","Ond'ella, appresso d'un pïo sospiro,","li occhi drizzò ver' me con quel sembiante","che madre fa sovra figlio deliro,","e cominciò: \"Le cose tutte quante","hanno ordine tra loro, e questo è forma","che l'universo a Dio fa simigliante.","Qui veggion l'alte creature l'orma","de l'etterno valore, il qual è fine","al quale è fatta la toccata norma.","Ne l'ordine ch'io dico sono accline","tutte nature, per diverse sorti,","più al principio loro e men vicine;","onde si muovono a diversi porti","per lo gran mar de l'essere, e ciascuna","con istinto a lei dato che la porti.","Questi ne porta il foco inver' la luna;","questi ne' cor mortali è permotore;","questi la terra in sé stringe e aduna;","né pur le creature che son fore","d'intelligenza quest'arco saetta,","ma quelle c' hanno intelletto e amore.","La provedenza, che cotanto assetta,","del suo lume fa 'l ciel sempre quïeto","nel qual si volge quel c' ha maggior fretta;","e ora lì, come a sito decreto,","cen porta la virtù di quella corda","che ciò che scocca drizza in segno lieto.","Vero è che, come forma non s'accorda","molte fïate a l'intenzion de l'arte,","perch'a risponder la materia è sorda,","così da questo corso si diparte","talor la creatura, c' ha podere","di piegar, così pinta, in altra parte;","e sì come veder si può cadere","foco di nube, sì l'impeto primo","l'atterra torto da falso piacere.","Non dei più ammirar, se bene stimo,","lo tuo salir, se non come d'un rivo","se d'alto monte scende giuso ad imo.","Maraviglia sarebbe in te se, privo","d'impedimento, giù ti fossi assiso,","com'a terra quïete in foco vivo\".","Quinci rivolse inver' lo cielo il viso."],"M":[[1,12,"La gloria di Dio risplende nell'universo; Dante racconterà quello che ricorda del Paradiso."],[13,36,"Dante invoca Apollo perché gli dia la forza per l'ultima parte del poema."],[37,63,"Beatrice fissa il sole e Dante la imita: tutto si illumina come se ci fosse un secondo sole."],[64,84,"Dante fissa gli occhi in Beatrice e si sente 'trasumanar'; sente l'armonia delle sfere."],[85,99,"Beatrice spiega che non sono più sulla Terra; Dante chiede come può salire attraverso i corpi leggeri."],[100,126,"Beatrice spiega l'ordine dell'universo: ogni cosa tende al suo posto per istinto."],[127,142,"Beatrice conclude che per chi è libero dal peccato salire a Dio è naturale, come un fiume che scende."]]};
+var L=D.versi.length;
 function mescola(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
 function el(x){return document.getElementById(x)}
-var dom=[],i=0,punti=0,chiuso=false;
-function parlanti(){var o={};D.V.forEach(function(v){o[v.p]=1});return Object.keys(o)}
+function da(v){return parseInt(v.split("-")[0],10)}
+function a(v){var p=v.split("-");return parseInt(p[p.length-1],10)}
+function mom(n){for(var k=0;k<D.M.length;k++)if(D.M[k][0]<=n&&n<=D.M[k][1])return k;return 0}
+function nv(x,y){return x===y?"(v. "+x+")":"(vv. "+x+"-"+y+")"}
+var dom=[],i=0,voti=[0,0,0],fatto=false;
 function prepara(){
-  var chi=parlanti(),nChi=chi.length>=3?2:chi.length===2?1:0;
-  // cinque versi: uno per ogni parte del canto, poi a caso
-  var scelti=[];
-  [0,1,2].forEach(function(z){var c=mescola(D.V.filter(function(v){return v.z===z&&!v.a}))[0];if(c)scelti.push(c)});
+  // cinque versi da momenti diversi del canto, quando si può
+  var scelti=[],usati={};
+  mescola(D.V).forEach(function(v){var m=mom(da(v.v));if(scelti.length<5&&!usati[m]){usati[m]=1;scelti.push(v)}});
   mescola(D.V).forEach(function(v){if(scelti.length<5&&scelti.indexOf(v)<0)scelti.push(v)});
-  scelti=mescola(scelti);
-  // le domande su chi parla vanno ai versi vicini al confine fra due parti, poi a caso
-  var ordine=scelti.map(function(v,k){return k}).sort(function(a,b){return scelti[b].a-scelti[a].a});
-  var tipoChi={};for(var k=0;k<5&&nChi>0;k++){if(scelti[ordine[k]].a||nChi>0){tipoChi[ordine[k]]=1;nChi--}}
-  scelti.forEach(function(v,k){if(v.a)tipoChi[k]=1});
-  dom=scelti.map(function(v,k){
-    if(tipoChi[k]){
-      var altri=mescola(chi.filter(function(p){return p!==v.p})).concat(mescola(D.altri)).filter(function(p,x,a){return a.indexOf(p)===x&&p!==v.p}).slice(0,2);
-      return {v:v,domanda:"Chi parla?",opz:mescola([v.p].concat(altri)),giusta:v.p};
-    }
-    return {v:v,domanda:"A che punto del canto si trova questo verso?",opz:PUNTI.slice(),giusta:PUNTI[v.z]};
-  });
-  i=0;punti=0;
+  dom=mescola(scelti);i=0;voti=[0,0,0];
 }
 function mostra(){
-  var q=dom[i];chiuso=false;
-  el("n").textContent=i+1;el("domanda").textContent=q.domanda;el("frase").textContent=q.v.t.replace(/ \/ /g,"\n");
-  el("dopo").hidden=true;el("nonso").hidden=false;
+  var v=dom[i];fatto=false;
+  el("n").textContent=i+1;el("frase").textContent=v.t.replace(/ \/ /g,"\n");
+  el("bottoni").hidden=false;el("boxaiuto").hidden=true;el("scheda").hidden=true;el("esito").textContent="";
+}
+function scheda(){
+  var v=dom[i],x=da(v.v),y=a(v.v);
+  el("bottoni").hidden=true;
+  el("sit").textContent=D.M[mom(x)][2];
+  if(x>1){var p=Math.max(1,x-3);el("npri").textContent=nv(p,x-1);el("pri").textContent=D.versi.slice(p-1,x-1).join("\n")}
+  else{el("npri").textContent="";el("pri").textContent="È l'inizio del canto."}
+  if(y<L){var q=Math.min(L,y+3);el("ndop").textContent=nv(y+1,q);el("dop").textContent=D.versi.slice(y,q).join("\n")}
+  else{el("ndop").textContent="";el("dop").textContent="È la fine del canto."}
+  el("info").textContent=(x===y?"Verso "+x:"Versi "+x+"-"+y)+" su "+L+" · Chi parla: "+v.p;
+  el("scheda").hidden=false;
+}
+function aiuto(){
+  if(window.umami)umami.track("canto-aiuto",{canto:CANTO});
+  var v=dom[i],x=da(v.v),y=a(v.v);
+  var dopo=mom(y)<D.M.length-1,mio=dopo?mom(y):mom(x),giusto=dopo?mio+1:mio-1;
+  el("aiutodom").textContent=dopo?"Quale di questi momenti viene subito dopo?":"Siamo nell'ultima parte del canto. Quale di questi momenti viene subito prima?";
+  var altri=mescola(D.M.map(function(m,k){return k}).filter(function(k){return k!==mio&&k!==giusto})).slice(0,2);
   var box=el("opzioni");box.innerHTML="";
-  q.opz.forEach(function(t){
-    var b=document.createElement("button");b.type="button";b.className="opz";b.textContent=t;
-    b.onclick=function(){scegli(b,t)};box.appendChild(b)
-  })
+  mescola([giusto].concat(altri)).forEach(function(k){
+    var b=document.createElement("button");b.type="button";b.className="opz";b.textContent=D.M[k][2];b.setAttribute("data-k",k);
+    b.onclick=function(){
+      if(fatto)return;fatto=true;
+      [].forEach.call(box.children,function(z){z.disabled=true;if(+z.getAttribute("data-k")===giusto)z.className="opz ok"});
+      if(k!==giusto)b.className="opz no";
+      el("esito").textContent=k===giusto?"Esatto!":"Non era questo: guarda la risposta.";
+      scheda();
+    };
+    box.appendChild(b);
+  });
+  el("bottoni").hidden=true;el("boxaiuto").hidden=false;
 }
-function scegli(b,t){
-  if(chiuso)return;chiuso=true;
-  var q=dom[i],v=q.v;
-  [].forEach.call(el("opzioni").children,function(y){y.disabled=true;if(y.textContent===q.giusta)y.className="opz ok"});
-  if(t===q.giusta){punti++;el("esito").textContent="Esatto!"}
-  else{if(b)b.className="opz no";el("esito").textContent="Era: "+(q.giusta.charAt(0).toLowerCase()===q.giusta.charAt(0)||q.domanda!=="Chi parla?"?q.giusta.charAt(0).toLowerCase()+q.giusta.slice(1):q.giusta)+"."}
-  el("info").textContent=(v.v.indexOf("-")>0?"Versi ":"Verso ")+v.v+" su "+D.L+" · Chi parla: "+v.p;
-  el("avanti").textContent=i<4?"Avanti":"Vedi il risultato";
-  el("nonso").hidden=true;el("dopo").hidden=false
+function valuta(n){
+  voti[n]++;i++;
+  if(i<5){mostra();window.scrollTo(0,0);return}
+  el("quiz").hidden=true;el("fine").hidden=false;window.scrollTo(0,0);
+  if(window.umami)umami.track("canto-fine-test",{canto:CANTO,punti:voti[2]});
+  el("punti").textContent="Lo sapevi in "+voti[2]+" su 5";
+  el("dettaglio").textContent="Più o meno: "+voti[1]+" · Non lo sapevi: "+voti[0];
+  var s=voti[2]+voti[1]/2;
+  el("commento").textContent=s>=4?"Ottimo: questo canto lo conosci bene.":s>=2?"Buon ripasso. Con il canto intero davanti lo fissi tutto.":"Si impara ripassando: ogni verso che rivedi è uno in più che ricorderai."
 }
-el("nonso").onclick=function(){scegli(null,null)};
-el("avanti").onclick=function(){
-  i++;
-  if(i<5){mostra();return}
-  el("quiz").hidden=true;el("fine").hidden=false;if(window.umami)umami.track("canto-fine-test",{canto:CANTO,punti:punti});
-  el("punti").textContent="Ne hai riconosciuti "+punti+" su 5";
-  el("commento").textContent=punti>=4?"Ottimo: questo canto lo conosci bene.":punti>=2?"Buon ripasso. Con qualche verso in più lo fissi tutto.":"Si impara ripassando: ogni verso che rivedi è uno in più che riconoscerai."
-};
+el("mostra").onclick=scheda;
+el("aiuto").onclick=aiuto;
+[].forEach.call(document.querySelectorAll(".voto"),function(b){b.onclick=function(){valuta(+b.getAttribute("data-v"))}});
 el("ripeti").onclick=function(){el("fine").hidden=true;el("quiz").hidden=false;prepara();mostra()};
 el("start").onclick=function(){el("intro").hidden=true;el("quiz").hidden=false;window.scrollTo(0,0)};
 prepara();mostra();

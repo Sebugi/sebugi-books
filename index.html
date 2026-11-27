@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
     <link rel="apple-touch-icon" href="favicon-192.png">
     <link rel="stylesheet" href="/fonts/fonts.css">
-    <link rel="stylesheet" href="style.css?v=15">
+    <link rel="stylesheet" href="style.css?v=16">
 <script defer src="https://cloud.umami.is/script.js" data-website-id="86c03d25-c58e-427d-a332-2fb69da70300"></script>
 </head>
 <body>
@@ -43,7 +43,7 @@
 
                 <button type="button" id="btn-dante-home" class="btn-dante-home">
                     <strong data-i18n="danteHomeTitolo">Ripassa la Divina Commedia</strong>
-                    <span data-i18n="danteHomeSotto">Canto per canto: riconosci il canto e chi parla</span>
+                    <span data-i18n="danteHomeSotto">Canto per canto: cosa viene prima e cosa viene dopo, chi parla</span>
                 </button>
 
                 <p class="suggerimento" data-i18n="suggerimento">Tocca per scegliere nazione, autore o libro, anche più di uno. Se non scegli niente, ricevi domande a caso da tutti i libri.</p>
@@ -152,6 +152,10 @@
                 <div class="chips" id="dc-canti"></div>
             </div>
             <div class="filtro-gruppo">
+                <label data-i18n="danteAmbito">Versi</label>
+                <div class="chips" id="dc-ambito"></div>
+            </div>
+            <div class="filtro-gruppo">
                 <label data-i18n="danteDomanda">Domanda</label>
                 <div class="chips" id="dc-domande"></div>
             </div>
@@ -171,6 +175,31 @@
                     <p class="dc-num" id="dc-num"></p>
                     <p class="dc-domanda" id="dc-domanda"></p>
                     <p class="dc-verso" id="dc-verso"></p>
+                    <p class="dc-sotto" id="dc-sotto" data-i18n="pdSotto" style="display:none;">Rispondi a parole tue o, se te li ricordi, con i versi</p>
+                </div>
+                <div id="dc-pd" style="display:none;">
+                    <button type="button" class="dc-primario dc-stretto" id="dc-mostra" data-i18n="pdMostra">Mostra la risposta</button>
+                    <button type="button" class="dc-secondario" id="dc-aiuto-btn" data-i18n="pdAiuto">Voglio un aiuto</button>
+                </div>
+                <div id="dc-aiuto" style="display:none;">
+                    <p class="dc-aiuto-dom" id="dc-aiuto-dom"></p>
+                    <div id="dc-aiuto-opz"></div>
+                    <p class="dc-esito" id="dc-aiuto-esito" style="display:none;"></p>
+                </div>
+                <div id="dc-scheda" class="dc-scheda" style="display:none;">
+                    <p class="dc-etichetta" data-i18n="pdSituazione">La situazione</p>
+                    <p class="dc-situazione" id="dc-situazione"></p>
+                    <p class="dc-etichetta"><span data-i18n="pdPrima">Prima</span> <span class="dc-nv" id="dc-prima-n"></span></p>
+                    <p class="dc-contesto" id="dc-prima"></p>
+                    <p class="dc-etichetta"><span data-i18n="pdDopo">Dopo</span> <span class="dc-nv" id="dc-dopo-n"></span></p>
+                    <p class="dc-contesto" id="dc-dopo-v"></p>
+                    <p class="dc-info" id="dc-pd-info"></p>
+                    <p class="dc-etichetta dc-centro" data-i18n="pdComeVa">Come è andata?</p>
+                    <div class="dc-voti">
+                        <button type="button" class="dc-voto v-si" id="dc-sapevo" data-i18n="pdSapevo">Lo sapevo</button>
+                        <button type="button" class="dc-voto v-forse" id="dc-piumeno" data-i18n="pdPiuMeno">Più o meno</button>
+                        <button type="button" class="dc-voto v-no" id="dc-nonsapevo" data-i18n="pdNonSapevo">Non lo sapevo</button>
+                    </div>
                 </div>
                 <div id="dc-opzioni"></div>
                 <button type="button" class="dc-nonso" id="dc-nonso" data-i18n="danteNonSo">Non lo so</button>
@@ -190,7 +219,7 @@
     </div>
 
     <script src="illustrazioni.js?v=10"></script>
-    <script src="app.js?v=19"></script>
-    <script src="dante.js?v=1"></script>
+    <script src="app.js?v=20"></script>
+    <script src="dante.js?v=2"></script>
 </body>
 </html>

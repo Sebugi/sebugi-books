@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#f5eddc">
-<title>Ripassa il sesto canto del Paradiso: riconosci i versi | Sebugi Books</title>
+<title>Ripassa il sesto canto del Paradiso: cosa viene prima e cosa viene dopo | Sebugi Books</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
     <link rel="apple-touch-icon" href="../favicon-192.png">
-<meta name="description" content="Cinque versi del sesto canto del Paradiso: riconosci a che punto del canto si trovano e chi parla. Ripasso gratuito, senza registrazione.">
+<meta name="description" content="Cinque versi del sesto canto del Paradiso: sai dire cosa viene prima e cosa viene dopo? Ripasso gratuito, senza registrazione.">
 <link rel="canonical" href="https://books.sebugi.com/landing/paradiso-6.html">
 <meta name="robots" content="noindex">
 <style>
@@ -41,6 +41,18 @@ h1{font-size:1.7rem;line-height:1.2;margin:.2em 0 .3em;text-align:center}
 .intro ul{list-style:none;padding:0;margin:0 0 14px;color:#6b5b47;font-size:.95rem}
 .start{display:block;width:100%;padding:20px 14px;margin-top:6px;font:inherit;font-weight:bold;font-size:1.5rem;color:#fff;background:linear-gradient(#5d8a4a,#46703a);border:0;border-radius:12px;cursor:pointer;box-shadow:0 3px 0 #2f5226}
 .start:active{transform:translateY(2px);box-shadow:0 1px 0 #2f5226}
+.sotto2{font-size:.92rem;color:#6b5b47;margin:0 0 14px}
+.sec{display:block;width:100%;padding:13px;margin-top:10px;font:inherit;font-size:1rem;text-align:center;color:#3b2f22;background:#fff;border:1px solid #cdb98f;border-radius:8px;cursor:pointer}
+.aiuto-dom{font-style:italic;color:#6b5b47;margin:16px 0 4px}
+.scheda{margin-top:16px;border-top:1px solid #d9c9a8;padding-top:12px}
+.etich{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:#8a6a35;font-weight:bold;margin:12px 0 2px}
+.etich span{font-weight:normal;letter-spacing:0;text-transform:none;color:#7a6a55}
+.sit{margin:0 0 4px}
+.ctx{font-style:italic;white-space:pre-line;margin:0 0 4px;color:#4b3d2c}
+.voti{display:flex;gap:8px;margin-top:6px}
+.voto{flex:1;padding:12px 4px;font:inherit;font-size:.95rem;font-weight:bold;border-radius:8px;cursor:pointer;color:#3b2f22;border:1px solid}
+.v1{background:#dcebd2;border-color:#6a9a52}.v2{background:#f3e6c8;border-color:#b8913f}.v3{background:#f4d9d3;border-color:#b9604f}
+.dettaglio{text-align:center;color:#6b5b47;font-size:.92rem;margin:0 0 8px}
 </style>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="86c03d25-c58e-427d-a332-2fb69da70300"></script>
 </head>
@@ -48,32 +60,47 @@ h1{font-size:1.7rem;line-height:1.2;margin:.2em 0 .3em;text-align:center}
 <div class="wrap">
 <img src="../logo.png" alt="Sebugi" width="150" style="display:block;margin:0 auto 6px;max-width:50%;height:auto">
 <h1>Devi ripassare il sesto canto del Paradiso?</h1>
-<p class="sotto">Cinque versi del canto: riconosci a che punto si trovano.</p>
+<p class="sotto">Cinque versi del canto: sai dire cosa viene prima e cosa viene dopo?</p>
 
 <div class="card intro" id="intro">
 <h2>Come funziona</h2>
-<p>Leggi cinque versi del sesto canto del Paradiso e indovina se vengono dall'inizio, dalla metà o dalla fine del canto. Ogni tanto la domanda è su chi parla.</p>
-<ul><li>Gratis e senza registrazione</li><li>Due minuti, anche dal telefono</li><li>Dopo ogni risposta vedi i numeri dei versi e chi parla</li></ul>
+<p>Leggi cinque versi del sesto canto del Paradiso e prova a dire cosa viene prima e cosa viene dopo, a parole tue o con i versi. Se non ti viene in mente, chiedi un aiuto.</p>
+<ul><li>Gratis e senza registrazione</li><li>Due minuti, anche dal telefono</li><li>Dopo ogni verso vedi la situazione, i versi prima e dopo e chi parla</li></ul>
 <button class="start" id="start" type="button" data-umami-event="canto-inizio-test" data-umami-event-canto="paradiso-6">Inizia il ripasso</button>
 </div>
 
 <div class="card" id="quiz" hidden>
 <p class="num">Paradiso, canto VI · verso <span id="n">1</span> di 5</p>
-<p class="domanda" id="domanda"></p>
+<p class="domanda">Cosa viene prima e cosa viene dopo?</p>
 <p class="frase" id="frase"></p>
+<p class="sotto2">Rispondi a parole tue o, se te li ricordi, con i versi</p>
+<div id="bottoni">
+<button class="avanti" id="mostra" type="button">Mostra la risposta</button>
+<button class="sec" id="aiuto" type="button">Voglio un aiuto</button>
+</div>
+<div id="boxaiuto" hidden>
+<p class="aiuto-dom" id="aiutodom"></p>
 <div id="opzioni"></div>
-<button class="nonso" id="nonso" type="button">Non lo so</button>
-<div id="dopo" hidden>
 <p class="esito" id="esito"></p>
-<p class="info" id="info"></p>
-<button class="avanti" id="avanti" type="button">Avanti</button>
+</div>
+<div class="scheda" id="scheda" hidden>
+<p class="etich">La situazione</p>
+<p class="sit" id="sit"></p>
+<p class="etich">Prima <span id="npri"></span></p>
+<p class="ctx" id="pri"></p>
+<p class="etich">Dopo <span id="ndop"></span></p>
+<p class="ctx" id="dop"></p>
+<p class="info" id="info" style="margin-top:12px"></p>
+<p class="etich" style="text-align:center;margin-top:16px">Come è andata?</p>
+<div class="voti"><button class="voto v1" type="button" data-v="2">Lo sapevo</button><button class="voto v2" type="button" data-v="1">Più o meno</button><button class="voto v3" type="button" data-v="0">Non lo sapevo</button></div>
 </div>
 </div>
 
 <div class="card" id="fine" hidden>
 <p class="punti" id="punti"></p>
+<p class="dettaglio" id="dettaglio"></p>
 <p id="commento" style="text-align:center"></p>
-<p style="text-align:center">Nell'app ripassi i versi più importanti del sesto canto del Paradiso e gli altri canti della Divina Commedia. Gratis e senza registrazione.</p>
+<p style="text-align:center">Nell'app ripassi tutto il sesto canto del Paradiso e gli altri canti della Divina Commedia. Gratis e senza registrazione.</p>
 <a class="cta" href="https://books.sebugi.com/?libro=la-divina-commedia&amp;canto=paradiso-6&amp;lang=it" id="cta" data-umami-event="canto-entra-app" data-umami-event-canto="paradiso-6">Ripassa il sesto canto del Paradiso</a>
 <button class="avanti" id="ripeti" type="button" style="background:#fff;color:#3b2f22;border:1px solid #cdb98f">Rifai il quiz</button>
 </div>
@@ -82,60 +109,71 @@ h1{font-size:1.7rem;line-height:1.2;margin:.2em 0 .3em;text-align:center}
 </div>
 <script>
 var CANTO="paradiso-6";
-var D={"V":[{"t":"Cesare fui e son Iustinïano, / che, per voler del primo amor ch'i' sento, / d'entro le leggi trassi il troppo e 'l vano.","v":"10-12","p":"Giustiniano","z":0,"a":0},{"t":"Poscia che Costantin l'aquila volse / contr'al corso del ciel, ch'ella seguio / dietro a l'antico che Lavina tolse…","v":"1-3","p":"Giustiniano","z":0,"a":0},{"t":"L'uno al pubblico segno i gigli gialli / oppone, e l'altro appropria quello a parte, / sì ch'è forte a veder chi più si falli.","v":"100-102","p":"Giustiniano","z":2,"a":0},{"t":"Faccian li Ghibellin, faccian lor arte / sott'altro segno, ché mal segue quello…","v":"103-104","p":"Giustiniano","z":2,"a":0},{"t":"Diverse voci fanno dolci note; / così diversi scanni in nostra vita / rendon dolce armonia tra queste rote.","v":"124-126","p":"Giustiniano","z":2,"a":0},{"t":"E dentro a la presente margarita / luce la luce di Romeo, di cui…","v":"127-128","p":"Giustiniano","z":2,"a":0},{"t":"Quattro figlie ebbe, e ciascuna reina, / Ramondo Beringhiere, e ciò li fece…","v":"133-134","p":"Giustiniano","z":2,"a":0},{"t":"Vedi quanta virtù l'ha fatto degno / di reverenza; e cominciò da l'ora…","v":"34-35","p":"Giustiniano","z":0,"a":0},{"t":"Esso atterrò l'orgoglio de li Aràbi / che di retro ad Anibale passaro…","v":"49-50","p":"Giustiniano","z":1,"a":1},{"t":"Poi, presso al tempo che tutto 'l ciel volle / redur lo mondo a suo modo sereno…","v":"55-56","p":"Giustiniano","z":1,"a":0}],"L":142,"altri":["Beatrice","Cacciaguida","Dante","Piccarda Donati","San Bernardo","San Tommaso d'Aquino"]};
-var PUNTI=["All'inizio","A metà","Alla fine"];
+var D={"V":[{"t":"Cesare fui e son Iustinïano, / che, per voler del primo amor ch'i' sento, / d'entro le leggi trassi il troppo e 'l vano.","v":"10-12","p":"Giustiniano"},{"t":"Poscia che Costantin l'aquila volse / contr'al corso del ciel, ch'ella seguio / dietro a l'antico che Lavina tolse…","v":"1-3","p":"Giustiniano"},{"t":"L'uno al pubblico segno i gigli gialli / oppone, e l'altro appropria quello a parte, / sì ch'è forte a veder chi più si falli.","v":"100-102","p":"Giustiniano"},{"t":"Faccian li Ghibellin, faccian lor arte / sott'altro segno, ché mal segue quello…","v":"103-104","p":"Giustiniano"},{"t":"Diverse voci fanno dolci note; / così diversi scanni in nostra vita / rendon dolce armonia tra queste rote.","v":"124-126","p":"Giustiniano"},{"t":"E dentro a la presente margarita / luce la luce di Romeo, di cui…","v":"127-128","p":"Giustiniano"},{"t":"Quattro figlie ebbe, e ciascuna reina, / Ramondo Beringhiere, e ciò li fece…","v":"133-134","p":"Giustiniano"},{"t":"Vedi quanta virtù l'ha fatto degno / di reverenza; e cominciò da l'ora…","v":"34-35","p":"Giustiniano"},{"t":"Esso atterrò l'orgoglio de li Aràbi / che di retro ad Anibale passaro…","v":"49-50","p":"Giustiniano"},{"t":"Poi, presso al tempo che tutto 'l ciel volle / redur lo mondo a suo modo sereno…","v":"55-56","p":"Giustiniano"}],"versi":["«Poscia che Costantin l'aquila volse","contr' al corso del ciel, ch'ella seguio","dietro a l'antico che Lavina tolse,","cento e cent' anni e più l'uccel di Dio","ne lo stremo d'Europa si ritenne,","vicino a' monti de' quai prima uscìo;","e sotto l'ombra de le sacre penne","governò 'l mondo lì di mano in mano,","e, sì cangiando, in su la mia pervenne.","Cesare fui e son Iustinïano,","che, per voler del primo amor ch'i' sento,","d'entro le leggi trassi il troppo e 'l vano.","E prima ch'io a l'ovra fossi attento,","una natura in Cristo esser, non piùe,","credea, e di tal fede era contento;","ma 'l benedetto Agapito, che fue","sommo pastore, a la fede sincera","mi dirizzò con le parole sue.","Io li credetti; e ciò che 'n sua fede era,","vegg' io or chiaro sì, come tu vedi","ogni contradizione e falsa e vera.","Tosto che con la Chiesa mossi i piedi,","a Dio per grazia piacque di spirarmi","l'alto lavoro, e tutto 'n lui mi diedi;","e al mio Belisar commendai l'armi,","cui la destra del ciel fu sì congiunta,","che segno fu ch'i' dovessi posarmi.","Or qui a la question prima s'appunta","la mia risposta; ma sua condizione","mi stringe a seguitare alcuna giunta,","perché tu veggi con quanta ragione","si move contr' al sacrosanto segno","e chi 'l s'appropria e chi a lui s'oppone.","Vedi quanta virtù l'ha fatto degno","di reverenza; e cominciò da l'ora","che Pallante morì per darli regno.","Tu sai ch'el fece in Alba sua dimora","per trecento anni e oltre, infino al fine","che i tre a' tre pugnar per lui ancora.","E sai ch'el fé dal mal de le Sabine","al dolor di Lucrezia in sette regi,","vincendo intorno le genti vicine.","Sai quel ch'el fé portato da li egregi","Romani incontro a Brenno, incontro a Pirro,","incontro a li altri principi e collegi;","onde Torquato e Quinzio, che dal cirro","negletto fu nomato, i Deci e ' Fabi","ebber la fama che volontier mirro.","Esso atterrò l'orgoglio de li Aràbi","che di retro ad Anibale passaro","l'alpestre rocce, Po, di che tu labi.","Sott' esso giovanetti trïunfaro","Scipïone e Pompeo; e a quel colle","sotto 'l qual tu nascesti parve amaro.","Poi, presso al tempo che tutto 'l ciel volle","redur lo mondo a suo modo sereno,","Cesare per voler di Roma il tolle.","E quel che fé da Varo infino a Reno,","Isara vide ed Era e vide Senna","e ogne valle onde Rodano è pieno.","Quel che fé poi ch'elli uscì di Ravenna","e saltò Rubicon, fu di tal volo,","che nol seguiteria lingua né penna.","Inver' la Spagna rivolse lo stuolo,","poi ver' Durazzo, e Farsalia percosse","sì ch'al Nil caldo si sentì del duolo.","Antandro e Simoenta, onde si mosse,","rivide e là dov' Ettore si cuba;","e mal per Tolomeo poscia si scosse.","Da indi scese folgorando a Iuba;","onde si volse nel vostro occidente,","ove sentia la pompeana tuba.","Di quel che fé col baiulo seguente,","Bruto con Cassio ne l'inferno latra,","e Modena e Perugia fu dolente.","Piangene ancor la trista Cleopatra,","che, fuggendoli innanzi, dal colubro","la morte prese subitana e atra.","Con costui corse infino al lito rubro;","con costui puose il mondo in tanta pace,","che fu serrato a Giano il suo delubro.","Ma ciò che 'l segno che parlar mi face","fatto avea prima e poi era fatturo","per lo regno mortal ch'a lui soggiace,","diventa in apparenza poco e scuro,","se in mano al terzo Cesare si mira","con occhio chiaro e con affetto puro;","ché la viva giustizia che mi spira,","li concedette, in mano a quel ch'i' dico,","gloria di far vendetta a la sua ira.","Or qui t'ammira in ciò ch'io ti replìco:","poscia con Tito a far vendetta corse","de la vendetta del peccato antico.","E quando il dente longobardo morse","la Santa Chiesa, sotto le sue ali","Carlo Magno, vincendo, la soccorse.","Omai puoi giudicar di quei cotali","ch'io accusai di sopra e di lor falli,","che son cagion di tutti vostri mali.","L'uno al pubblico segno i gigli gialli","oppone, e l'altro appropria quello a parte,","sì ch'è forte a veder chi più si falli.","Faccian li Ghibellin, faccian lor arte","sott' altro segno, ché mal segue quello","sempre chi la giustizia e lui diparte;","e non l'abbatta esto Carlo novello","coi Guelfi suoi, ma tema de li artigli","ch'a più alto leon trasser lo vello.","Molte fïate già pianser li figli","per la colpa del padre, e non si creda","che Dio trasmuti l'armi per suoi gigli!","Questa picciola stella si correda","d'i buoni spirti che son stati attivi","perché onore e fama li succeda:","e quando li disiri poggian quivi,","sì disvïando, pur convien che i raggi","del vero amore in sù poggin men vivi.","Ma nel commensurar d'i nostri gaggi","col merto è parte di nostra letizia,","perché non li vedem minor né maggi.","Quindi addolcisce la viva giustizia","in noi l'affetto sì, che non si puote","torcer già mai ad alcuna nequizia.","Diverse voci fanno dolci note;","così diversi scanni in nostra vita","rendon dolce armonia tra queste rote.","E dentro a la presente margarita","luce la luce di Romeo, di cui","fu l'ovra grande e bella mal gradita.","Ma i Provenzai che fecer contra lui","non hanno riso; e però mal cammina","qual si fa danno del ben fare altrui.","Quattro figlie ebbe, e ciascuna reina,","Ramondo Beringhiere, e ciò li fece","Romeo, persona umìle e peregrina.","E poi il mosser le parole biece","a dimandar ragione a questo giusto,","che li assegnò sette e cinque per diece,","indi partissi povero e vetusto;","e se 'l mondo sapesse il cor ch'elli ebbe","mendicando sua vita a frusto a frusto,","assai lo loda, e più lo loderebbe»."],"M":[[1,12,"L'anima si presenta: è l'imperatore Giustiniano, che riordinò le leggi romane."],[13,27,"Giustiniano racconta la sua conversione grazie al papa Agapito e le armi affidate a Belisario."],[28,54,"Giustiniano ripercorre la storia dell'aquila imperiale: Enea, Alba, i re di Roma, la repubblica."],[55,81,"Le imprese di Cesare e di Augusto, che portò la pace nel mondo."],[82,96,"Con Tiberio la crocifissione, con Tito la distruzione di Gerusalemme, poi Carlo Magno difende la Chiesa."],[97,111,"Giustiniano condanna Guelfi e Ghibellini, che combattono o usano l'aquila per interesse di parte."],[112,126,"Nel cielo di Mercurio stanno gli spiriti attivi per l'onore e la fama, felici del loro grado."],[127,142,"Giustiniano racconta di Romeo di Villanova, giusto e calunniato, che se ne andò povero."]]};
+var L=D.versi.length;
 function mescola(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
 function el(x){return document.getElementById(x)}
-var dom=[],i=0,punti=0,chiuso=false;
-function parlanti(){var o={};D.V.forEach(function(v){o[v.p]=1});return Object.keys(o)}
+function da(v){return parseInt(v.split("-")[0],10)}
+function a(v){var p=v.split("-");return parseInt(p[p.length-1],10)}
+function mom(n){for(var k=0;k<D.M.length;k++)if(D.M[k][0]<=n&&n<=D.M[k][1])return k;return 0}
+function nv(x,y){return x===y?"(v. "+x+")":"(vv. "+x+"-"+y+")"}
+var dom=[],i=0,voti=[0,0,0],fatto=false;
 function prepara(){
-  var chi=parlanti(),nChi=chi.length>=3?2:chi.length===2?1:0;
-  // cinque versi: uno per ogni parte del canto, poi a caso
-  var scelti=[];
-  [0,1,2].forEach(function(z){var c=mescola(D.V.filter(function(v){return v.z===z&&!v.a}))[0];if(c)scelti.push(c)});
+  // cinque versi da momenti diversi del canto, quando si può
+  var scelti=[],usati={};
+  mescola(D.V).forEach(function(v){var m=mom(da(v.v));if(scelti.length<5&&!usati[m]){usati[m]=1;scelti.push(v)}});
   mescola(D.V).forEach(function(v){if(scelti.length<5&&scelti.indexOf(v)<0)scelti.push(v)});
-  scelti=mescola(scelti);
-  // le domande su chi parla vanno ai versi vicini al confine fra due parti, poi a caso
-  var ordine=scelti.map(function(v,k){return k}).sort(function(a,b){return scelti[b].a-scelti[a].a});
-  var tipoChi={};for(var k=0;k<5&&nChi>0;k++){if(scelti[ordine[k]].a||nChi>0){tipoChi[ordine[k]]=1;nChi--}}
-  scelti.forEach(function(v,k){if(v.a)tipoChi[k]=1});
-  dom=scelti.map(function(v,k){
-    if(tipoChi[k]){
-      var altri=mescola(chi.filter(function(p){return p!==v.p})).concat(mescola(D.altri)).filter(function(p,x,a){return a.indexOf(p)===x&&p!==v.p}).slice(0,2);
-      return {v:v,domanda:"Chi parla?",opz:mescola([v.p].concat(altri)),giusta:v.p};
-    }
-    return {v:v,domanda:"A che punto del canto si trova questo verso?",opz:PUNTI.slice(),giusta:PUNTI[v.z]};
-  });
-  i=0;punti=0;
+  dom=mescola(scelti);i=0;voti=[0,0,0];
 }
 function mostra(){
-  var q=dom[i];chiuso=false;
-  el("n").textContent=i+1;el("domanda").textContent=q.domanda;el("frase").textContent=q.v.t.replace(/ \/ /g,"\n");
-  el("dopo").hidden=true;el("nonso").hidden=false;
+  var v=dom[i];fatto=false;
+  el("n").textContent=i+1;el("frase").textContent=v.t.replace(/ \/ /g,"\n");
+  el("bottoni").hidden=false;el("boxaiuto").hidden=true;el("scheda").hidden=true;el("esito").textContent="";
+}
+function scheda(){
+  var v=dom[i],x=da(v.v),y=a(v.v);
+  el("bottoni").hidden=true;
+  el("sit").textContent=D.M[mom(x)][2];
+  if(x>1){var p=Math.max(1,x-3);el("npri").textContent=nv(p,x-1);el("pri").textContent=D.versi.slice(p-1,x-1).join("\n")}
+  else{el("npri").textContent="";el("pri").textContent="È l'inizio del canto."}
+  if(y<L){var q=Math.min(L,y+3);el("ndop").textContent=nv(y+1,q);el("dop").textContent=D.versi.slice(y,q).join("\n")}
+  else{el("ndop").textContent="";el("dop").textContent="È la fine del canto."}
+  el("info").textContent=(x===y?"Verso "+x:"Versi "+x+"-"+y)+" su "+L+" · Chi parla: "+v.p;
+  el("scheda").hidden=false;
+}
+function aiuto(){
+  if(window.umami)umami.track("canto-aiuto",{canto:CANTO});
+  var v=dom[i],x=da(v.v),y=a(v.v);
+  var dopo=mom(y)<D.M.length-1,mio=dopo?mom(y):mom(x),giusto=dopo?mio+1:mio-1;
+  el("aiutodom").textContent=dopo?"Quale di questi momenti viene subito dopo?":"Siamo nell'ultima parte del canto. Quale di questi momenti viene subito prima?";
+  var altri=mescola(D.M.map(function(m,k){return k}).filter(function(k){return k!==mio&&k!==giusto})).slice(0,2);
   var box=el("opzioni");box.innerHTML="";
-  q.opz.forEach(function(t){
-    var b=document.createElement("button");b.type="button";b.className="opz";b.textContent=t;
-    b.onclick=function(){scegli(b,t)};box.appendChild(b)
-  })
+  mescola([giusto].concat(altri)).forEach(function(k){
+    var b=document.createElement("button");b.type="button";b.className="opz";b.textContent=D.M[k][2];b.setAttribute("data-k",k);
+    b.onclick=function(){
+      if(fatto)return;fatto=true;
+      [].forEach.call(box.children,function(z){z.disabled=true;if(+z.getAttribute("data-k")===giusto)z.className="opz ok"});
+      if(k!==giusto)b.className="opz no";
+      el("esito").textContent=k===giusto?"Esatto!":"Non era questo: guarda la risposta.";
+      scheda();
+    };
+    box.appendChild(b);
+  });
+  el("bottoni").hidden=true;el("boxaiuto").hidden=false;
 }
-function scegli(b,t){
-  if(chiuso)return;chiuso=true;
-  var q=dom[i],v=q.v;
-  [].forEach.call(el("opzioni").children,function(y){y.disabled=true;if(y.textContent===q.giusta)y.className="opz ok"});
-  if(t===q.giusta){punti++;el("esito").textContent="Esatto!"}
-  else{if(b)b.className="opz no";el("esito").textContent="Era: "+(q.giusta.charAt(0).toLowerCase()===q.giusta.charAt(0)||q.domanda!=="Chi parla?"?q.giusta.charAt(0).toLowerCase()+q.giusta.slice(1):q.giusta)+"."}
-  el("info").textContent=(v.v.indexOf("-")>0?"Versi ":"Verso ")+v.v+" su "+D.L+" · Chi parla: "+v.p;
-  el("avanti").textContent=i<4?"Avanti":"Vedi il risultato";
-  el("nonso").hidden=true;el("dopo").hidden=false
+function valuta(n){
+  voti[n]++;i++;
+  if(i<5){mostra();window.scrollTo(0,0);return}
+  el("quiz").hidden=true;el("fine").hidden=false;window.scrollTo(0,0);
+  if(window.umami)umami.track("canto-fine-test",{canto:CANTO,punti:voti[2]});
+  el("punti").textContent="Lo sapevi in "+voti[2]+" su 5";
+  el("dettaglio").textContent="Più o meno: "+voti[1]+" · Non lo sapevi: "+voti[0];
+  var s=voti[2]+voti[1]/2;
+  el("commento").textContent=s>=4?"Ottimo: questo canto lo conosci bene.":s>=2?"Buon ripasso. Con il canto intero davanti lo fissi tutto.":"Si impara ripassando: ogni verso che rivedi è uno in più che ricorderai."
 }
-el("nonso").onclick=function(){scegli(null,null)};
-el("avanti").onclick=function(){
-  i++;
-  if(i<5){mostra();return}
-  el("quiz").hidden=true;el("fine").hidden=false;if(window.umami)umami.track("canto-fine-test",{canto:CANTO,punti:punti});
-  el("punti").textContent="Ne hai riconosciuti "+punti+" su 5";
-  el("commento").textContent=punti>=4?"Ottimo: questo canto lo conosci bene.":punti>=2?"Buon ripasso. Con qualche verso in più lo fissi tutto.":"Si impara ripassando: ogni verso che rivedi è uno in più che riconoscerai."
-};
+el("mostra").onclick=scheda;
+el("aiuto").onclick=aiuto;
+[].forEach.call(document.querySelectorAll(".voto"),function(b){b.onclick=function(){valuta(+b.getAttribute("data-v"))}});
 el("ripeti").onclick=function(){el("fine").hidden=true;el("quiz").hidden=false;prepara();mostra()};
 el("start").onclick=function(){el("intro").hidden=true;el("quiz").hidden=false;window.scrollTo(0,0)};
 prepara();mostra();

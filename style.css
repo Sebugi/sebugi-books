@@ -867,3 +867,26 @@ h2 {
 .dc-esito { font-weight: 700; margin: 14px 0 4px; text-align: center; }
 .dc-info { color: var(--text-soft); font-size: .92rem; text-align: center; }
 #dc-fine h2 { margin-bottom: 8px; }
+
+/* Divina Commedia: cosa viene prima e cosa viene dopo */
+.dc-sotto { margin-top: 12px; font-size: .9rem; color: var(--text-soft); font-family: var(--font-ui); }
+.dc-stretto { margin-top: 0; }
+.dc-aiuto-dom { font-family: var(--font-display); font-style: italic; font-size: 1.15rem; color: var(--text-soft); margin: 4px 0 6px; text-align: center; }
+.dc-scheda {
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg);
+    padding: 18px 16px; margin-top: 16px; scroll-margin-top: 12px;
+}
+.dc-etichetta { font: 700 .78rem var(--font-ui); letter-spacing: .08em; text-transform: uppercase; color: var(--sepia); margin: 14px 0 4px; }
+.dc-etichetta:first-child { margin-top: 0; }
+.dc-nv { font-weight: 500; letter-spacing: 0; text-transform: none; color: var(--text-faint); }
+.dc-centro { text-align: center; margin-top: 18px; }
+.dc-situazione { font-family: var(--font-ui); font-size: 1rem; color: var(--text); }
+.dc-contesto { font-family: var(--font-display); font-size: 1.12rem; line-height: 1.35; white-space: pre-line; color: var(--text-soft); }
+.dc-scheda .dc-info { margin-top: 14px; }
+.dc-voti { display: flex; gap: 8px; margin-top: 6px; }
+.dc-voto {
+    flex: 1; padding: 13px 6px; cursor: pointer; border-radius: var(--radius); border: 1px solid var(--c);
+    background: color-mix(in srgb, var(--c) 14%, var(--surface)); color: var(--text); font: 600 .9rem var(--font-ui);
+}
+.dc-voto:active { transform: scale(.97); }
+.v-si { --c: var(--ok); } .v-forse { --c: var(--sepia); } .v-no { --c: var(--bad); }

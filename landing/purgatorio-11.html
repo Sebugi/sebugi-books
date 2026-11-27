@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#f5eddc">
-<title>Ripassa l'undicesimo canto del Purgatorio: riconosci i versi | Sebugi Books</title>
+<title>Ripassa l'undicesimo canto del Purgatorio: cosa viene prima e cosa viene dopo | Sebugi Books</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
     <link rel="apple-touch-icon" href="../favicon-192.png">
-<meta name="description" content="Cinque versi dell'undicesimo canto del Purgatorio: riconosci a che punto del canto si trovano e chi parla. Ripasso gratuito, senza registrazione.">
+<meta name="description" content="Cinque versi dell'undicesimo canto del Purgatorio: sai dire cosa viene prima e cosa viene dopo? Ripasso gratuito, senza registrazione.">
 <link rel="canonical" href="https://books.sebugi.com/landing/purgatorio-11.html">
 <meta name="robots" content="noindex">
 <style>
@@ -41,6 +41,18 @@ h1{font-size:1.7rem;line-height:1.2;margin:.2em 0 .3em;text-align:center}
 .intro ul{list-style:none;padding:0;margin:0 0 14px;color:#6b5b47;font-size:.95rem}
 .start{display:block;width:100%;padding:20px 14px;margin-top:6px;font:inherit;font-weight:bold;font-size:1.5rem;color:#fff;background:linear-gradient(#5d8a4a,#46703a);border:0;border-radius:12px;cursor:pointer;box-shadow:0 3px 0 #2f5226}
 .start:active{transform:translateY(2px);box-shadow:0 1px 0 #2f5226}
+.sotto2{font-size:.92rem;color:#6b5b47;margin:0 0 14px}
+.sec{display:block;width:100%;padding:13px;margin-top:10px;font:inherit;font-size:1rem;text-align:center;color:#3b2f22;background:#fff;border:1px solid #cdb98f;border-radius:8px;cursor:pointer}
+.aiuto-dom{font-style:italic;color:#6b5b47;margin:16px 0 4px}
+.scheda{margin-top:16px;border-top:1px solid #d9c9a8;padding-top:12px}
+.etich{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:#8a6a35;font-weight:bold;margin:12px 0 2px}
+.etich span{font-weight:normal;letter-spacing:0;text-transform:none;color:#7a6a55}
+.sit{margin:0 0 4px}
+.ctx{font-style:italic;white-space:pre-line;margin:0 0 4px;color:#4b3d2c}
+.voti{display:flex;gap:8px;margin-top:6px}
+.voto{flex:1;padding:12px 4px;font:inherit;font-size:.95rem;font-weight:bold;border-radius:8px;cursor:pointer;color:#3b2f22;border:1px solid}
+.v1{background:#dcebd2;border-color:#6a9a52}.v2{background:#f3e6c8;border-color:#b8913f}.v3{background:#f4d9d3;border-color:#b9604f}
+.dettaglio{text-align:center;color:#6b5b47;font-size:.92rem;margin:0 0 8px}
 </style>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="86c03d25-c58e-427d-a332-2fb69da70300"></script>
 </head>
@@ -48,32 +60,47 @@ h1{font-size:1.7rem;line-height:1.2;margin:.2em 0 .3em;text-align:center}
 <div class="wrap">
 <img src="../logo.png" alt="Sebugi" width="150" style="display:block;margin:0 auto 6px;max-width:50%;height:auto">
 <h1>Devi ripassare l'undicesimo canto del Purgatorio?</h1>
-<p class="sotto">Cinque versi del canto: riconosci a che punto si trovano.</p>
+<p class="sotto">Cinque versi del canto: sai dire cosa viene prima e cosa viene dopo?</p>
 
 <div class="card intro" id="intro">
 <h2>Come funziona</h2>
-<p>Leggi cinque versi dell'undicesimo canto del Purgatorio e indovina se vengono dall'inizio, dalla metà o dalla fine del canto. Ogni tanto la domanda è su chi parla.</p>
-<ul><li>Gratis e senza registrazione</li><li>Due minuti, anche dal telefono</li><li>Dopo ogni risposta vedi i numeri dei versi e chi parla</li></ul>
+<p>Leggi cinque versi dell'undicesimo canto del Purgatorio e prova a dire cosa viene prima e cosa viene dopo, a parole tue o con i versi. Se non ti viene in mente, chiedi un aiuto.</p>
+<ul><li>Gratis e senza registrazione</li><li>Due minuti, anche dal telefono</li><li>Dopo ogni verso vedi la situazione, i versi prima e dopo e chi parla</li></ul>
 <button class="start" id="start" type="button" data-umami-event="canto-inizio-test" data-umami-event-canto="purgatorio-11">Inizia il ripasso</button>
 </div>
 
 <div class="card" id="quiz" hidden>
 <p class="num">Purgatorio, canto XI · verso <span id="n">1</span> di 5</p>
-<p class="domanda" id="domanda"></p>
+<p class="domanda">Cosa viene prima e cosa viene dopo?</p>
 <p class="frase" id="frase"></p>
+<p class="sotto2">Rispondi a parole tue o, se te li ricordi, con i versi</p>
+<div id="bottoni">
+<button class="avanti" id="mostra" type="button">Mostra la risposta</button>
+<button class="sec" id="aiuto" type="button">Voglio un aiuto</button>
+</div>
+<div id="boxaiuto" hidden>
+<p class="aiuto-dom" id="aiutodom"></p>
 <div id="opzioni"></div>
-<button class="nonso" id="nonso" type="button">Non lo so</button>
-<div id="dopo" hidden>
 <p class="esito" id="esito"></p>
-<p class="info" id="info"></p>
-<button class="avanti" id="avanti" type="button">Avanti</button>
+</div>
+<div class="scheda" id="scheda" hidden>
+<p class="etich">La situazione</p>
+<p class="sit" id="sit"></p>
+<p class="etich">Prima <span id="npri"></span></p>
+<p class="ctx" id="pri"></p>
+<p class="etich">Dopo <span id="ndop"></span></p>
+<p class="ctx" id="dop"></p>
+<p class="info" id="info" style="margin-top:12px"></p>
+<p class="etich" style="text-align:center;margin-top:16px">Come è andata?</p>
+<div class="voti"><button class="voto v1" type="button" data-v="2">Lo sapevo</button><button class="voto v2" type="button" data-v="1">Più o meno</button><button class="voto v3" type="button" data-v="0">Non lo sapevo</button></div>
 </div>
 </div>
 
 <div class="card" id="fine" hidden>
 <p class="punti" id="punti"></p>
+<p class="dettaglio" id="dettaglio"></p>
 <p id="commento" style="text-align:center"></p>
-<p style="text-align:center">Nell'app ripassi i versi più importanti dell'undicesimo canto del Purgatorio e gli altri canti della Divina Commedia. Gratis e senza registrazione.</p>
+<p style="text-align:center">Nell'app ripassi tutto l'undicesimo canto del Purgatorio e gli altri canti della Divina Commedia. Gratis e senza registrazione.</p>
 <a class="cta" href="https://books.sebugi.com/?libro=la-divina-commedia&amp;canto=purgatorio-11&amp;lang=it" id="cta" data-umami-event="canto-entra-app" data-umami-event-canto="purgatorio-11">Ripassa l'undicesimo canto del Purgatorio</a>
 <button class="avanti" id="ripeti" type="button" style="background:#fff;color:#3b2f22;border:1px solid #cdb98f">Rifai il quiz</button>
 </div>
@@ -82,60 +109,71 @@ h1{font-size:1.7rem;line-height:1.2;margin:.2em 0 .3em;text-align:center}
 </div>
 <script>
 var CANTO="purgatorio-11";
-var D={"V":[{"t":"O Padre nostro, che ne' cieli stai, / non circunscritto, ma per più amore / ch'ai primi effetti di là sù tu hai…","v":"1-3","p":"Le anime dei superbi","z":0,"a":0},{"t":"Oh! diss'io lui, non se' tu Oderisi, / l'onor d'Agobbio e l'onor di quell'arte / ch'alluminar chiamata è in Parisi?","v":"79-81","p":"Dante","z":1,"a":0},{"t":"Oh vana gloria de l'umane posse! / com' poco verde in su la cima dura, / se non è giunta da l'etati grosse!","v":"91-93","p":"Oderisi da Gubbio","z":1,"a":1},{"t":"Credette Cimabue ne la pittura / tener lo campo, e ora ha Giotto il grido, / sì che la fama di colui è scura.","v":"94-96","p":"Oderisi da Gubbio","z":1,"a":1},{"t":"Non è il mondan romore altro ch'un fiato / di vento, ch'or vien quinci e or vien quindi, / e muta nome perché muta lato.","v":"100-102","p":"Oderisi da Gubbio","z":2,"a":0},{"t":"La vostra nominanza è color d'erba, / che viene e va, e quei la discolora / per cui ella esce de la terra acerba.","v":"115-117","p":"Oderisi da Gubbio","z":2,"a":0},{"t":"Vegna ver' noi la pace del tuo regno, / ché noi ad essa non potem da noi…","v":"7-8","p":"Le anime dei superbi","z":0,"a":0},{"t":"Dà oggi a noi la cotidiana manna, / sanza la qual per questo aspro diserto…","v":"13-14","p":"Le anime dei superbi","z":0,"a":0},{"t":"Colui che del cammin sì poco piglia / dinanzi a me, Toscana sonò tutta;","v":"109-110","p":"Oderisi da Gubbio","z":2,"a":0},{"t":"Quelli è, rispuose, Provenzan Salvani; / ed è qui perché fu presuntüoso / a recar Siena tutta a le sue mani.","v":"121-123","p":"Oderisi da Gubbio","z":2,"a":0}],"L":142,"altri":["Catone","Manfredi","Sordello","Virgilio"]};
-var PUNTI=["All'inizio","A metà","Alla fine"];
+var D={"V":[{"t":"O Padre nostro, che ne' cieli stai, / non circunscritto, ma per più amore / ch'ai primi effetti di là sù tu hai…","v":"1-3","p":"Le anime dei superbi"},{"t":"Oh! diss'io lui, non se' tu Oderisi, / l'onor d'Agobbio e l'onor di quell'arte / ch'alluminar chiamata è in Parisi?","v":"79-81","p":"Dante"},{"t":"Oh vana gloria de l'umane posse! / com' poco verde in su la cima dura, / se non è giunta da l'etati grosse!","v":"91-93","p":"Oderisi da Gubbio"},{"t":"Credette Cimabue ne la pittura / tener lo campo, e ora ha Giotto il grido, / sì che la fama di colui è scura.","v":"94-96","p":"Oderisi da Gubbio"},{"t":"Non è il mondan romore altro ch'un fiato / di vento, ch'or vien quinci e or vien quindi, / e muta nome perché muta lato.","v":"100-102","p":"Oderisi da Gubbio"},{"t":"La vostra nominanza è color d'erba, / che viene e va, e quei la discolora / per cui ella esce de la terra acerba.","v":"115-117","p":"Oderisi da Gubbio"},{"t":"Vegna ver' noi la pace del tuo regno, / ché noi ad essa non potem da noi…","v":"7-8","p":"Le anime dei superbi"},{"t":"Dà oggi a noi la cotidiana manna, / sanza la qual per questo aspro diserto…","v":"13-14","p":"Le anime dei superbi"},{"t":"Colui che del cammin sì poco piglia / dinanzi a me, Toscana sonò tutta;","v":"109-110","p":"Oderisi da Gubbio"},{"t":"Quelli è, rispuose, Provenzan Salvani; / ed è qui perché fu presuntüoso / a recar Siena tutta a le sue mani.","v":"121-123","p":"Oderisi da Gubbio"}],"versi":["\"O Padre nostro, che ne' cieli stai,","non circunscritto, ma per più amore","ch'ai primi effetti di là sù tu hai,","laudato sia 'l tuo nome e 'l tuo valore","da ogne creatura, com'è degno","di render grazie al tuo dolce vapore.","Vegna ver' noi la pace del tuo regno,","ché noi ad essa non potem da noi,","s'ella non vien, con tutto nostro ingegno.","Come del suo voler li angeli tuoi","fan sacrificio a te, cantando osanna,","così facciano li uomini de' suoi.","Dà oggi a noi la cotidiana manna,","sanza la qual per questo aspro diserto","a retro va chi più di gir s'affanna.","E come noi lo mal ch'avem sofferto","perdoniamo a ciascuno, e tu perdona","benigno, e non guardar lo nostro merto.","Nostra virtù che di legger s'adona,","non spermentar con l'antico avversaro,","ma libera da lui che sì la sprona.","Quest'ultima preghiera, segnor caro,","già non si fa per noi, ché non bisogna,","ma per color che dietro a noi restaro\".","Così a sé e noi buona ramogna","quell'ombre orando, andavan sotto 'l pondo,","simile a quel che talvolta si sogna,","disparmente angosciate tutte a tondo","e lasse su per la prima cornice,","purgando la caligine del mondo.","Se di là sempre ben per noi si dice,","di qua che dire e far per lor si puote","da quei c' hanno al voler buona radice?","Ben si de' loro atar lavar le note","che portar quinci, sì che, mondi e lievi,","possano uscire a le stellate ruote.","\"Deh, se giustizia e pietà vi disgrievi","tosto, sì che possiate muover l'ala,","che secondo il disio vostro vi lievi,","mostrate da qual mano inver' la scala","si va più corto; e se c'è più d'un varco,","quel ne 'nsegnate che men erto cala;","ché questi che vien meco, per lo 'ncarco","de la carne d'Adamo onde si veste,","al montar sù, contra sua voglia, è parco\".","Le lor parole, che rendero a queste","che dette avea colui cu' io seguiva,","non fur da cui venisser manifeste;","ma fu detto: \"A man destra per la riva","con noi venite, e troverete il passo","possibile a salir persona viva.","E s'io non fossi impedito dal sasso","che la cervice mia superba doma,","onde portar convienmi il viso basso,","cotesti, ch'ancor vive e non si noma,","guardere' io, per veder s'i' 'l conosco,","e per farlo pietoso a questa soma.","Io fui latino e nato d'un gran Tosco:","Guiglielmo Aldobrandesco fu mio padre;","non so se 'l nome suo già mai fu vosco.","L'antico sangue e l'opere leggiadre","d'i miei maggior mi fer sì arrogante,","che, non pensando a la comune madre,","ogn'uomo ebbi in despetto tanto avante,","ch'io ne mori', come i Sanesi sanno,","e sallo in Campagnatico ogne fante.","Io sono Omberto; e non pur a me danno","superbia fa, ché tutti miei consorti","ha ella tratti seco nel malanno.","E qui convien ch'io questo peso porti","per lei, tanto che a Dio si sodisfaccia,","poi ch'io nol fe' tra ' vivi, qui tra ' morti\".","Ascoltando chinai in giù la faccia;","e un di lor, non questi che parlava,","si torse sotto il peso che li 'mpaccia,","e videmi e conobbemi e chiamava,","tenendo li occhi con fatica fisi","a me che tutto chin con loro andava.","\"Oh!\", diss'io lui, \"non se' tu Oderisi,","l'onor d'Agobbio e l'onor di quell'arte","ch'alluminar chiamata è in Parisi?\".","\"Frate\", diss'elli, \"più ridon le carte","che pennelleggia Franco Bolognese;","l'onore è tutto or suo, e mio in parte.","Ben non sare' io stato sì cortese","mentre ch'io vissi, per lo gran disio","de l'eccellenza ove mio core intese.","Di tal superbia qui si paga il fio;","e ancor non sarei qui, se non fosse","che, possendo peccar, mi volsi a Dio.","Oh vana gloria de l'umane posse!","com' poco verde in su la cima dura,","se non è giunta da l'etati grosse!","Credette Cimabue ne la pittura","tener lo campo, e ora ha Giotto il grido,","sì che la fama di colui è scura.","Così ha tolto l'uno a l'altro Guido","la gloria de la lingua; e forse è nato","chi l'uno e l'altro caccerà del nido.","Non è il mondan romore altro ch'un fiato","di vento, ch'or vien quinci e or vien quindi,","e muta nome perché muta lato.","Che voce avrai tu più, se vecchia scindi","da te la carne, che se fossi morto","anzi che tu lasciassi il 'pappo' e 'l 'dindi',","pria che passin mill'anni? ch'è più corto","spazio a l'etterno, ch'un muover di ciglia","al cerchio che più tardi in cielo è torto.","Colui che del cammin sì poco piglia","dinanzi a me, Toscana sonò tutta;","e ora a pena in Siena sen pispiglia,","ond'era sire quando fu distrutta","la rabbia fiorentina, che superba","fu a quel tempo sì com'ora è putta.","La vostra nominanza è color d'erba,","che viene e va, e quei la discolora","per cui ella esce de la terra acerba\".","E io a lui: \"Tuo vero dir m'incora","bona umiltà, e gran tumor m'appiani;","ma chi è quei di cui tu parlavi ora?\".","\"Quelli è\", rispuose, \"Provenzan Salvani;","ed è qui perché fu presuntüoso","a recar Siena tutta a le sue mani.","Ito è così e va, sanza riposo,","poi che morì; cotal moneta rende","a sodisfar chi è di là troppo oso\".","E io: \"Se quello spirito ch'attende,","pria che si penta, l'orlo de la vita,","qua giù dimora e qua sù non ascende,","se buona orazïon lui non aita,","prima che passi tempo quanto visse,","come fu la venuta lui largita?\".","\"Quando vivea più glorïoso\", disse,","\"liberamente nel Campo di Siena,","ogne vergogna diposta, s'affisse;","e lì, per trar l'amico suo di pena,","ch'e' sostenea ne la prigion di Carlo,","si condusse a tremar per ogne vena.","Più non dirò, e scuro so che parlo;","ma poco tempo andrà, che ' tuoi vicini","faranno sì che tu potrai chiosarlo.","Quest'opera li tolse quei confini\"."],"M":[[1,24,"I superbi recitano il Padre nostro mentre camminano piegati sotto i massi."],[25,36,"Le anime avanzano sotto il peso e Dante invita a pregare per chi si purifica."],[37,57,"Virgilio chiede la via per salire; un'anima risponde di seguirli verso destra."],[58,72,"Omberto Aldobrandeschi racconta che la superbia per la sua nobile famiglia lo ha rovinato."],[73,90,"Dante riconosce Oderisi da Gubbio, il miniatore, che ora riconosce il merito di Franco Bolognese."],[91,117,"Oderisi parla della vanità della fama: Cimabue superato da Giotto, un Guido dall'altro."],[118,142,"Oderisi indica Provenzan Salvani, che si umiliò a chiedere l'elemosina per salvare un amico."]]};
+var L=D.versi.length;
 function mescola(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
 function el(x){return document.getElementById(x)}
-var dom=[],i=0,punti=0,chiuso=false;
-function parlanti(){var o={};D.V.forEach(function(v){o[v.p]=1});return Object.keys(o)}
+function da(v){return parseInt(v.split("-")[0],10)}
+function a(v){var p=v.split("-");return parseInt(p[p.length-1],10)}
+function mom(n){for(var k=0;k<D.M.length;k++)if(D.M[k][0]<=n&&n<=D.M[k][1])return k;return 0}
+function nv(x,y){return x===y?"(v. "+x+")":"(vv. "+x+"-"+y+")"}
+var dom=[],i=0,voti=[0,0,0],fatto=false;
 function prepara(){
-  var chi=parlanti(),nChi=chi.length>=3?2:chi.length===2?1:0;
-  // cinque versi: uno per ogni parte del canto, poi a caso
-  var scelti=[];
-  [0,1,2].forEach(function(z){var c=mescola(D.V.filter(function(v){return v.z===z&&!v.a}))[0];if(c)scelti.push(c)});
+  // cinque versi da momenti diversi del canto, quando si può
+  var scelti=[],usati={};
+  mescola(D.V).forEach(function(v){var m=mom(da(v.v));if(scelti.length<5&&!usati[m]){usati[m]=1;scelti.push(v)}});
   mescola(D.V).forEach(function(v){if(scelti.length<5&&scelti.indexOf(v)<0)scelti.push(v)});
-  scelti=mescola(scelti);
-  // le domande su chi parla vanno ai versi vicini al confine fra due parti, poi a caso
-  var ordine=scelti.map(function(v,k){return k}).sort(function(a,b){return scelti[b].a-scelti[a].a});
-  var tipoChi={};for(var k=0;k<5&&nChi>0;k++){if(scelti[ordine[k]].a||nChi>0){tipoChi[ordine[k]]=1;nChi--}}
-  scelti.forEach(function(v,k){if(v.a)tipoChi[k]=1});
-  dom=scelti.map(function(v,k){
-    if(tipoChi[k]){
-      var altri=mescola(chi.filter(function(p){return p!==v.p})).concat(mescola(D.altri)).filter(function(p,x,a){return a.indexOf(p)===x&&p!==v.p}).slice(0,2);
-      return {v:v,domanda:"Chi parla?",opz:mescola([v.p].concat(altri)),giusta:v.p};
-    }
-    return {v:v,domanda:"A che punto del canto si trova questo verso?",opz:PUNTI.slice(),giusta:PUNTI[v.z]};
-  });
-  i=0;punti=0;
+  dom=mescola(scelti);i=0;voti=[0,0,0];
 }
 function mostra(){
-  var q=dom[i];chiuso=false;
-  el("n").textContent=i+1;el("domanda").textContent=q.domanda;el("frase").textContent=q.v.t.replace(/ \/ /g,"\n");
-  el("dopo").hidden=true;el("nonso").hidden=false;
+  var v=dom[i];fatto=false;
+  el("n").textContent=i+1;el("frase").textContent=v.t.replace(/ \/ /g,"\n");
+  el("bottoni").hidden=false;el("boxaiuto").hidden=true;el("scheda").hidden=true;el("esito").textContent="";
+}
+function scheda(){
+  var v=dom[i],x=da(v.v),y=a(v.v);
+  el("bottoni").hidden=true;
+  el("sit").textContent=D.M[mom(x)][2];
+  if(x>1){var p=Math.max(1,x-3);el("npri").textContent=nv(p,x-1);el("pri").textContent=D.versi.slice(p-1,x-1).join("\n")}
+  else{el("npri").textContent="";el("pri").textContent="È l'inizio del canto."}
+  if(y<L){var q=Math.min(L,y+3);el("ndop").textContent=nv(y+1,q);el("dop").textContent=D.versi.slice(y,q).join("\n")}
+  else{el("ndop").textContent="";el("dop").textContent="È la fine del canto."}
+  el("info").textContent=(x===y?"Verso "+x:"Versi "+x+"-"+y)+" su "+L+" · Chi parla: "+v.p;
+  el("scheda").hidden=false;
+}
+function aiuto(){
+  if(window.umami)umami.track("canto-aiuto",{canto:CANTO});
+  var v=dom[i],x=da(v.v),y=a(v.v);
+  var dopo=mom(y)<D.M.length-1,mio=dopo?mom(y):mom(x),giusto=dopo?mio+1:mio-1;
+  el("aiutodom").textContent=dopo?"Quale di questi momenti viene subito dopo?":"Siamo nell'ultima parte del canto. Quale di questi momenti viene subito prima?";
+  var altri=mescola(D.M.map(function(m,k){return k}).filter(function(k){return k!==mio&&k!==giusto})).slice(0,2);
   var box=el("opzioni");box.innerHTML="";
-  q.opz.forEach(function(t){
-    var b=document.createElement("button");b.type="button";b.className="opz";b.textContent=t;
-    b.onclick=function(){scegli(b,t)};box.appendChild(b)
-  })
+  mescola([giusto].concat(altri)).forEach(function(k){
+    var b=document.createElement("button");b.type="button";b.className="opz";b.textContent=D.M[k][2];b.setAttribute("data-k",k);
+    b.onclick=function(){
+      if(fatto)return;fatto=true;
+      [].forEach.call(box.children,function(z){z.disabled=true;if(+z.getAttribute("data-k")===giusto)z.className="opz ok"});
+      if(k!==giusto)b.className="opz no";
+      el("esito").textContent=k===giusto?"Esatto!":"Non era questo: guarda la risposta.";
+      scheda();
+    };
+    box.appendChild(b);
+  });
+  el("bottoni").hidden=true;el("boxaiuto").hidden=false;
 }
-function scegli(b,t){
-  if(chiuso)return;chiuso=true;
-  var q=dom[i],v=q.v;
-  [].forEach.call(el("opzioni").children,function(y){y.disabled=true;if(y.textContent===q.giusta)y.className="opz ok"});
-  if(t===q.giusta){punti++;el("esito").textContent="Esatto!"}
-  else{if(b)b.className="opz no";el("esito").textContent="Era: "+(q.giusta.charAt(0).toLowerCase()===q.giusta.charAt(0)||q.domanda!=="Chi parla?"?q.giusta.charAt(0).toLowerCase()+q.giusta.slice(1):q.giusta)+"."}
-  el("info").textContent=(v.v.indexOf("-")>0?"Versi ":"Verso ")+v.v+" su "+D.L+" · Chi parla: "+v.p;
-  el("avanti").textContent=i<4?"Avanti":"Vedi il risultato";
-  el("nonso").hidden=true;el("dopo").hidden=false
+function valuta(n){
+  voti[n]++;i++;
+  if(i<5){mostra();window.scrollTo(0,0);return}
+  el("quiz").hidden=true;el("fine").hidden=false;window.scrollTo(0,0);
+  if(window.umami)umami.track("canto-fine-test",{canto:CANTO,punti:voti[2]});
+  el("punti").textContent="Lo sapevi in "+voti[2]+" su 5";
+  el("dettaglio").textContent="Più o meno: "+voti[1]+" · Non lo sapevi: "+voti[0];
+  var s=voti[2]+voti[1]/2;
+  el("commento").textContent=s>=4?"Ottimo: questo canto lo conosci bene.":s>=2?"Buon ripasso. Con il canto intero davanti lo fissi tutto.":"Si impara ripassando: ogni verso che rivedi è uno in più che ricorderai."
 }
-el("nonso").onclick=function(){scegli(null,null)};
-el("avanti").onclick=function(){
-  i++;
-  if(i<5){mostra();return}
-  el("quiz").hidden=true;el("fine").hidden=false;if(window.umami)umami.track("canto-fine-test",{canto:CANTO,punti:punti});
-  el("punti").textContent="Ne hai riconosciuti "+punti+" su 5";
-  el("commento").textContent=punti>=4?"Ottimo: questo canto lo conosci bene.":punti>=2?"Buon ripasso. Con qualche verso in più lo fissi tutto.":"Si impara ripassando: ogni verso che rivedi è uno in più che riconoscerai."
-};
+el("mostra").onclick=scheda;
+el("aiuto").onclick=aiuto;
+[].forEach.call(document.querySelectorAll(".voto"),function(b){b.onclick=function(){valuta(+b.getAttribute("data-v"))}});
 el("ripeti").onclick=function(){el("fine").hidden=true;el("quiz").hidden=false;prepara();mostra()};
 el("start").onclick=function(){el("intro").hidden=true;el("quiz").hidden=false;window.scrollTo(0,0)};
 prepara();mostra();

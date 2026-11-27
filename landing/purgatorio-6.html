@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#f5eddc">
-<title>Ripassa il sesto canto del Purgatorio: riconosci i versi | Sebugi Books</title>
+<title>Ripassa il sesto canto del Purgatorio: cosa viene prima e cosa viene dopo | Sebugi Books</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
     <link rel="apple-touch-icon" href="../favicon-192.png">
-<meta name="description" content="Cinque versi del sesto canto del Purgatorio: riconosci a che punto del canto si trovano e chi parla. Ripasso gratuito, senza registrazione.">
+<meta name="description" content="Cinque versi del sesto canto del Purgatorio: sai dire cosa viene prima e cosa viene dopo? Ripasso gratuito, senza registrazione.">
 <link rel="canonical" href="https://books.sebugi.com/landing/purgatorio-6.html">
 <meta name="robots" content="noindex">
 <style>
@@ -41,6 +41,18 @@ h1{font-size:1.7rem;line-height:1.2;margin:.2em 0 .3em;text-align:center}
 .intro ul{list-style:none;padding:0;margin:0 0 14px;color:#6b5b47;font-size:.95rem}
 .start{display:block;width:100%;padding:20px 14px;margin-top:6px;font:inherit;font-weight:bold;font-size:1.5rem;color:#fff;background:linear-gradient(#5d8a4a,#46703a);border:0;border-radius:12px;cursor:pointer;box-shadow:0 3px 0 #2f5226}
 .start:active{transform:translateY(2px);box-shadow:0 1px 0 #2f5226}
+.sotto2{font-size:.92rem;color:#6b5b47;margin:0 0 14px}
+.sec{display:block;width:100%;padding:13px;margin-top:10px;font:inherit;font-size:1rem;text-align:center;color:#3b2f22;background:#fff;border:1px solid #cdb98f;border-radius:8px;cursor:pointer}
+.aiuto-dom{font-style:italic;color:#6b5b47;margin:16px 0 4px}
+.scheda{margin-top:16px;border-top:1px solid #d9c9a8;padding-top:12px}
+.etich{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:#8a6a35;font-weight:bold;margin:12px 0 2px}
+.etich span{font-weight:normal;letter-spacing:0;text-transform:none;color:#7a6a55}
+.sit{margin:0 0 4px}
+.ctx{font-style:italic;white-space:pre-line;margin:0 0 4px;color:#4b3d2c}
+.voti{display:flex;gap:8px;margin-top:6px}
+.voto{flex:1;padding:12px 4px;font:inherit;font-size:.95rem;font-weight:bold;border-radius:8px;cursor:pointer;color:#3b2f22;border:1px solid}
+.v1{background:#dcebd2;border-color:#6a9a52}.v2{background:#f3e6c8;border-color:#b8913f}.v3{background:#f4d9d3;border-color:#b9604f}
+.dettaglio{text-align:center;color:#6b5b47;font-size:.92rem;margin:0 0 8px}
 </style>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="86c03d25-c58e-427d-a332-2fb69da70300"></script>
 </head>
@@ -48,32 +60,47 @@ h1{font-size:1.7rem;line-height:1.2;margin:.2em 0 .3em;text-align:center}
 <div class="wrap">
 <img src="../logo.png" alt="Sebugi" width="150" style="display:block;margin:0 auto 6px;max-width:50%;height:auto">
 <h1>Devi ripassare il sesto canto del Purgatorio?</h1>
-<p class="sotto">Cinque versi del canto: riconosci a che punto si trovano.</p>
+<p class="sotto">Cinque versi del canto: sai dire cosa viene prima e cosa viene dopo?</p>
 
 <div class="card intro" id="intro">
 <h2>Come funziona</h2>
-<p>Leggi cinque versi del sesto canto del Purgatorio e indovina se vengono dall'inizio, dalla metà o dalla fine del canto. Ogni tanto la domanda è su chi parla.</p>
-<ul><li>Gratis e senza registrazione</li><li>Due minuti, anche dal telefono</li><li>Dopo ogni risposta vedi i numeri dei versi e chi parla</li></ul>
+<p>Leggi cinque versi del sesto canto del Purgatorio e prova a dire cosa viene prima e cosa viene dopo, a parole tue o con i versi. Se non ti viene in mente, chiedi un aiuto.</p>
+<ul><li>Gratis e senza registrazione</li><li>Due minuti, anche dal telefono</li><li>Dopo ogni verso vedi la situazione, i versi prima e dopo e chi parla</li></ul>
 <button class="start" id="start" type="button" data-umami-event="canto-inizio-test" data-umami-event-canto="purgatorio-6">Inizia il ripasso</button>
 </div>
 
 <div class="card" id="quiz" hidden>
 <p class="num">Purgatorio, canto VI · verso <span id="n">1</span> di 5</p>
-<p class="domanda" id="domanda"></p>
+<p class="domanda">Cosa viene prima e cosa viene dopo?</p>
 <p class="frase" id="frase"></p>
+<p class="sotto2">Rispondi a parole tue o, se te li ricordi, con i versi</p>
+<div id="bottoni">
+<button class="avanti" id="mostra" type="button">Mostra la risposta</button>
+<button class="sec" id="aiuto" type="button">Voglio un aiuto</button>
+</div>
+<div id="boxaiuto" hidden>
+<p class="aiuto-dom" id="aiutodom"></p>
 <div id="opzioni"></div>
-<button class="nonso" id="nonso" type="button">Non lo so</button>
-<div id="dopo" hidden>
 <p class="esito" id="esito"></p>
-<p class="info" id="info"></p>
-<button class="avanti" id="avanti" type="button">Avanti</button>
+</div>
+<div class="scheda" id="scheda" hidden>
+<p class="etich">La situazione</p>
+<p class="sit" id="sit"></p>
+<p class="etich">Prima <span id="npri"></span></p>
+<p class="ctx" id="pri"></p>
+<p class="etich">Dopo <span id="ndop"></span></p>
+<p class="ctx" id="dop"></p>
+<p class="info" id="info" style="margin-top:12px"></p>
+<p class="etich" style="text-align:center;margin-top:16px">Come è andata?</p>
+<div class="voti"><button class="voto v1" type="button" data-v="2">Lo sapevo</button><button class="voto v2" type="button" data-v="1">Più o meno</button><button class="voto v3" type="button" data-v="0">Non lo sapevo</button></div>
 </div>
 </div>
 
 <div class="card" id="fine" hidden>
 <p class="punti" id="punti"></p>
+<p class="dettaglio" id="dettaglio"></p>
 <p id="commento" style="text-align:center"></p>
-<p style="text-align:center">Nell'app ripassi i versi più importanti del sesto canto del Purgatorio e gli altri canti della Divina Commedia. Gratis e senza registrazione.</p>
+<p style="text-align:center">Nell'app ripassi tutto il sesto canto del Purgatorio e gli altri canti della Divina Commedia. Gratis e senza registrazione.</p>
 <a class="cta" href="https://books.sebugi.com/?libro=la-divina-commedia&amp;canto=purgatorio-6&amp;lang=it" id="cta" data-umami-event="canto-entra-app" data-umami-event-canto="purgatorio-6">Ripassa il sesto canto del Purgatorio</a>
 <button class="avanti" id="ripeti" type="button" style="background:#fff;color:#3b2f22;border:1px solid #cdb98f">Rifai il quiz</button>
 </div>
@@ -82,60 +109,71 @@ h1{font-size:1.7rem;line-height:1.2;margin:.2em 0 .3em;text-align:center}
 </div>
 <script>
 var CANTO="purgatorio-6";
-var D={"V":[{"t":"Quando si parte il gioco de la zara, / colui che perde si riman dolente, / repetendo le volte, e tristo impara;","v":"1-3","p":"Dante","z":0,"a":0},{"t":"A guisa di leon quando si posa.","v":"66","p":"Dante","z":1,"a":0},{"t":"O Mantoano, io son Sordello / de la tua terra!; e l'un l'altro abbracciava.","v":"74-75","p":"Sordello","z":1,"a":0},{"t":"Ahi serva Italia, di dolore ostello, / nave sanza nocchiere in gran tempesta, / non donna di provincie, ma bordello!","v":"76-78","p":"Dante","z":1,"a":0},{"t":"Vieni a veder la tua Roma che piagne / vedova e sola, e dì e notte chiama: / Cesare mio, perché non m'accompagne?","v":"112-114","p":"Dante","z":2,"a":0},{"t":"Ché le città d'Italia tutte piene / son di tiranni, e un Marcel diventa / ogne villan che parteggiando viene.","v":"124-126","p":"Dante","z":2,"a":0},{"t":"Fiorenza mia, ben puoi esser contenta / di questa digression che non ti tocca…","v":"127-128","p":"Dante","z":2,"a":0},{"t":"La mia scrittura è piana; / e la speranza di costor non falla, / se ben si guarda con la mente sana;","v":"34-36","p":"Virgilio","z":0,"a":0},{"t":"Ma vedi là un'anima che, posta / sola soletta, inverso noi riguarda…","v":"58-59","p":"Virgilio","z":1,"a":0},{"t":"Atene e Lacedemona, che fenno / l'antiche leggi e furon sì civili…","v":"139-140","p":"Dante","z":2,"a":0}],"L":151,"altri":["Catone","Le anime dei superbi","Manfredi","Oderisi da Gubbio"]};
-var PUNTI=["All'inizio","A metà","Alla fine"];
+var D={"V":[{"t":"Quando si parte il gioco de la zara, / colui che perde si riman dolente, / repetendo le volte, e tristo impara;","v":"1-3","p":"Dante"},{"t":"A guisa di leon quando si posa.","v":"66","p":"Dante"},{"t":"O Mantoano, io son Sordello / de la tua terra!; e l'un l'altro abbracciava.","v":"74-75","p":"Sordello"},{"t":"Ahi serva Italia, di dolore ostello, / nave sanza nocchiere in gran tempesta, / non donna di provincie, ma bordello!","v":"76-78","p":"Dante"},{"t":"Vieni a veder la tua Roma che piagne / vedova e sola, e dì e notte chiama: / Cesare mio, perché non m'accompagne?","v":"112-114","p":"Dante"},{"t":"Ché le città d'Italia tutte piene / son di tiranni, e un Marcel diventa / ogne villan che parteggiando viene.","v":"124-126","p":"Dante"},{"t":"Fiorenza mia, ben puoi esser contenta / di questa digression che non ti tocca…","v":"127-128","p":"Dante"},{"t":"La mia scrittura è piana; / e la speranza di costor non falla, / se ben si guarda con la mente sana;","v":"34-36","p":"Virgilio"},{"t":"Ma vedi là un'anima che, posta / sola soletta, inverso noi riguarda…","v":"58-59","p":"Virgilio"},{"t":"Atene e Lacedemona, che fenno / l'antiche leggi e furon sì civili…","v":"139-140","p":"Dante"}],"versi":["Quando si parte il gioco de la zara,","colui che perde si riman dolente,","repetendo le volte, e tristo impara;","con l'altro se ne va tutta la gente;","qual va dinanzi, e qual di dietro il prende,","e qual dallato li si reca a mente;","el non s'arresta, e questo e quello intende;","a cui porge la man, più non fa pressa;","e così da la calca si difende.","Tal era io in quella turba spessa,","volgendo a loro, e qua e là, la faccia,","e promettendo mi sciogliea da essa.","Quiv'era l'Aretin che da le braccia","fiere di Ghin di Tacco ebbe la morte,","e l'altro ch'annegò correndo in caccia.","Quivi pregava con le mani sporte","Federigo Novello, e quel da Pisa","che fé parer lo buon Marzucco forte.","Vidi conte Orso e l'anima divisa","dal corpo suo per astio e per inveggia,","com'e' dicea, non per colpa commisa;","Pier da la Broccia dico; e qui proveggia,","mentr'è di qua, la donna di Brabante,","sì che però non sia di peggior greggia.","Come libero fui da tutte quante","quell'ombre che pregar pur ch'altri prieghi,","sì che s'avacci lor divenir sante,","io cominciai: \"El par che tu mi nieghi,","o luce mia, espresso in alcun testo","che decreto del cielo orazion pieghi;","e questa gente prega pur di questo:","sarebbe dunque loro speme vana,","o non m'è 'l detto tuo ben manifesto?\".","Ed elli a me: \"La mia scrittura è piana;","e la speranza di costor non falla,","se ben si guarda con la mente sana;","ché cima di giudicio non s'avvalla","perché foco d'amor compia in un punto","ciò che de' sodisfar chi qui s'astalla;","e là dov'io fermai cotesto punto,","non s'ammendava, per pregar, difetto,","perché 'l priego da Dio era disgiunto.","Veramente a così alto sospetto","non ti fermar, se quella nol ti dice","che lume fia tra 'l vero e lo 'ntelletto.","Non so se 'ntendi: io dico di Beatrice;","tu la vedrai di sopra, in su la vetta","di questo monte, ridere e felice\".","E io: \"Segnore, andiamo a maggior fretta,","ché già non m'affatico come dianzi,","e vedi omai che 'l poggio l'ombra getta\".","\"Noi anderem con questo giorno innanzi\",","rispuose, \"quanto più potremo omai;","ma 'l fatto è d'altra forma che non stanzi.","Prima che sie là sù, tornar vedrai","colui che già si cuopre de la costa,","sì che ' suoi raggi tu romper non fai.","Ma vedi là un'anima che, posta","sola soletta, inverso noi riguarda:","quella ne 'nsegnerà la via più tosta\".","Venimmo a lei: o anima lombarda,","come ti stavi altera e disdegnosa","e nel mover de li occhi onesta e tarda!","Ella non ci dicëa alcuna cosa,","ma lasciavane gir, solo sguardando","a guisa di leon quando si posa.","Pur Virgilio si trasse a lei, pregando","che ne mostrasse la miglior salita;","e quella non rispuose al suo dimando,","ma di nostro paese e de la vita","ci 'nchiese; e 'l dolce duca incominciava","\"Mantüa ...\", e l'ombra, tutta in sé romita,","surse ver' lui del loco ove pria stava,","dicendo: \"O Mantoano, io son Sordello","de la tua terra!\"; e l'un l'altro abbracciava.","Ahi serva Italia, di dolore ostello,","nave sanza nocchiere in gran tempesta,","non donna di provincie, ma bordello!","Quell'anima gentil fu così presta,","sol per lo dolce suon de la sua terra,","di fare al cittadin suo quivi festa;","e ora in te non stanno sanza guerra","li vivi tuoi, e l'un l'altro si rode","di quei ch'un muro e una fossa serra.","Cerca, misera, intorno da le prode","le tue marine, e poi ti guarda in seno,","s'alcuna parte in te di pace gode.","Che val perché ti racconciasse il freno","Iustinïano, se la sella è vòta?","Sanz'esso fora la vergogna meno.","Ahi gente che dovresti esser devota,","e lasciar seder Cesare in la sella,","se bene intendi ciò che Dio ti nota,","guarda come esta fiera è fatta fella","per non esser corretta da li sproni,","poi che ponesti mano a la predella.","O Alberto tedesco ch'abbandoni","costei ch'è fatta indomita e selvaggia,","e dovresti inforcar li suoi arcioni,","giusto giudicio da le stelle caggia","sovra 'l tuo sangue, e sia novo e aperto,","tal che 'l tuo successor temenza n'aggia!","Ch'avete tu e 'l tuo padre sofferto,","per cupidigia di costà distretti,","che 'l giardin de lo 'mperio sia diserto.","Vieni a veder Montecchi e Cappelletti,","Monaldi e Filippeschi, uom sanza cura:","color già tristi, e questi con sospetti!","Vien, crudel, vieni, e vedi la pressura","d'i tuoi gentili, e cura lor magagne;","e vedrai Santafior com'è oscura!","Vieni a veder la tua Roma che piagne","vedova e sola, e dì e notte chiama:","\"Cesare mio, perché non m'accompagne?\".","Vieni a veder la gente quanto s'ama!","e se nulla di noi pietà ti move,","a vergognar ti vien de la tua fama.","E se licito m'è, o sommo Giove","che fosti in terra per noi crucifisso,","son li giusti occhi tuoi rivolti altrove?","O è preparazion che ne l'abisso","del tuo consiglio fai per alcun bene","in tutto de l'accorger nostro scisso?","Ché le città d'Italia tutte piene","son di tiranni, e un Marcel diventa","ogne villan che parteggiando viene.","Fiorenza mia, ben puoi esser contenta","di questa digression che non ti tocca,","mercé del popol tuo che si argomenta.","Molti han giustizia in cuore, e tardi scocca","per non venir sanza consiglio a l'arco;","ma il popol tuo l' ha in sommo de la bocca.","Molti rifiutan lo comune incarco;","ma il popol tuo solicito risponde","sanza chiamare, e grida: \"I' mi sobbarco!\".","Or ti fa lieta, ché tu hai ben onde:","tu ricca, tu con pace e tu con senno!","S'io dico 'l ver, l'effetto nol nasconde.","Atene e Lacedemona, che fenno","l'antiche leggi e furon sì civili,","fecero al viver bene un picciol cenno","verso di te, che fai tanto sottili","provedimenti, ch'a mezzo novembre","non giugne quel che tu d'ottobre fili.","Quante volte, del tempo che rimembre,","legge, moneta, officio e costume","hai tu mutato, e rinovate membre!","E se ben ti ricordi e vedi lume,","vedrai te somigliante a quella inferma","che non può trovar posa in su le piume,","ma con dar volta suo dolore scherma."],"M":[[1,12,"Come il vincitore al gioco della zara, Dante si libera a fatica dalle anime che chiedono preghiere."],[13,24,"Dante ricorda le anime morte di morte violenta che ha visto tra la folla."],[25,48,"Dante chiede se le preghiere possono cambiare il volere del cielo; Virgilio risponde e rimanda a Beatrice."],[49,60,"Dante vuole affrettarsi; Virgilio spiega che non arriveranno in giornata e indica un'anima solitaria."],[61,75,"L'anima, altera come un leone, è Sordello: sentendo il nome di Mantova, abbraccia Virgilio."],[76,96,"Dante lancia l'invettiva 'Ahi serva Italia': l'Italia è senza guida e piena di guerre interne."],[97,126,"Dante accusa l'imperatore Alberto di aver abbandonato l'Italia e si chiede se Dio guardi altrove."],[127,151,"Con amara ironia Dante si rivolge a Firenze, che cambia leggi di continuo come un'inferma che si rigira nel letto."]]};
+var L=D.versi.length;
 function mescola(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
 function el(x){return document.getElementById(x)}
-var dom=[],i=0,punti=0,chiuso=false;
-function parlanti(){var o={};D.V.forEach(function(v){o[v.p]=1});return Object.keys(o)}
+function da(v){return parseInt(v.split("-")[0],10)}
+function a(v){var p=v.split("-");return parseInt(p[p.length-1],10)}
+function mom(n){for(var k=0;k<D.M.length;k++)if(D.M[k][0]<=n&&n<=D.M[k][1])return k;return 0}
+function nv(x,y){return x===y?"(v. "+x+")":"(vv. "+x+"-"+y+")"}
+var dom=[],i=0,voti=[0,0,0],fatto=false;
 function prepara(){
-  var chi=parlanti(),nChi=chi.length>=3?2:chi.length===2?1:0;
-  // cinque versi: uno per ogni parte del canto, poi a caso
-  var scelti=[];
-  [0,1,2].forEach(function(z){var c=mescola(D.V.filter(function(v){return v.z===z&&!v.a}))[0];if(c)scelti.push(c)});
+  // cinque versi da momenti diversi del canto, quando si può
+  var scelti=[],usati={};
+  mescola(D.V).forEach(function(v){var m=mom(da(v.v));if(scelti.length<5&&!usati[m]){usati[m]=1;scelti.push(v)}});
   mescola(D.V).forEach(function(v){if(scelti.length<5&&scelti.indexOf(v)<0)scelti.push(v)});
-  scelti=mescola(scelti);
-  // le domande su chi parla vanno ai versi vicini al confine fra due parti, poi a caso
-  var ordine=scelti.map(function(v,k){return k}).sort(function(a,b){return scelti[b].a-scelti[a].a});
-  var tipoChi={};for(var k=0;k<5&&nChi>0;k++){if(scelti[ordine[k]].a||nChi>0){tipoChi[ordine[k]]=1;nChi--}}
-  scelti.forEach(function(v,k){if(v.a)tipoChi[k]=1});
-  dom=scelti.map(function(v,k){
-    if(tipoChi[k]){
-      var altri=mescola(chi.filter(function(p){return p!==v.p})).concat(mescola(D.altri)).filter(function(p,x,a){return a.indexOf(p)===x&&p!==v.p}).slice(0,2);
-      return {v:v,domanda:"Chi parla?",opz:mescola([v.p].concat(altri)),giusta:v.p};
-    }
-    return {v:v,domanda:"A che punto del canto si trova questo verso?",opz:PUNTI.slice(),giusta:PUNTI[v.z]};
-  });
-  i=0;punti=0;
+  dom=mescola(scelti);i=0;voti=[0,0,0];
 }
 function mostra(){
-  var q=dom[i];chiuso=false;
-  el("n").textContent=i+1;el("domanda").textContent=q.domanda;el("frase").textContent=q.v.t.replace(/ \/ /g,"\n");
-  el("dopo").hidden=true;el("nonso").hidden=false;
+  var v=dom[i];fatto=false;
+  el("n").textContent=i+1;el("frase").textContent=v.t.replace(/ \/ /g,"\n");
+  el("bottoni").hidden=false;el("boxaiuto").hidden=true;el("scheda").hidden=true;el("esito").textContent="";
+}
+function scheda(){
+  var v=dom[i],x=da(v.v),y=a(v.v);
+  el("bottoni").hidden=true;
+  el("sit").textContent=D.M[mom(x)][2];
+  if(x>1){var p=Math.max(1,x-3);el("npri").textContent=nv(p,x-1);el("pri").textContent=D.versi.slice(p-1,x-1).join("\n")}
+  else{el("npri").textContent="";el("pri").textContent="È l'inizio del canto."}
+  if(y<L){var q=Math.min(L,y+3);el("ndop").textContent=nv(y+1,q);el("dop").textContent=D.versi.slice(y,q).join("\n")}
+  else{el("ndop").textContent="";el("dop").textContent="È la fine del canto."}
+  el("info").textContent=(x===y?"Verso "+x:"Versi "+x+"-"+y)+" su "+L+" · Chi parla: "+v.p;
+  el("scheda").hidden=false;
+}
+function aiuto(){
+  if(window.umami)umami.track("canto-aiuto",{canto:CANTO});
+  var v=dom[i],x=da(v.v),y=a(v.v);
+  var dopo=mom(y)<D.M.length-1,mio=dopo?mom(y):mom(x),giusto=dopo?mio+1:mio-1;
+  el("aiutodom").textContent=dopo?"Quale di questi momenti viene subito dopo?":"Siamo nell'ultima parte del canto. Quale di questi momenti viene subito prima?";
+  var altri=mescola(D.M.map(function(m,k){return k}).filter(function(k){return k!==mio&&k!==giusto})).slice(0,2);
   var box=el("opzioni");box.innerHTML="";
-  q.opz.forEach(function(t){
-    var b=document.createElement("button");b.type="button";b.className="opz";b.textContent=t;
-    b.onclick=function(){scegli(b,t)};box.appendChild(b)
-  })
+  mescola([giusto].concat(altri)).forEach(function(k){
+    var b=document.createElement("button");b.type="button";b.className="opz";b.textContent=D.M[k][2];b.setAttribute("data-k",k);
+    b.onclick=function(){
+      if(fatto)return;fatto=true;
+      [].forEach.call(box.children,function(z){z.disabled=true;if(+z.getAttribute("data-k")===giusto)z.className="opz ok"});
+      if(k!==giusto)b.className="opz no";
+      el("esito").textContent=k===giusto?"Esatto!":"Non era questo: guarda la risposta.";
+      scheda();
+    };
+    box.appendChild(b);
+  });
+  el("bottoni").hidden=true;el("boxaiuto").hidden=false;
 }
-function scegli(b,t){
-  if(chiuso)return;chiuso=true;
-  var q=dom[i],v=q.v;
-  [].forEach.call(el("opzioni").children,function(y){y.disabled=true;if(y.textContent===q.giusta)y.className="opz ok"});
-  if(t===q.giusta){punti++;el("esito").textContent="Esatto!"}
-  else{if(b)b.className="opz no";el("esito").textContent="Era: "+(q.giusta.charAt(0).toLowerCase()===q.giusta.charAt(0)||q.domanda!=="Chi parla?"?q.giusta.charAt(0).toLowerCase()+q.giusta.slice(1):q.giusta)+"."}
-  el("info").textContent=(v.v.indexOf("-")>0?"Versi ":"Verso ")+v.v+" su "+D.L+" · Chi parla: "+v.p;
-  el("avanti").textContent=i<4?"Avanti":"Vedi il risultato";
-  el("nonso").hidden=true;el("dopo").hidden=false
+function valuta(n){
+  voti[n]++;i++;
+  if(i<5){mostra();window.scrollTo(0,0);return}
+  el("quiz").hidden=true;el("fine").hidden=false;window.scrollTo(0,0);
+  if(window.umami)umami.track("canto-fine-test",{canto:CANTO,punti:voti[2]});
+  el("punti").textContent="Lo sapevi in "+voti[2]+" su 5";
+  el("dettaglio").textContent="Più o meno: "+voti[1]+" · Non lo sapevi: "+voti[0];
+  var s=voti[2]+voti[1]/2;
+  el("commento").textContent=s>=4?"Ottimo: questo canto lo conosci bene.":s>=2?"Buon ripasso. Con il canto intero davanti lo fissi tutto.":"Si impara ripassando: ogni verso che rivedi è uno in più che ricorderai."
 }
-el("nonso").onclick=function(){scegli(null,null)};
-el("avanti").onclick=function(){
-  i++;
-  if(i<5){mostra();return}
-  el("quiz").hidden=true;el("fine").hidden=false;if(window.umami)umami.track("canto-fine-test",{canto:CANTO,punti:punti});
-  el("punti").textContent="Ne hai riconosciuti "+punti+" su 5";
-  el("commento").textContent=punti>=4?"Ottimo: questo canto lo conosci bene.":punti>=2?"Buon ripasso. Con qualche verso in più lo fissi tutto.":"Si impara ripassando: ogni verso che rivedi è uno in più che riconoscerai."
-};
+el("mostra").onclick=scheda;
+el("aiuto").onclick=aiuto;
+[].forEach.call(document.querySelectorAll(".voto"),function(b){b.onclick=function(){valuta(+b.getAttribute("data-v"))}});
 el("ripeti").onclick=function(){el("fine").hidden=true;el("quiz").hidden=false;prepara();mostra()};
 el("start").onclick=function(){el("intro").hidden=true;el("quiz").hidden=false;window.scrollTo(0,0)};
 prepara();mostra();
