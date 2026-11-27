@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f5eddc">
+<title>Ripassa il sesto canto del Paradiso: riconosci i versi | Sebugi Books</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+    <link rel="apple-touch-icon" href="../favicon-192.png">
+<meta name="description" content="Cinque versi del sesto canto del Paradiso: riconosci a che punto del canto si trovano e chi parla. Ripasso gratuito, senza registrazione.">
+<link rel="canonical" href="https://books.sebugi.com/landing/paradiso-6.html">
+<meta name="robots" content="noindex">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f5eddc;color:#3b2f22;font-family:Georgia,"Times New Roman",serif;line-height:1.5}
+.wrap{max-width:560px;margin:0 auto;padding:22px 18px 40px}
+.marca{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:#7a6a55;text-align:center;margin:0 0 6px}
+h1{font-size:1.7rem;line-height:1.2;margin:.2em 0 .3em;text-align:center}
+.sotto{text-align:center;color:#6b5b47;margin:0 0 20px}
+.card{background:#fffaf0;border:1px solid #d9c9a8;border-radius:12px;padding:20px;box-shadow:0 2px 8px rgba(80,60,30,.08)}
+.num{font-size:.85rem;color:#7a6a55;margin:0 0 8px}
+.frase{font-size:1.2rem;font-style:italic;margin:0 0 16px;white-space:pre-line}
+.opz{display:block;width:100%;text-align:left;margin:8px 0;padding:13px 14px;font:inherit;font-size:1rem;background:#fff;border:1px solid #cdb98f;border-radius:8px;color:inherit;cursor:pointer}
+.opz:hover:not(:disabled){background:#f3e8cf}
+.opz.ok{background:#dcebd2;border-color:#6a9a52}
+.opz.no{background:#f4d9d3;border-color:#b9604f}
+.esito{margin:14px 0 4px;font-weight:bold}
+.info{font-size:.92rem;color:#6b5b47;margin:0 0 6px}
+.domanda{font-size:1rem;color:#6b5b47;margin:0 0 6px;font-style:italic}
+.nonso{display:block;margin:6px auto 0;background:none;border:0;color:#7a6a55;text-decoration:underline;font:inherit;font-size:.9rem;cursor:pointer;padding:6px}
+.orig{font-size:.9rem;color:#6b5b47;margin:0 0 12px}.orig:empty{display:none}
+.avanti,.cta{display:block;width:100%;padding:14px;margin-top:12px;font:inherit;font-weight:bold;font-size:1.05rem;text-align:center;text-decoration:none;color:#fff;background:linear-gradient(#5d8a4a,#46703a);border:0;border-radius:8px;cursor:pointer}
+.punti{font-size:1.5rem;text-align:center;margin:0 0 6px}
+.nota{font-size:.85rem;color:#7a6a55;text-align:center;margin-top:12px}
+.piede{text-align:center;font-size:.8rem;color:#7a6a55;margin-top:26px}
+.piede a{color:#7a6a55}
+[hidden]{display:none!important}
+.intro{text-align:center}
+.intro h2{font-size:1.15rem;margin:0 0 8px}
+.intro p{margin:0 0 10px}
+.intro ul{list-style:none;padding:0;margin:0 0 14px;color:#6b5b47;font-size:.95rem}
+.start{display:block;width:100%;padding:20px 14px;margin-top:6px;font:inherit;font-weight:bold;font-size:1.5rem;color:#fff;background:linear-gradient(#5d8a4a,#46703a);border:0;border-radius:12px;cursor:pointer;box-shadow:0 3px 0 #2f5226}
+.start:active{transform:translateY(2px);box-shadow:0 1px 0 #2f5226}
+</style>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="86c03d25-c58e-427d-a332-2fb69da70300"></script>
+</head>
+<body>
+<div class="wrap">
+<img src="../logo.png" alt="Sebugi" width="150" style="display:block;margin:0 auto 6px;max-width:50%;height:auto">
+<h1>Devi ripassare il sesto canto del Paradiso?</h1>
+<p class="sotto">Cinque versi del canto: riconosci a che punto si trovano.</p>
+
+<div class="card intro" id="intro">
+<h2>Come funziona</h2>
+<p>Leggi cinque versi del sesto canto del Paradiso e indovina se vengono dall'inizio, dalla metà o dalla fine del canto. Ogni tanto la domanda è su chi parla.</p>
+<ul><li>Gratis e senza registrazione</li><li>Due minuti, anche dal telefono</li><li>Dopo ogni risposta vedi i numeri dei versi e chi parla</li></ul>
+<button class="start" id="start" type="button" data-umami-event="canto-inizio-test" data-umami-event-canto="paradiso-6">Inizia il ripasso</button>
+</div>
+
+<div class="card" id="quiz" hidden>
+<p class="num">Paradiso, canto VI · verso <span id="n">1</span> di 5</p>
+<p class="domanda" id="domanda"></p>
+<p class="frase" id="frase"></p>
+<div id="opzioni"></div>
+<button class="nonso" id="nonso" type="button">Non lo so</button>
+<div id="dopo" hidden>
+<p class="esito" id="esito"></p>
+<p class="info" id="info"></p>
+<button class="avanti" id="avanti" type="button">Avanti</button>
+</div>
+</div>
+
+<div class="card" id="fine" hidden>
+<p class="punti" id="punti"></p>
+<p id="commento" style="text-align:center"></p>
+<p style="text-align:center">Nell'app ripassi i versi più importanti del sesto canto del Paradiso e gli altri canti della Divina Commedia. Gratis e senza registrazione.</p>
+<a class="cta" href="https://books.sebugi.com/?libro=la-divina-commedia&amp;canto=paradiso-6&amp;lang=it" id="cta" data-umami-event="canto-entra-app" data-umami-event-canto="paradiso-6">Ripassa il sesto canto del Paradiso</a>
+<button class="avanti" id="ripeti" type="button" style="background:#fff;color:#3b2f22;border:1px solid #cdb98f">Rifai il quiz</button>
+</div>
+
+<p class="piede"><a href="../privacy.html">Privacy</a> · <a href="../termini.html">Condizioni d'uso</a> · <a href="../avviso.html">Non affiliazione</a></p>
+</div>
+<script>
+var CANTO="paradiso-6";
+var D={"V":[{"t":"Cesare fui e son Iustinïano, / che, per voler del primo amor ch'i' sento, / d'entro le leggi trassi il troppo e 'l vano.","v":"10-12","p":"Giustiniano","z":0,"a":0},{"t":"Poscia che Costantin l'aquila volse / contr'al corso del ciel, ch'ella seguio / dietro a l'antico che Lavina tolse…","v":"1-3","p":"Giustiniano","z":0,"a":0},{"t":"L'uno al pubblico segno i gigli gialli / oppone, e l'altro appropria quello a parte, / sì ch'è forte a veder chi più si falli.","v":"100-102","p":"Giustiniano","z":2,"a":0},{"t":"Faccian li Ghibellin, faccian lor arte / sott'altro segno, ché mal segue quello…","v":"103-104","p":"Giustiniano","z":2,"a":0},{"t":"Diverse voci fanno dolci note; / così diversi scanni in nostra vita / rendon dolce armonia tra queste rote.","v":"124-126","p":"Giustiniano","z":2,"a":0},{"t":"E dentro a la presente margarita / luce la luce di Romeo, di cui…","v":"127-128","p":"Giustiniano","z":2,"a":0},{"t":"Quattro figlie ebbe, e ciascuna reina, / Ramondo Beringhiere, e ciò li fece…","v":"133-134","p":"Giustiniano","z":2,"a":0},{"t":"Vedi quanta virtù l'ha fatto degno / di reverenza; e cominciò da l'ora…","v":"34-35","p":"Giustiniano","z":0,"a":0},{"t":"Esso atterrò l'orgoglio de li Aràbi / che di retro ad Anibale passaro…","v":"49-50","p":"Giustiniano","z":1,"a":1},{"t":"Poi, presso al tempo che tutto 'l ciel volle / redur lo mondo a suo modo sereno…","v":"55-56","p":"Giustiniano","z":1,"a":0}],"L":142,"altri":["Beatrice","Cacciaguida","Dante","Piccarda Donati","San Bernardo","San Tommaso d'Aquino"]};
+var PUNTI=["All'inizio","A metà","Alla fine"];
+function mescola(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
+function el(x){return document.getElementById(x)}
+var dom=[],i=0,punti=0,chiuso=false;
+function parlanti(){var o={};D.V.forEach(function(v){o[v.p]=1});return Object.keys(o)}
+function prepara(){
+  var chi=parlanti(),nChi=chi.length>=3?2:chi.length===2?1:0;
+  // cinque versi: uno per ogni parte del canto, poi a caso
+  var scelti=[];
+  [0,1,2].forEach(function(z){var c=mescola(D.V.filter(function(v){return v.z===z&&!v.a}))[0];if(c)scelti.push(c)});
+  mescola(D.V).forEach(function(v){if(scelti.length<5&&scelti.indexOf(v)<0)scelti.push(v)});
+  scelti=mescola(scelti);
+  // le domande su chi parla vanno ai versi vicini al confine fra due parti, poi a caso
+  var ordine=scelti.map(function(v,k){return k}).sort(function(a,b){return scelti[b].a-scelti[a].a});
+  var tipoChi={};for(var k=0;k<5&&nChi>0;k++){if(scelti[ordine[k]].a||nChi>0){tipoChi[ordine[k]]=1;nChi--}}
+  scelti.forEach(function(v,k){if(v.a)tipoChi[k]=1});
+  dom=scelti.map(function(v,k){
+    if(tipoChi[k]){
+      var altri=mescola(chi.filter(function(p){return p!==v.p})).concat(mescola(D.altri)).filter(function(p,x,a){return a.indexOf(p)===x&&p!==v.p}).slice(0,2);
+      return {v:v,domanda:"Chi parla?",opz:mescola([v.p].concat(altri)),giusta:v.p};
+    }
+    return {v:v,domanda:"A che punto del canto si trova questo verso?",opz:PUNTI.slice(),giusta:PUNTI[v.z]};
+  });
+  i=0;punti=0;
+}
+function mostra(){
+  var q=dom[i];chiuso=false;
+  el("n").textContent=i+1;el("domanda").textContent=q.domanda;el("frase").textContent=q.v.t.replace(/ \/ /g,"\n");
+  el("dopo").hidden=true;el("nonso").hidden=false;
+  var box=el("opzioni");box.innerHTML="";
+  q.opz.forEach(function(t){
+    var b=document.createElement("button");b.type="button";b.className="opz";b.textContent=t;
+    b.onclick=function(){scegli(b,t)};box.appendChild(b)
+  })
+}
+function scegli(b,t){
+  if(chiuso)return;chiuso=true;
+  var q=dom[i],v=q.v;
+  [].forEach.call(el("opzioni").children,function(y){y.disabled=true;if(y.textContent===q.giusta)y.className="opz ok"});
+  if(t===q.giusta){punti++;el("esito").textContent="Esatto!"}
+  else{if(b)b.className="opz no";el("esito").textContent="Era: "+(q.giusta.charAt(0).toLowerCase()===q.giusta.charAt(0)||q.domanda!=="Chi parla?"?q.giusta.charAt(0).toLowerCase()+q.giusta.slice(1):q.giusta)+"."}
+  el("info").textContent=(v.v.indexOf("-")>0?"Versi ":"Verso ")+v.v+" su "+D.L+" · Chi parla: "+v.p;
+  el("avanti").textContent=i<4?"Avanti":"Vedi il risultato";
+  el("nonso").hidden=true;el("dopo").hidden=false
+}
+el("nonso").onclick=function(){scegli(null,null)};
+el("avanti").onclick=function(){
+  i++;
+  if(i<5){mostra();return}
+  el("quiz").hidden=true;el("fine").hidden=false;if(window.umami)umami.track("canto-fine-test",{canto:CANTO,punti:punti});
+  el("punti").textContent="Ne hai riconosciuti "+punti+" su 5";
+  el("commento").textContent=punti>=4?"Ottimo: questo canto lo conosci bene.":punti>=2?"Buon ripasso. Con qualche verso in più lo fissi tutto.":"Si impara ripassando: ogni verso che rivedi è uno in più che riconoscerai."
+};
+el("ripeti").onclick=function(){el("fine").hidden=true;el("quiz").hidden=false;prepara();mostra()};
+el("start").onclick=function(){el("intro").hidden=true;el("quiz").hidden=false;window.scrollTo(0,0)};
+prepara();mostra();
+</script>
+</body>
+</html>
